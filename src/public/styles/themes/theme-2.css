@@ -1,0 +1,11 @@
+:root{
+    --text-color: #464579;
+    --aside-color: #50253b;
+    --content-color: #fa6956;
+    --border-color: #351727;
+    --highlight-color: #fff474;
+}
+
+*{
+    color: var(--text-color);
+}

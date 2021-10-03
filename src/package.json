@@ -1,0 +1,17 @@
+{
+  "name": "computer-science-archive",
+  "version": "1.0.0",
+  "description": "collection of computer science topics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "computer-science"
+  ],
+  "author": "AntVil",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

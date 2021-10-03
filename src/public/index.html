@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="images/icon.png">
+        <title>computer-science-archive</title>
+
+        <!-- load libs -->
+        <link rel="stylesheet" type="text/css" href="./libs/katex/katex.min.css">
+        <script src="./libs/katex/katex.min.js"></script>
+
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="./styles/classes.css">
+        <link rel="stylesheet" type="text/css" href="./styles/computer-layout.css">
+        <link rel="stylesheet" type="text/css" href="./styles/mobile-layout.css">
+        <link id="theme" rel="stylesheet" type="text/css" href="./styles/themes/theme-1.css">
+
+        <!--scripts -->
+        <script src="./scripts/theme.js"></script>
+        <script src="./scripts/topic.js"></script>
+        <script src="./scripts/main.js"></script>
+    </head>
+
+    <body>
+        <!-- computer-view -->
+        <div id="computer-view">
+            <!-- invisable checkboxes (for css) -->
+            <input type="radio" id="theme-0-toggle" name="theme-toggle" onchange="changeTheme()" checked />
+            <input type="radio" id="theme-1-toggle" name="theme-toggle" onchange="changeTheme()" />
+            <input type="radio" id="theme-2-toggle" name="theme-toggle" onchange="changeTheme()" />
+            <input type="radio" id="theme-3-toggle" name="theme-toggle" onchange="changeTheme()" />
+            <input type="checkbox" id="page-options-toggle" name="page-options-toggle" />
+            <input type="checkbox" id="about-toggle" name="about-toggle" />
+
+            <div id="header">
+                <img id="logo" src="images/logo.png" onclick="loadTopicContent('Home')" />
+                <div id="nav">
+                    <span>Home</span>
+                </div>
+                <label class="no-select" for="page-options-toggle">≡</label>
+            </div>
+
+            <div id="main">
+                <div id="outline" class="hidden-scrollbar">
+                    <div><a>heading 1</a></div>
+                    <div><a>heading 2</a></div>
+                </div>
+
+                <div id="content" class="hidden-scrollbar">
+                    content
+                </div>
+
+                <div id="content-options">
+                    
+                </div>
+            </div>
+
+            <div id="page-options">
+                <div id="themes-option">
+                    <label id="theme-0-label" for="theme-0-toggle"><img src="./images/theme-0.png" /></label>
+                    <label id="theme-1-label" for="theme-1-toggle"><img src="./images/theme-1.png" /></label>
+                    <label id="theme-2-label" for="theme-2-toggle"><img src="./images/theme-2.png" /></label>
+                    <label id="theme-3-label" for="theme-3-toggle"><img src="./images/theme-3.png" /></label>
+                </div>
+                <label id="about-label" for="about-toggle">about</label>
+            </div>
+
+            <div id="about">
+                <div id="about-background">
+                    <div id="about-content">
+                        <div>created by AntVil</div>
+                        <br>
+                        <div><label for="about-toggle">close</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- mobile-view -->
+        <div id="mobile-view">
+            <!-- invisable checkboxes (for css) -->
+        </div>
+    </body>
+</html>

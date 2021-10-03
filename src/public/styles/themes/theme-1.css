@@ -1,0 +1,11 @@
+:root{
+    --text-color: #FFFFFF;
+    --aside-color: #666666;
+    --content-color: #444444;
+    --border-color: #000000;
+    --highlight-color: #dbab62;
+}
+
+*{
+    color: var(--text-color);
+}
