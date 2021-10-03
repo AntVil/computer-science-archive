@@ -49,5 +49,35 @@ async function loadTopicContent(topicName){
     });
     response = await response.json();
 
-    document.getElementById("content").innerText = response.content;
+    let content = response.content;
+    
+    // convert equation markdown
+    content = content.split("$$").reduce(function(s1, s2, i){
+        if(i % 2 == 0){
+            return `${s1}</div>${s2}`;
+        }else{
+            return `${s1}<div class="equation">${s2}`;
+        }
+    });
+    content = content.split("$").reduce(function(s1, s2, i){
+        if(i % 2 == 0){
+            return `${s1}</span>${s2}`;
+        }else{
+            return `${s1}<span class="equation">${s2}`;
+        }
+    });
+
+    // convert generic markdown
+    content = marked(content);
+
+    // display on page
+    document.getElementById("content").innerHTML = content;
+
+    // render equations
+    let equations = document.getElementsByClassName("equation");
+    for(let equation of equations){
+        equation.innerHTML = katex.renderToString(equation.innerText, {
+            "throwOnError": false
+        });
+    }
 }

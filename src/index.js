@@ -25,7 +25,7 @@ server.post("/getTopicContent", function(request, response){
     
     // get file content
     let content = fs.readFileSync(
-        path.join(__dirname, "topics", topicName, "content.txt"),
+        path.join(__dirname, "topics", topicName, "content.md"),
         {
             "encoding": "utf-8"
         }
