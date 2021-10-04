@@ -11,41 +11,22 @@ $$\{\} = \emptyset$$
 Mit $n \notin M$ wird ausgedrückt, dass das Objekt $n$ nicht in der Menge $M$ enthalten ist.
 Eine **unendliche** Menge heißt Abzählbar, wenn es eine bijektive Abbildung zwischen $\mathbb{N}_0$ und der Menge gibt. Wenn es keine gibt heißt die Menge Überabzählbar.
 
-### Relationen
-Gleich
-$$M = N$$
+### Mengen-Relationen
 
-*(Gleiche Elemente)*
+| Relation        |  Schreibweise   | Beschreibung                         |
+| :-------------- | :-------------: | :----------------------------------- |
+| Gleich          |     $M = N$     | Gleiche Elemente                     |
+| Teilmenge       | $M \subseteq N$ | Ausschnitt aus Menge                 |
+| Echte-Teilmenge |  $M \subset N$  | Ausschnitt aus Menge                 |
+| Disjunkt        |        -        | $M$ und $N$ stehen nicht in Relation |
 
-#### Teilmenge
-$$M \subseteq N$$
-
-*(Ausschnitt aus Menge)*
-
-#### Echte-Teilmenge
-$$M \subset N$$
-
-*(Ausschnitt aus Menge)*
-
-#### Disjunkt
-$M$ und $N$ sind disjunkt
-
-*(Nicht in Relation)*
-
-### Operationen
+### Mengen-Operationen
 Um Operationen auf Mengen auszuführen benötigt man ein **Universum** $U$, als Referenz Menge.
-#### Vereinigung
-![beispiel_vereinigung]()
-$M \cup N$
-#### Schnitt
-![beispiel_schnitt]()
-$M \cap N$
-#### Differenz
-![beispiel_differenz]()
-$M \setminus N$
-#### Komplement
-![beispiel_komplement]()
-$M^C$
+
+| Vereinigung               | Schnitt               | Differenz               | Komplement               |
+| ------------------------- | --------------------- | ----------------------- | ------------------------ |
+| ![beispiel_vereinigung]() | ![beispiel_schnitt]() | ![beispiel_differenz]() | ![beispiel_komplement]() |
+| $$M \cup N$$              | $$M \cap N$$          | $$M \setminus N$$       | $$M^C$$                  |
 
 ### Kardinalität
 Mächtigkeit einer Menge
@@ -56,105 +37,42 @@ $P(M)=\{m \in U m \subseteq M\}$
 
 ### Kartesisches Produkt
 Mit $(a, b, ...)$ bezeichnet man ein Tupel, eine **geordnete** Sammlung an Objekten. Beim Kartesischen Produkt entsteht eine Menge aus Tupeln.
-$M \times N = \{(m,n) | m \in M, n \in N\}$
-$M^n = M \times M \times ...$
+
+$$M \times N = \{(m,n) | m \in M, n \in N\}$$
+$$M^n = M \times M \times ...$$
+
 ### Kleenscher Abschluss
-$M^* = M^0 \cup M^1 \cup ...$
+$$M^* = M^0 \cup M^1 \cup ...$$
+
 ### Positive Hülle
-$M^+ = M^1 \cup M^2 \cup ...$
+$$M^+ = M^1 \cup M^2 \cup ...$$
 
 
 
 
 
-# Relationen
-# Beschreibung
-
+## Relationen
 Eine Relation gibt eine Beziehung zwischen Objekten an. Sie ist eine Teilmenge eines Kartesischen Produkts.
 
 $$R \subseteq M^n$$
 
 Mit $(a, b) \in R$ bezeichnet man, dass $a$ mit $b$ in Relation steht. Eine Relation $R$ kann auf verschiedene Mengen bezogen sein und verschiedene Eigenschaften auf den jeweiligen Mengen besitzen.
 
-# Eigenschaften
+### Eigenschaften Relationen
+
+| Eigenschaft        | Definition                                            | Beschreibung                                                        | Darstellung                       |
+| ------------------ | ----------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
+| Reflexiv           | $$\forall a \in M: (a, a) \in R$$                     | Alles steht mit sich selbst in Relation                             | ![beispiel_reflexiv]()            |
+| Symmetrisch        | $$(a,b) \in R \Rightarrow (b,a) \in R$$               | Alle Relationen sind Beidseitig.                                    | ![beispiel_symmetrisch]()         |
+| Antisymmetrisch    | $$(a,b), (b,a) \in R \Rightarrow a = b$$              | Alle Relationen sind Einseitig.                                     | ![beispiel_antisymmetrisch]()     |
+| Transitiv          | $$(a,b),(b,c)\in R \Rightarrow (a,c)\in R$$           | Über zwei Relationen verknüpfte Objekte sind auch direkt verknüpft. | ![beispiel_transitiv]()           |
+| Total              | $$\forall a,b \in M: (a,b) \in R \lor (b,a) \in R$$   | Alles steht mit allem mindestens Einseitig in Relation.             | ![beispiel_total]()               |
+| Halbordnung        | Reflexiv, <b>Antisymmetrisch</b> und Transitiv.       | -                                                                   | ![beispiel_halbordnung]()         |
+| Totalordnung       | Reflexiv, <b>Antisymmetrisch</b> Transitiv und Total. | -                                                                   | ![beispiel_totalordnung]()        |
+| Äquivalenzrelation | Reflexiv, <b>Symmetrisch</b> und Transitiv            | Die Relation unterteilt eine Menge in Äquivalenzklassen.            | ![beispiel_aequivalenzrelation]() |
 
 
-# Reflexiv
-
-![beispiel_reflexiv]()
-
-Alles steht mit sich selbst in Relation
-$$\forall a \in M: (a, a) \in R$$
-
-
-# Symmetrisch
-
-![beispiel_symmetrisch]()
-
-Alle Relationen sind Beidseitig.
-$$(a,b) \in R \Rightarrow (b,a) \in R$$
-
-
-# Antisymmetrisch
-
-![beispiel_antisymmetrisch]()
-
-Alle Relationen sind Einseitig.
-$$(a,b), (b,a) \in R \Rightarrow a = b$$
-
-
-# Transitiv
-
-![beispiel_transitiv]()
-
-Über zwei Relationen verknüpfte Objekte sind auch direkt verknüpft.
-$$(a,b),(b,c)\in R \Rightarrow (a,c)\in R$$
-
-
-
-
-
-# Total
-
-![beispiel_total]()
-
-Alles steht mit allem mindestens Einseitig in Relation.
-$$\forall a,b \in M: (a,b) \in R \lor (b,a) \in R$$
-
-
-# Halbordnung
-
-![beispiel_halbordnung]()
-
-Reflexiv, <b>Antisymmetrisch</b> und Transitiv.
-
-
-# Totalordnung
-
-![beispiel_totalordnung]()
-
-Reflexiv, <b>Antisymmetrisch</b> Transitiv und Total.
-
-
-
-
-
-# Äquivalenzrelation
-
-![beispiel_aequivalenzrelation]()
-
-
-Reflexiv, <b>Symmetrisch</b> und Transitiv
-Die Relation unterteilt eine Menge in Äquivalenzklassen.
-
-
-
-$$\Rightarrow$$
-
-
-# Äquivalenzklassen
-
-
+### Äquivalenzklassen
 
 ![beispiel_aequivalenzklasse_1]()
 
@@ -179,8 +97,7 @@ $$M/R = \{\{a, b, c\}, \{d\}\}$$
 
 
 
-# Abbildungen
-# Beschreibung
+## Abbildungen
 
 Eine Abbildung ist eine spezielle Relation. Eine Abbildung weist jedem Element aus einer Menge, dem Definitionsbereich, ein Element aus einer Menge, dem Bildbereich, zu.
 
@@ -213,37 +130,23 @@ $$Bild(f) = \{f(m) | \forall m \in M\}$$
 
 Mit $Abb(M, N)$ erhält man eine Menge aller Abbildungen von der Menge $M$ zur Menge $N$.
 
-# Eigenschaften
+### Eigenschaften Abbildungen
+
+|                                Injektiv                                |                               Surjektiv                                |
+| :--------------------------------------------------------------------: | :--------------------------------------------------------------------: |
+|                         ![beispiel_injektiv]()                         |                        ![beispiel_surjektiv]()                         |
+| Jedes Element aus dem Bildbereich wird <b>maximal einmal</b> getroffen | Jedes Element aus dem Bildbereich wird <b>minimal einmal</b> getroffen |
+|          $$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$          |             $$\forall b \in N: \exists a \in M: f(a) = b$$             |
 
 
-# Injektiv
-
-![beispiel_injektiv]()
-
-Jedes Element aus dem Bildbereich wird <b>maximal einmal</b> getroffen
-$$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$
-
-
-# Surjektiv
-
-![beispiel_surjektiv]()
-
-Jedes Element aus dem Bildbereich wird <b>minimal einmal</b> getroffen
-$$\forall b \in N: \exists a \in M: f(a) = b$$
+|                                                      Bijektiv                                                       |
+| :-----------------------------------------------------------------------------------------------------------------: |
+|                                               ![beispiel_bijektiv]()                                                |
+| Jedes Element aus dem Bildbereich wird <b>genau einmal</b> getroffen. Bijektive Abbildungen sind immer invertierbar |
+|                                               Injektiv und Surjektiv                                                |
 
 
-# Bijektiv
-
-![beispiel_bijektiv]()
-
-
-Jedes Element aus dem Bildbereich wird <b>genau einmal</b> getroffen.
-Bijektive Abbildungen sind immer invertierbar
-
-# Zusatz
-
-
-# Abgeänderte Abbildungen
+### Abgeänderte Abbildungen
 Eine abgeänderte Abbildung bei der $x$ auf $y$ abbilden soll kann so erstellt werden:
 $$f_{x}^{y}: M \rightarrow N$$
 $$x \mapsto y$$
@@ -251,7 +154,7 @@ $$m_1 \mapsto n_1$$
 $$...$$
 
 
-# Partielle Abbildungen
+### Partielle Abbildungen
 Eine Partielle Abbildung ist nicht für alle Werte definiert.
 $$f: M \rightarrow N$$
 $$x \mapsto \perp$$
@@ -262,80 +165,55 @@ $$...$$
 
 
 
-
-
-
-# Algebraische Strukturen
-# Beschreibung
+## Algebraische Strukturen
 Algebraische Strukturen ermöglichen es Gesetze für Operationen auf bestimmten Mengen zu formen. Sie bestehen aus einer Menge und einer oder zwei Operationen.
 $$(M, \oplus)$$
 $$(M, \oplus, \odot)$$
 
-# Eigenschaften
+### Eigenschaften Algebraischer Strukturen
 
-
-# Abgeschlossenheit
-$$\forall a, b \in M: \exists c \in M: a \oplus b = c$$
-
-
-# Assoziativ
-$$\forall a, b, c \in M: a \oplus (b \oplus c) = (a \oplus b) \oplus c$$
-
-
-
-
-
-# Neutral Element
-$$\exists n \in M: \forall e \in M: e \oplus n = e$$
-
-
-# Inverse Elemente
-$$\exists n \in M: \forall e \in M: \exists e^{-1} \in M: e \oplus e^{-1} = n$$
+| Eigenschaft       |                                   Definition                                    |
+| :---------------- | :-----------------------------------------------------------------------------: |
+| Abgeschlossenheit |             $$\forall a, b \in M: \exists c \in M: a \oplus b = c$$             |
+| Assoziativ        |    $$\forall a, b, c \in M: a \oplus (b \oplus c) = (a \oplus b) \oplus c$$     |
+| Neutral Element   |              $$\exists n \in M: \forall e \in M: e \oplus n = e$$               |
+| Inverse Elemente  | $$\exists n \in M: \forall e \in M: \exists e^{-1} \in M: e \oplus e^{-1} = n$$ |
+| Kommutativ        |                 $$\forall a,b \in M: a \oplus b = b \oplus a$$                  |
+| Distributiv       | $$\forall a,b,c \in M: a \odot (b \oplus c) = (a \odot b) \oplus (a \odot c)$$  |
 
 
 
-
-
-# Kommutativ
-$$\forall a,b \in M: a \oplus b = b \oplus a$$
-
-
-# Distributiv
-$$\forall a,b,c \in M: a \odot (b \oplus c) = (a \odot b) \oplus (a \odot c)$$
-
-
-
-# Algebraische Strukturen
+### Algebraische Strukturen
 Die Eigenschaften der Operationen auf der Menge bestimmen die Algebraische Struktur.
 
 ![beispiel_algebraische_struktur]()
 
 
 
-# Vektorraum
+### Vektorraum
 Über einem Körper $M$ kann ein Vektorraum $M^n (n \in \mathbb{N})$ definiert werden. In diesem Vektorraum sind zwei Operationen definiert.
 
 
 
-# Addition
+#### Addition
 $$\oplus: M^n \times M^n \rightarrow M^n$$
 $$\vec{a} \oplus \vec{b} \mapsto \vec{c}$$
-<div style="text-align: center;"><i>(Komponentenweise addiert wie im Körper)</i>$$
+*(Komponentenweise addiert wie im Körper)*
 
 
-# Skalarmultiplikation
+#### Skalarmultiplikation
 $$\odot: M \times M^n \rightarrow M^n$$
 $$a \odot \vec{b} \mapsto \vec{c}$$
-<div style="text-align: center;"><i>(Komponenten skaliert wie im Körper)</i>$$
+*(Komponenten skaliert wie im Körper)*
 
 
 
-# Untervektorraum
+#### Untervektorraum
 Ein Untervektorraum ist eine Teilmenge eines Vektorraums, welche selbst ein Vektorraum ist.
 
 
-# Operationen
-# Ordnung
+### Operationen
+#### Ordnung
 Die Ordnung eines Elements gibt an, nach wie vielen hintereinander ausführungen der Multiplikation mit sich selbst, das Neutral Element entsteht. Sie ist bedeutend für endliche Körper.
 $$a^n = a \odot a \odot a \odot ... = 1$$
 $$ord(a) = n$$
@@ -346,44 +224,24 @@ $$ord(a) = n$$
 
 
 
-# Aussagen Logik
-# Beschreibung
+## Aussagen Logik
 Eine Formel besteht aus, den Symbolen $0$, $1$ den Atomen der Menge $\Sigma$ (Signatur) oder Verknüpfungen von bekannten Formeln mit den fünf definieren Operationen. In Folgenden Beispielen gilt $\Sigma = \{\textcolor{orange}{A}, \textcolor{orange}{B}\}$. Die Menge aller Formeln auf $\Sigma$ wird mit $For0_{\Sigma}$ bezeichnet. 
 $$0, 1 \in For0_{\Sigma}$$
 $$\Sigma \subseteq For0_{\Sigma}$$
 Formeln selber sind nur Zeichenketten und können nicht umgeformt werden.
 
-# Operationen
+### Operationen Aussagen Logik
+
+| Operation   | Schreibweise                                                      | Beschreibung                                                     |
+| ----------- | ----------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Negation    | $$\neg \textcolor{orange}{A}$$                                    | Gegenteil                                                        |
+| Disjunktion | $$(\textcolor{orange}{A} \lor \textcolor{orange}{B})$$            | Eins von beiden Wahr                                             |
+| Konjunktion | $$(\textcolor{orange}{A} \land \textcolor{orange}{B})$$           | Beide Wahr                                                       |
+| Implikation | $$(\textcolor{orange}{A} \rightarrow \textcolor{orange}{B})$$     | $$\neg(\textcolor{orange}{A} \land \neg \textcolor{orange}{B})$$ |
+| Äquivalenz  | $$(\textcolor{orange}{A} \leftrightarrow \textcolor{orange}{B})$$ | Gleichwertig                                                     |
 
 
-# Negation
-$$\neg \textcolor{orange}{A}$$
-<div style="text-align: center;">Gegenteil$$
-
-
-# Disjunktion
-$$(\textcolor{orange}{A} \lor \textcolor{orange}{B})$$
-<div style="text-align: center;">Eins von beiden Wahr$$
-
-
-# Konjunktion
-$$(\textcolor{orange}{A} \land \textcolor{orange}{B})$$
-<div style="text-align: center;">Beide Wahr$$
-
-
-# Implikation
-$$(\textcolor{orange}{A} \rightarrow \textcolor{orange}{B})$$
-$$\neg(\textcolor{orange}{A} \land \neg \textcolor{orange}{B})$$
-
-
-# Äquivalenz
-$$(\textcolor{orange}{A} \leftrightarrow \textcolor{orange}{B})$$
-<div style="text-align: center;">Gleichwertig$$
-
-
-<div style="text-align: center;"><i>(Klammerung wichtig!)</i>$$
-
-# Syntaxbaum
+### Syntaxbaum
 
 
 Zu jeder Formel $F$ kann ein Syntaxbaum erstellt werden. Mit ihm kann die Formel leicht in ihre Teilformen $Teilf(F)$ zerlegen werden, wodurch sie ausgewertet werden kann.
@@ -392,14 +250,14 @@ $$Teilf(\neg (\textcolor{orange}{A} \land \neg \textcolor{orange}{B})) = \{\neg 
 
 
 $$\neg (\textcolor{orange}{A} \land \neg \textcolor{orange}{B})$$
-<div>
+
 ![beispiel_syntaxbaum]()
-$$
 
 
 
-# Auswertung
-Um eine Formel auszuwerten benötigt man eine Interpretation $I$, welche den Atomen aus $\Sigma$ die Werte $\textcolor{LimeGreen}{W}$ für Wahr und $\textcolor{red}{F}$ für Falsch zuweist. Mit $val_I$ wird eine Abbildung definiert die nun alle Formeln aus $For0_\Sigma$ auswerten kann, durch eine Rekursive Definition der Operationen (<i>ausgelassen</i>).
+
+### Auswertung
+Um eine Formel auszuwerten benötigt man eine Interpretation $I$, welche den Atomen aus $\Sigma$ die Werte $\textcolor{LimeGreen}{W}$ für Wahr und $\textcolor{red}{F}$ für Falsch zuweist. Mit $val_I$ wird eine Abbildung definiert die nun alle Formeln aus $For0_\Sigma$ auswerten kann, durch eine Rekursive Definition der Operationen (*ausgelassen*).
 
 
 $$I: \Sigma \rightarrow \{\textcolor{LimeGreen}{W}, \textcolor{red}{F}\}$$
@@ -415,156 +273,88 @@ $$...$$
 
 
 
+| Eigenschaft     | Beschreibung                                       |
+| --------------- | -------------------------------------------------- |
+| Modell          | Eine Interpretation wertet die Formel zu Wahr aus. |
+| Erfüllbar       | Mindestens eine Interpretation ist Modell.         |
+| Allgemeingültig | Alle Interpretationen sind Modell.                 |
 
 
+### Relationen Aussagen Logik
 
-# Modell
-<div style="text-align: center;">Eine Interpretation wertet die Formel zu Wahr aus.$$
-
-
-# Erfüllbar
-<div style="text-align: center;">Mindestens eine Interpretation ist Modell.$$
-
-
-# Allgemeingültig
-<div style="text-align: center;">Alle Interpretationen sind Modell.$$
-
-
-
-
-# Relationen
-
-
-# Logische Folgerbarkeit
-$$\textcolor{orange}{A} \models \textcolor{orange}{B}$$
-<div style="text-align: center;">Modelle für $\textcolor{orange}{A}$ sind Modelle für $\textcolor{orange}{B}$$$
-
-
-# Logische Äquivalenz
-$$\textcolor{orange}{A} \equiv \textcolor{orange}{B}$$
-<div style="text-align: center;">$\textcolor{orange}{A}$ und $\textcolor{orange}{B}$ sind logisch Äquivalent$$
+| Logische Folgerbarkeit                                                       | Logische Äquivalenz                                                         |
+| ---------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| Modelle für $\textcolor{orange}{A}$ sind Modelle für $\textcolor{orange}{B}$ | $\textcolor{orange}{A}$ und $\textcolor{orange}{B}$ sind logisch Äquivalent |
+| $$\textcolor{orange}{A} \models \textcolor{orange}{B}$$                      | $$\textcolor{orange}{A} \equiv \textcolor{orange}{B}$$                      |
 
 
 
 
-
-
-
-
-# Normalform
+### Normalform
 
 
 Mit einer Wahrheitstabelle kann man eine Aussagenlogische Formel ausdrücken. Der Ausgang $Y$ kann auch den Wert $\perp$ haben, falls diese Kombination an Eingangs-werten nicht auftritt oder irrelevant ist. Eine Wahrheitstabelle ist wie eine Partielle Abbildung.
 $$f: \{\textcolor{red}{F}, \textcolor{LimeGreen}{W}\}^n \rightarrow \{\textcolor{red}{F}, \textcolor{LimeGreen}{W}\}^m$$
 $$x_1 \mapsto y_1$$
 $$x_2 \mapsto \perp$$
+
+| $\textcolor{orange}{A}$    | $\textcolor{orange}{B}$    | $Y$                        |
+| -------------------------- | -------------------------- | -------------------------- |
+| $\textcolor{#FF0000}{F}$   | $\textcolor{#FF0000}{F}$   | $\textcolor{LimeGreen}{W}$ |
+| $\textcolor{#FF0000}{F}$   | $\textcolor{LimeGreen}{W}$ | $\textcolor{#FF0000}{F}$   |
+| $\textcolor{LimeGreen}{W}$ | $\textcolor{#FF0000}{F}$   | $\textcolor{#FF0000}{F}$   |
+| $\textcolor{LimeGreen}{W}$ | $\textcolor{LimeGreen}{W}$ | $\textcolor{LimeGreen}{W}$ |
+
 Mit Hilfe der Wahrheitstabelle kann man nun die Normalform bilden, welche sich leicht realisieren lässt. Man unterscheidet zwischen der DNF und KNF.
 
 
-<div class="table" style="grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(5, 1fr);">
-<div class="table_bottom">$\textcolor{orange}{A}$$$<div class="table_bottom table_right">$\textcolor{orange}{B}$$$<div class="table_bottom table_left">$Y$$$
-<div class="table_top">$\textcolor{#FF0000}{F}$$$<div class="table_top table_right">$\textcolor{#FF0000}{F}$$$<div class="table_top table_left">$\textcolor{LimeGreen}{W}$$$
-<div>$\textcolor{#FF0000}{F}$$$<div class="table_right">$\textcolor{LimeGreen}{W}$$$<div class="table_left">$\textcolor{#FF0000}{F}$$$
-<div>$\textcolor{LimeGreen}{W}$$$<div class="table_right">$\textcolor{#FF0000}{F}$$$<div class="table_left">$\textcolor{#FF0000}{F}$$$
-<div>$\textcolor{LimeGreen}{W}$$$<div class="table_right">$\textcolor{LimeGreen}{W}$$$<div class="table_left">$\textcolor{LimeGreen}{W}$$$
-$$
-<div style="text-align: center;">
-<i>(Äquivalenz)</i>
-$$
 
 
-
-
-
-
-
-
-# Disjunktive NF
-Disjunktiv-verknüpfte Minterme
-$$DNF = (m_1 \lor m_2 \lor ...)$$
-# Minterm
-Konjunktiv-verknüpfte Kombinationen die $\textcolor{LimeGreen}{W}$ ergeben
-$$m_i = (\textcolor{orange}{A} \land \textcolor{orange}{B} \land...)$$
-
-
-# Konjunktive NF
-Konjunktiv-verknüpfte Maxterme
-$$KNF = (M_1 \land M_2 \land ...)$$
-# Maxterm
-Disjunktiv-verknüpfte Kombination die $\textcolor{red}{F}$ ergeben
-$$M_i = (\textcolor{orange}{A} \lor \textcolor{orange}{B} \lor...)$$
-
+| Disjunktive Normalform                                                 | Konjunktive Normalform                                               |
+| ---------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| Disjunktiv-verknüpfte Minterme                                         | Konjunktiv-verknüpfte Maxterme                                       |
+| $$DNF = (m_1 \lor m_2 \lor ...)$$                                      | $$KNF = (M_1 \land M_2 \land ...)$$                                  |
+| $$m_i = (\textcolor{orange}{A} \land \textcolor{orange}{B} \land...)$$ | $$M_i = (\textcolor{orange}{A} \lor \textcolor{orange}{B} \lor...)$$ |
 
 $$DNF \equiv Y \equiv KNF$$
 
 
 
 
-# KV-Diagramm
+#### KV-Diagramm
 
 ![beispiel_kv_diagramm]()
 
 
-
-
-# Minterme
-<ul>
-<li>$(\textcolor{#AA00FF}{\neg A \land C})$</li>
-<li>$(\textcolor{#00FFAA}{\neg A \land \neg B})$</li>
-<li>$(\textcolor{#00AAFF}{B \land C \land D})$</li>
-</ul>
-
-
-# Maxterme
-<ul>
-<li>$(\textcolor{#FF00AA}{\neg B \lor \neg \neg C})$</li>
-<li>$(\textcolor{#AAFF00}{\neg A \lor \neg \neg D})$</li>
-<li>$(\textcolor{#777777}{\neg A \lor \neg \neg B})$</li>
-</ul>
-<div style="text-align: center;">
-<i>(wurde invertiert)</i>
-$$
-
-
-
-
-
 Größtmögliche Rechtecke der Größe $2^n$ bilden. Diese ergeben die Primimplika(n)te (minimierte Terme). Für die KNF müssen alle Eingänge noch invertiert werden.
 
+| Minterme                                     | Maxterme                                         |
+| -------------------------------------------- | ------------------------------------------------ |
+| $(\textcolor{#AA00FF}{\neg A \land C})$      | $(\textcolor{#FF00AA}{\neg B \lor \neg \neg C})$ |
+| $(\textcolor{#00FFAA}{\neg A \land \neg B})$ | $(\textcolor{#AAFF00}{\neg A \lor \neg \neg D})$ |
+| $(\textcolor{#00AAFF}{B \land C \land D})$   | $(\textcolor{#777777}{\neg A \lor \neg \neg B})$ |
 
 
-
-$$Y \equiv (\left(\textcolor{#AA00FF}{\neg A \land C}\right) \lor \left(\textcolor{#00FFAA}{\neg A \land \neg B}\right) \lor \left(\textcolor{#00AAFF}{B \land C \land D}\right))$$
-<div style="text-align: center;">
-<i>(minimale DNF)</i>
-$$
-
-
-$$Y \equiv ((\textcolor{#FF00AA}{\neg B \lor C}) \land (\textcolor{#AAFF00}{\neg A \lor D}) \land (\textcolor{#777777}{\neg A \lor B}))$$
-<div style="text-align: center;">
-<i>(minimale KNF)</i>
-$$
+| minimale DNF                                                                                                                                                                        | minimale KNF                                                                                                                              |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| $$Y \equiv (\left(\textcolor{#AA00FF}{\neg A \land C}\right) \lor \left(\textcolor{#00FFAA}{\neg A \land \neg B}\right) \lor \left(\textcolor{#00AAFF}{B \land C \land D}\right))$$ | $$Y \equiv ((\textcolor{#FF00AA}{\neg B \lor C}) \land (\textcolor{#AAFF00}{\neg A \lor D}) \land (\textcolor{#777777}{\neg A \lor B}))$$ |
 
 
 
 
 
 
-# QMC-Verfahren (DNF)
-<ol>
-<li>Spalte füllen</li>
-<li>um eins verschiedene Paare finden</li>
-<li>in nächste Spalte zusammenfassen</li>
-<ul>
-<li>Unterschied wird durch $\perp$ ersetzt</li>
-</ul>
-<li>wiederholen bis keine Paare mehr</li>
-<li>Paar-lose sind Primimplika(n)te</li>
-<li>abgleichen und Redundante entfernen</li>
-</ol>
+#### QMC-Verfahren (DNF)
+1. Spalte füllen
+2. um eins verschiedene Paare finden
+3. in nächste Spalte zusammenfassen
+    - Unterschied wird durch $\perp$ ersetzt
+4. wiederholen bis keine Paare mehr
+5. Paar-lose sind Primimplika(n)te
+6. abgleichen und Redundante entfernen
 
 
-# QMC Optimierung
+#### QMC Optimierung
 QMC ist ein exakter Algorithmus und deswegen langsam.
 Ein heuristischer Algorithmus ist deutlich schneller, aber ein wenig ungenau. (ESPRESSO)
 Die Ungenauigkeit bezieht sich auf die vollständige Kürzung, es entsteht trotzdem eine valide DNF, nur nicht unbedingt die minimale.
@@ -576,11 +366,9 @@ Die Ungenauigkeit bezieht sich auf die vollständige Kürzung, es entsteht trotz
 
 
 
-# Prädikaten Logik
-# Beschreibung
+## Prädikaten Logik
 
-
-Die Syntax in der Prädikaten Logik wird erweitert durch Prädikate, Terme und Variablen.
+Die Syntax der Aussagen Logik wird in der Prädikaten Logik erweitert durch Prädikate, Terme und Variablen.
 Die Signatur $\Sigma$ ist nun ein Tupel und besteht aus der Menge der Prädikatssymbolen $P_\Sigma$, Funktionssymbolen $F_\Sigma$, der Abbildung $\alpha_\Sigma$ und der Menge der Variablen $Var_\Sigma$.
 $$\Sigma = (F_\Sigma, P_\Sigma, \alpha_\Sigma, Var_\Sigma)$$
 Die Abbildung $\alpha_\Sigma$ ordnet Elementen aus $F_\Sigma$ und $P_\Sigma$ eine Stelligkeit zu.
@@ -595,18 +383,18 @@ Mit $Teilf$ erhält man alle Teilformeln von einer Formel.
 Mit $Teilt$ erhält man alle Teilterme von einer Formel.
 
 
-# Syntaxbaum
+### Syntaxbaum
 $$((\forall x \textcolor{orange}{p_1}(\textcolor{cyan}{f_1}(\textcolor{red}{x})) \land \exists y \textcolor{orange}{p_1}(\textcolor{cyan}{f_2}(\textcolor{red}{y}, \textcolor{green}{x}, \textcolor{cyan}{f_0}))) \lor \textcolor{orange}{p_0})$$
 
 ![beispiel_syntaxbaum]()
 
-<div style="text-align: center;"><i>(Indices stehen für Stelligkeit)</i>$$
+*(Indices stehen für Stelligkeit)*
 
 
 
 
 
-# Quantoren (Zusätzliche Operationen)
+### Quantoren (Zusätzliche Operationen)
 
 
 Quantoren bringen eine Variable ein, welche in dem direkt darauf folgendem Block definiert ist. Tritt das gleiche Symbol nochmals auf handelt es sich um eine andere Variable.
@@ -617,51 +405,43 @@ $$[x/t]F$$
 
 
 
-# Existenzquantor
+#### Existenzquantor
 $$\exists x F$$
 Es gibt ein $x$ für das $F$ gilt
 
 
-# Allquantor
+#### Allquantor
 $$\forall x F$$
 Für alle $x$ gilt $F$
 
 
 
-# Auswertung
+### Auswertung
 Um eine Formel auszuwerten benötigt man eine Struktur $S$, welche aus einer Menge $U$ dem Universum und einer Menge $I$ der Interpretationsfunktion besteht. Zusätzlich benötigt man eine Variablenbelegung $v$ wodurch man eine erweiterte Struktur erhält. Mit $valt_{S,v}$ können Terme auswerten werden. Mit $valf_{S,v}$ können Formeln auswerten werden.
 $$S = (U, I)$$
 
-
-$$valf_{S,v}: For_\Sigma \rightarrow \{F, W\}$$
-$$0, 1 \mapsto F, W$$
-$$p_0 \mapsto \textcolor{orange}{I}(p_0)$$
-$$p_n(t, ...) \mapsto (\textcolor{cyan}{valt_{S,v}}(t), ...) \in \textcolor{orange}{I}(p_n)$$
-$$...$$
-
-
-$$\textcolor{cyan}{valt_{S,v}}: Term_\Sigma \rightarrow U$$
-$$var \mapsto \textcolor{green}{v}(var)$$
-$$f_0 \mapsto \textcolor{orange}{I}(f_0)$$
-$$f_n(t, ...) \mapsto (\textcolor{orange}{I}(f_n))(\textcolor{cyan}{valt_{S,v}}(t), ...)$$
+|                                                                                               |                                                                                            |                                                    |                                                                   |
+| --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------- | ----------------------------------------------------------------- |
+| $$valf_{S,v}: For_\Sigma \rightarrow \{F, W\}$$                                               | $$\textcolor{cyan}{valt_{S,v}}: Term_\Sigma \rightarrow U$$                                | $$\textcolor{green}{v}: Var_\Sigma \rightarrow U$$ | $$\textcolor{orange}{I}: F_\Sigma \cup P_\Sigma \rightarrow ...$$ |
+| $$0, 1 \mapsto F, W$$                                                                         | $$var \mapsto \textcolor{green}{v}(var)$$                                                  | $$var \mapsto u \in U$$                            | $$p_0 \mapsto F, W$$                                              |
+| $$p_0 \mapsto \textcolor{orange}{I}(p_0)$$                                                    | $$f_0 \mapsto \textcolor{orange}{I}(f_0)$$                                                 |                                                    | $$p_n \mapsto R \subseteq U^n$$                                   |
+| $$p_n(t, ...) \mapsto (\textcolor{cyan}{valt_{S,v}}(t), ...) \in \textcolor{orange}{I}(p_n)$$ | $$f_n(t, ...) \mapsto (\textcolor{orange}{I}(f_n))(\textcolor{cyan}{valt_{S,v}}(t), ...)$$ |                                                    | $$f_0 \mapsto u \in U$$                                           |
+| $$...$$                                                                                       |                                                                                            |                                                    | $$f_n \mapsto g: U^n \rightarrow U$$                              |
 
 
-$$\textcolor{green}{v}: Var_\Sigma \rightarrow U$$
-$$var \mapsto u \in U$$
 
 
-$$\textcolor{orange}{I}: F_\Sigma \cup P_\Sigma \rightarrow ...$$
-$$p_0 \mapsto F, W$$
-$$p_n \mapsto R \subseteq U^n$$
-$$f_0 \mapsto u \in U$$
-$$f_n \mapsto g: U^n \rightarrow U$$
+
+
+
+
 
 
 
 $$valf_{S, v}(\forall x F) = W\text{, wenn für alle } u \in U valf_{S, v_{x}^{u}}(F) \text{ gilt}$$
 $$valf_{S, v}(\exists x F) = W\text{, wenn es für mindestens ein } u \in U valf_{S, v_{x}^{u}}(F) \text{ gilt}$$
 
-# Klausel
+### Klausel
 Eine Klausel ist eine Mengen-darstellung einer KNF, wobei diese nicht eindeutig rückgängig gemacht werden kann.
 $$(A \land (\neg B \lor C))$$
 $$\{\{A\}, \{\neg B, C\}\}$$
