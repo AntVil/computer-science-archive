@@ -28,3 +28,7 @@
 div.equation{
     text-align: center;
 }
+
+strong, b, i{
+    color: var(--highlight-color);
+}
