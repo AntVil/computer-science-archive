@@ -16,7 +16,7 @@ server.use(express.urlencoded({ extended: true }))
 
 
 server.post("/getTopics", function(request, response){
-    response.send(fs.readdirSync(path.join(__dirname, "topics")));
+    response.send(fs.readdirSync(path.join(__dirname, "public", "topics")));
 });
 
 server.post("/getTopicContent", function(request, response){
@@ -25,7 +25,7 @@ server.post("/getTopicContent", function(request, response){
     
     // get file content
     let content = fs.readFileSync(
-        path.join(__dirname, "topics", topicName, "content.md"),
+        path.join(__dirname, "public", "topics", topicName, "content.md"),
         {
             "encoding": "utf-8"
         }

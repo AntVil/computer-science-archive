@@ -47,6 +47,12 @@
         border-bottom: none;
     }
 
+    img{
+        display: block;
+        margin: auto;
+        max-width: 250px;
+        width: 100%;
+    }
     
 
     /* computer view (hide all mobile) */

@@ -6,7 +6,8 @@ Die Menge, welche keine Elemente enthält wird mit $\emptyset$ bezeichnet.
 $$\{\} = \emptyset$$
 
 
-![beispiel_menge]()
+<img src="./menge.svg">
+
 
 Mit $n \notin M$ wird ausgedrückt, dass das Objekt $n$ nicht in der Menge $M$ enthalten ist.
 Eine **unendliche** Menge heißt Abzählbar, wenn es eine bijektive Abbildung zwischen $\mathbb{N}_0$ und der Menge gibt. Wenn es keine gibt heißt die Menge Überabzählbar.
@@ -23,10 +24,10 @@ Eine **unendliche** Menge heißt Abzählbar, wenn es eine bijektive Abbildung zw
 ### Mengen-Operationen
 Um Operationen auf Mengen auszuführen benötigt man ein **Universum** $U$, als Referenz Menge.
 
-| Vereinigung               | Schnitt               | Differenz               | Komplement               |
-| ------------------------- | --------------------- | ----------------------- | ------------------------ |
-| ![beispiel_vereinigung]() | ![beispiel_schnitt]() | ![beispiel_differenz]() | ![beispiel_komplement]() |
-| $$M \cup N$$              | $$M \cap N$$          | $$M \setminus N$$       | $$M^C$$                  |
+| Vereinigung                                                                         | Schnitt                                                                         | Differenz                                                                         | Komplement                                                                         |
+| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| <img src="./vereinigung.svg"> | <img src="./schnitt.svg"> | <img src="./differenz.svg"> | <img src="./komplement.svg"> |
+| $$M \cup N$$                                                                        | $$M \cap N$$                                                                    | $$M \setminus N$$                                                                 | $$M^C$$                                                                            |
 
 ### Kardinalität
 Mächtigkeit einer Menge
@@ -62,26 +63,26 @@ Mit $(a, b) \in R$ bezeichnet man, dass $a$ mit $b$ in Relation steht. Eine Rela
 
 | Eigenschaft        | Definition                                            | Beschreibung                                                        | Darstellung                       |
 | ------------------ | ----------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
-| Reflexiv           | $$\forall a \in M: (a, a) \in R$$                     | Alles steht mit sich selbst in Relation                             | ![beispiel_reflexiv]()            |
-| Symmetrisch        | $$(a,b) \in R \Rightarrow (b,a) \in R$$               | Alle Relationen sind Beidseitig.                                    | ![beispiel_symmetrisch]()         |
-| Antisymmetrisch    | $$(a,b), (b,a) \in R \Rightarrow a = b$$              | Alle Relationen sind Einseitig.                                     | ![beispiel_antisymmetrisch]()     |
-| Transitiv          | $$(a,b),(b,c)\in R \Rightarrow (a,c)\in R$$           | Über zwei Relationen verknüpfte Objekte sind auch direkt verknüpft. | ![beispiel_transitiv]()           |
-| Total              | $$\forall a,b \in M: (a,b) \in R \lor (b,a) \in R$$   | Alles steht mit allem mindestens Einseitig in Relation.             | ![beispiel_total]()               |
-| Halbordnung        | Reflexiv, <b>Antisymmetrisch</b> und Transitiv.       | -                                                                   | ![beispiel_halbordnung]()         |
-| Totalordnung       | Reflexiv, <b>Antisymmetrisch</b> Transitiv und Total. | -                                                                   | ![beispiel_totalordnung]()        |
-| Äquivalenzrelation | Reflexiv, <b>Symmetrisch</b> und Transitiv            | Die Relation unterteilt eine Menge in Äquivalenzklassen.            | ![beispiel_aequivalenzrelation]() |
+| Reflexiv           | $$\forall a \in M: (a, a) \in R$$                     | Alles steht mit sich selbst in Relation                             | <img src="./reflexiv.svg"/>            |
+| Symmetrisch        | $$(a,b) \in R \Rightarrow (b,a) \in R$$               | Alle Relationen sind Beidseitig.                                    | <img src="./symmetrisch.svg"/>         |
+| Antisymmetrisch    | $$(a,b), (b,a) \in R \Rightarrow a = b$$              | Alle Relationen sind Einseitig.                                     | <img src="./antisymmetrisch.svg"/>     |
+| Transitiv          | $$(a,b),(b,c)\in R \Rightarrow (a,c)\in R$$           | Über zwei Relationen verknüpfte Objekte sind auch direkt verknüpft. | <img src="./transitiv.svg"/>           |
+| Total              | $$\forall a,b \in M: (a,b) \in R \lor (b,a) \in R$$   | Alles steht mit allem mindestens Einseitig in Relation.             | <img src="./total.svg"/>               |
+| Halbordnung        | Reflexiv, <b>Antisymmetrisch</b> und Transitiv.       | -                                                                   | <img src="./halbordnung.svg"/>         |
+| Totalordnung       | Reflexiv, <b>Antisymmetrisch</b> Transitiv und Total. | -                                                                   | <img src="./totalordnung.svg"/>        |
+| Äquivalenzrelation | Reflexiv, <b>Symmetrisch</b> und Transitiv            | Die Relation unterteilt eine Menge in Äquivalenzklassen.            | <img src="./aequivalenzrelation.svg"/> |
 
 
 ### Äquivalenzklassen
 
-![beispiel_aequivalenzklasse_1]()
+<img src="./aequivalenzklasse_1.svg"/>
 
 $$[a]_R = [b]_R = [c]_R$$
 $$[a]_R = \{a, b, c\}$$
 
 
 
-![beispiel_aequivalenzklasse_2]()
+<img src="./aequivalenzklasse_2.svg"/>
 
 $$[d]_R$$
 $$[d]_R = \{d\}$$
@@ -132,16 +133,16 @@ Mit $Abb(M, N)$ erhält man eine Menge aller Abbildungen von der Menge $M$ zur M
 
 ### Eigenschaften Abbildungen
 
-|                                Injektiv                                |                               Surjektiv                                |
-| :--------------------------------------------------------------------: | :--------------------------------------------------------------------: |
-|                         ![beispiel_injektiv]()                         |                        ![beispiel_surjektiv]()                         |
-| Jedes Element aus dem Bildbereich wird <b>maximal einmal</b> getroffen | Jedes Element aus dem Bildbereich wird <b>minimal einmal</b> getroffen |
-|          $$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$          |             $$\forall b \in N: \exists a \in M: f(a) = b$$             |
+|                                     Injektiv                                     |                                      Surjektiv                                      |
+| :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: |
+| <img src="./injektiv.svg"> | <img src="./surjektiv.svg">() |
+|      Jedes Element aus dem Bildbereich wird <b>maximal einmal</b> getroffen      |       Jedes Element aus dem Bildbereich wird <b>minimal einmal</b> getroffen        |
+|               $$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$               |                   $$\forall b \in N: \exists a \in M: f(a) = b$$                    |
 
 
 |                                                      Bijektiv                                                       |
 | :-----------------------------------------------------------------------------------------------------------------: |
-|                                               ![beispiel_bijektiv]()                                                |
+|                  <img src="./bijektiv.svg">                   |
 | Jedes Element aus dem Bildbereich wird <b>genau einmal</b> getroffen. Bijektive Abbildungen sind immer invertierbar |
 |                                               Injektiv und Surjektiv                                                |
 
@@ -186,7 +187,7 @@ $$(M, \oplus, \odot)$$
 ### Algebraische Strukturen
 Die Eigenschaften der Operationen auf der Menge bestimmen die Algebraische Struktur.
 
-![beispiel_algebraische_struktur]()
+<img src="./algebraische_strukturen.svg"/>
 
 
 
@@ -251,7 +252,7 @@ $$Teilf(\neg (\textcolor{orange}{A} \land \neg \textcolor{orange}{B})) = \{\neg 
 
 $$\neg (\textcolor{orange}{A} \land \neg \textcolor{orange}{B})$$
 
-![beispiel_syntaxbaum]()
+<img src="./aussagenlogik_syntaxbaum.svg"/>
 
 
 
@@ -323,7 +324,7 @@ $$DNF \equiv Y \equiv KNF$$
 
 #### KV-Diagramm
 
-![beispiel_kv_diagramm]()
+<img src="./kv_diagramm.svg"/>
 
 
 Größtmögliche Rechtecke der Größe $2^n$ bilden. Diese ergeben die Primimplika(n)te (minimierte Terme). Für die KNF müssen alle Eingänge noch invertiert werden.
@@ -386,7 +387,7 @@ Mit $Teilt$ erhält man alle Teilterme von einer Formel.
 ### Syntaxbaum
 $$((\forall x \textcolor{orange}{p_1}(\textcolor{cyan}{f_1}(\textcolor{red}{x})) \land \exists y \textcolor{orange}{p_1}(\textcolor{cyan}{f_2}(\textcolor{red}{y}, \textcolor{green}{x}, \textcolor{cyan}{f_0}))) \lor \textcolor{orange}{p_0})$$
 
-![beispiel_syntaxbaum]()
+<img src="./praedikatenlogik_syntaxbaum.svg"/>
 
 *(Indices stehen für Stelligkeit)*
 
@@ -524,8 +525,8 @@ Permutationen alternative Schreibweisen:
 
 ### Schreibweisen
 
-| Matrix Schreibweise                                                                          | Zyklische Schreibweise                                                                                                                         |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| Matrix Schreibweise                                                                              | Zyklische Schreibweise                                                                                                                         |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | $$\left(\begin{array}{cccccc}1 & 2 & 3 & 4 & 5 & 6 \\ 2  & 3 & 1 & 5 & 4 & 6\end{array}\right)$$ | $$\left(\begin{array}{ccc}1 & 2 & 3\end{array}\right)\left(\begin{array}{cc}4 & 5\end{array}\right)\left(\begin{array}{c}6\end{array}\right)$$ |
 
 
@@ -552,7 +553,7 @@ Eine Reihe ist eine besondere Folge. Bei ihr ist der Abstand zwischen aufeinande
 | Arithmetische Folge                                           | Geometrische Folge                                                                | Arithmetische Reihe                                                                                                            | Geometrische Reihe                                                                                                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | $$\textcolor{orange}{a_{n+1}} = \textcolor{orange}{a_n} + k$$ | $$\textcolor{cyan}{g_{n+1}} = \textcolor{cyan}{g_n} \cdot \textcolor{purple}{q}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{orange}{a_i} = \frac{n \cdot (\textcolor{orange}{a_1} + \textcolor{orange}{a_n})}{2}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{cyan}{g_i} = \textcolor{cyan}{g_1} \cdot \frac{\textcolor{purple}{q}^n - 1}{\textcolor{purple}{q} - 1}$$ |
-| ![beispiel_arithmetische_folge]()                             | ![beispiel_geometrische_folge]()                                                  | ![beispiel_arithmetische_reihe]()                                                                                              | ![beispiel_geometrische_reihe]()                                                                                                                 |
+| <img src="./arithmetische_folge.svg"/>                             | <img src="./geometrische_folge.svg"/>                                                  | <img src="./arithmetische_reihe.svg"/>                                                                                              | <img src="./geometrische_reihe.svg"/>                                                                                                                 |
 
 
 
@@ -563,9 +564,9 @@ $$\displaystyle\lim_{n \rightarrow \infty} (a_n) = g$$
 
 ### Reihen Konvergenz
 
-| Notwendiges Kriterium                                                      | Hinreichendes Kriterium                               | Hinreichendes Kriterium                                             |
-| -------------------------------------------------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------- |
-| $$\displaystyle\lim_{n \rightarrow \infty}(\textcolor{#006666}{g_n}) = 0$$ | $$\displaystyle\lim_{n \rightarrow \infty}\left(\left| \frac{\textcolor{#006666}{g_{n+1}}}{\textcolor{#006666}{g_n}}\right\vert \right) < 1$$ | $$\displaystyle\lim_{n \rightarrow \infty}\left(\left| \sqrt[n]{\textcolor{#006666}{g_n}}\right\vert \right) < 1$$ |
+| Notwendiges Kriterium                                                      | Hinreichendes Kriterium                               | Hinreichendes Kriterium                                                                |
+| -------------------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| $$\displaystyle\lim_{n \rightarrow \infty}(\textcolor{#006666}{g_n}) = 0$$ | $$\displaystyle\lim_{n \rightarrow \infty}\left(\left \vert \frac{\textcolor{#006666}{g_{n+1}}}{\textcolor{#006666}{g_n}}\right\vert \right) < 1$$ | $$\displaystyle\lim_{n \rightarrow \infty}\left(\left \vert \sqrt[n]{\textcolor{#006666}{g_n}}\right\vert \right) < 1$$ |
 
 
 
@@ -587,7 +588,7 @@ Die Ableitung einer Funktion ist eine Funktion. Die Ableitung gibt die Steigung 
 $$\textcolor{orange}{f}(x) = 1 - \frac{x^2}{2} + \frac{x^3}{16} + \frac{x^4}{16}$$
 $$\textcolor{cyan}{f'}(x) = -x + \frac{3x^2}{16} + \frac{x^3}{6}$$
 
-![beispiel_ableitung]()
+<img src="./ableitung.svg"/>
 
 
 ### Ableitungen
@@ -696,7 +697,7 @@ $$\vec{v} = \begin{pmatrix}v_0\\v_1\\\vdots\end{pmatrix}$$
 Sie können addiert und skaliert werden. Das Skalarprodukt zwischen zwei Vektoren ergibt einen Skalar.
 $$\vec{v_1} \cdot \vec{v_2} = \displaystyle\sum_{i=0}^{n}v_{1_i} \cdot v_{2_i}$$
 
-![beispiel_vektor]()
+<img src="./vektor.svg"/>
 
 
 
@@ -716,7 +717,7 @@ Wenn ein Vektor durch andere Vektoren darstellbar ist, ist dieser Vektor linear 
 $$1 \cdot \textcolor{#FFAA00}{\left(\begin{array}{c}1\\2\end{array}\right)} + 2 \cdot \textcolor{#00AAFF}{\left(\begin{array}{c}\frac{1}{2}\\-\frac{1}{2}\end{array}\right)} = \textcolor{#AA00FF}{\left(\begin{array}{c}2\\1\end{array}\right)}$$
 Ansonsten sind die Vektoren linear unabhängig.
 
-![beispiel_linearkombination]()
+<img src="./linearkombination.svg"/>
 
 
 
@@ -724,7 +725,7 @@ Ansonsten sind die Vektoren linear unabhängig.
 Die Lineare Hülle ist die Menge aller Linearkombinationen von Vektoren eines Vektorraums. Damit kann Geometrisch gesehen ein Punkt, eine Gerade, eine Ebene, etc. durch den Ursprung beschrieben werden.
 $$\text{span}(\vec{v_0}, \vec{v_1}, ..., \vec{v_m}) = \left\{\vec{v} \in K^n \left| \vec{v} = \displaystyle\sum_{i=0}^{m} a_i \cdot \vec{v_i}\right.\right\}$$
 
-![beispiel_span]()
+<img src="./span.svg"/>
 
 
 
@@ -755,7 +756,7 @@ $$D \rightarrow W$$
 $$d_0 \mapsto w_0$$
 $$\vdots$$
 
-![beispiel_lineare_abbildung]()
+<img src="./lineare_abbildung.svg"/>
 
 *Rotationsmatrix*
 

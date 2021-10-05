@@ -34,23 +34,12 @@
  * @param {String} topicName 
  */
 async function loadTopicContent(topicName){
-    let url = [...window.location.href.split("/").slice(0, -1), "getTopicContent"].join("/");
+    let url = [...window.location.href.split("/").slice(0, -1), "topics", topicName, "content.md"].join("/");
 
-    let request = {
-        "topicName": topicName
-    }
+    let content = await (await fetch(url)).text();
 
-    let response = await fetch(url, {
-        "method": "POST",
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "body": JSON.stringify(request)
-    });
-    response = await response.json();
+    content = content.replaceAll("./", `./topics/${topicName}/`)
 
-    let content = response.content;
-    
     // convert equation markdown
     content = content.split("$$").reduce(function(s1, s2, i){
         if(i % 2 == 0){

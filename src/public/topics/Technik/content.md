@@ -12,7 +12,7 @@
 
 
 
-# Signal Converter
+### Signal Converter
 | Begriffe                 | Beschreibung                                      |
 | ------------------------ | ------------------------------------------------- |
 | **adc**                  | analog-digital-converter                          |
@@ -24,7 +24,7 @@
 
 
 
-# Abtasttheorem (Nyquist-Shannon)
+### Abtasttheorem (Nyquist-Shannon)
 Abtastfrequenz $f_A$ muss mindestens doppelt so groß sein, wie die größte Signalfrequenz:
 $$f_A \geq 2 \cdot f_{max}$$
 
@@ -37,7 +37,7 @@ Andernfalls können Frequenzen nicht korrekt wiedergegeben werden. (Alias Effekt
 
 
 
-# Codierung
+### Codierung
 **Tetraden Code** = Jede Ziffer mit Nibble codiert
 
 **Maschinenwort** = Bitstream (Folge an Bits)
@@ -53,7 +53,7 @@ Andernfalls können Frequenzen nicht korrekt wiedergegeben werden. (Alias Effekt
 
 
 
-# Komma Codierung
+### Komma Codierung
 | Festkomma     | Gleitkomma             |
 | ------------- | ---------------------- |
 | einfach       | komplex                |
@@ -66,7 +66,7 @@ Andernfalls können Frequenzen nicht korrekt wiedergegeben werden. (Alias Effekt
 
 
 
-# zu Binär
+### zu Binär
 
 
 Durch zwei mit Rest teilen bis 0 herauskommt, danach
@@ -95,7 +95,7 @@ $$0.41_{(10)} \approx 0.01101_{(2)}$$
 
 
 
-# Komplement
+#### Komplement
 **Einerkomplement**: alles Invertiert (0 doppelt encodiert, symmetrisch)
 <br>
 
@@ -108,7 +108,7 @@ $$0.41_{(10)} \approx 0.01101_{(2)}$$
 
 
 
-# Codierungen
+## Codierungen
 
 Ein Zeichenvorrat beschreibt die Menge aller Zeichen, welche in einem Wort verwendet werden können. 
 Dabei ist eine Codierung eine Abbildung von einem Zeichenvorrat in einen anderen Zeichenvorrat. In der (Technischen) Informatik ist der Bildbereich meist die Menge $\left\{0, 1\right\}^*$ (Jede Kombination aus 0 und 1). 
@@ -119,7 +119,7 @@ $$...$$
 
 Bekannte Codes wären 7-Bit ASCII, 8-Bit ASCII und Unicode.
 
-# Eigenschaften (Rechencodes)
+### Eigenschaften (Rechencodes)
 
 | Symmetrische Codes                                            | Progressive Codes                                           | Gleichgewichtige Codes                                       |
 | ------------------------------------------------------------- | ----------------------------------------------------------- | ------------------------------------------------------------ |
@@ -128,7 +128,7 @@ Bekannte Codes wären 7-Bit ASCII, 8-Bit ASCII und Unicode.
 
 
 
-# Fano-Bedingung
+### Fano-Bedingung
 Kein Wort einer Codierung ist ein Teil eines anderen Worts. Nur Blätter im Binärbaum werden codiert. (präfixfrei)
 
 ![beispiel_fano_bedingung_1]()
@@ -152,7 +152,7 @@ Fano-Bedingung erfüllt.
 
 
 
-# Hamming-Distanz
+### Hamming-Distanz
 
 
 Die Hamming-Distanz $D_n$ beschreibt den kleinsten Unterschied zwischen allen Codierten Wörtern. Die Wörter $000$ und $010$ unterscheiden sich in einem Zeichen, die Distanz wäre $1$. Codes die eine Korrektur zu lassen heißen Hamming-Codes.
@@ -167,7 +167,7 @@ Die Hamming-Distanz $D_n$ beschreibt den kleinsten Unterschied zwischen allen Co
 
 
 
-# Blockprüfung
+### Blockprüfung
 Mit der Blockprüfung kann ein Code erweitert werden, um die Position von Fehlern zu finden und zu beheben. Es ist die Kombination aus VRC und LRC.
 
 | VRC (vertical redundancy check)                                               | LRC (longitudinal redundancy check)                                            |
@@ -177,8 +177,8 @@ Mit der Blockprüfung kann ein Code erweitert werden, um die Position von Fehler
 *(Paritäts-Festlegung wird im voraus ausgemacht)*
 
 
-# Datenkompression
-# Huffman-Code Algorithmus
+## Datenkompression
+### Huffman-Code Algorithmus
 Der Huffman-Code Algorithmus erstellt für einen Eingabetext einen Binär-Codierbaum zur codierung und decodierung des Eingabetext. Dabei wird die Häufigkeit von Symbolen gezählt. Symbole mit größster Häufigkeit werden zusammengefasst zu einem Baum.
 
 
@@ -190,7 +190,7 @@ Der Huffman-Code Algorithmus erstellt für einen Eingabetext einen Binär-Codier
 ![beispiel_huffman_2]()
 
 
-# Informationsreduzierende Codes
+### Informationsreduzierende Codes
 Bei Bild-, Video- und Audiodateien können Information entfernt werden, ohne vom Menschen sicht-/hörbare unterschiede. Die Kompression kann nicht mehr rückgängig gemacht werden, ist aber in den meisten Fällen auch nicht nötig.
 <br>
 
@@ -202,7 +202,7 @@ Bei Bild-, Video- und Audiodateien können Information entfernt werden, ohne vom
 
 
 
-# Schaltungen (Schaltnetz)
+## Schaltungen (Schaltnetz)
 
 
 
@@ -217,7 +217,7 @@ Die beiden Bereiche werden von einander getrennt durch einen Sicherheitsabstand 
 
 
 
-# Logische-Gatter
+### Logische-Gatter
 
 | not-Gatter        | and-Gatter        | or-Gatter        | xor-Gatter        | nand-Gatter        | nor-Gatter        | xnor-Gatter        |
 | ----------------- | ----------------- | ---------------- | ----------------- | ------------------ | ----------------- | ------------------ |
@@ -227,24 +227,24 @@ Die beiden Bereiche werden von einander getrennt durch einen Sicherheitsabstand 
 
 
 
-# Vollständiges System
+### Vollständiges System
 Ein vollständiges System ist eine Menge an Logischen Gattern mit denen man jede Schaltung Realisieren kann. Die Menge $\{nand\}$ wäre ein mögliches Vollständiges System.
 
 
-# Schaltnetz
+### Schaltnetz
 Eingänge und Ausgänge ohne Speicher (Zeitunabhängig)
 $$f(A, B, ...) = (Y_1, Y_2, ...)$$
 
 
 
 
-# Halbaddierer (HA)
+#### Halbaddierer (HA)
 Addiert zwei Bits
 $S$: Sum, $C$: Carry
 ![beispiel_halbaddierer]()
 
 
-# Volladdierer (VA)
+#### Volladdierer (VA)
 Addiert drei Bits
 $S$: Sum, $C$: Carry
 ![beispiel_volladdierer]()
@@ -264,13 +264,13 @@ Die Komplexität integrierter Schaltkreise verdoppelt sich regelmäßig (ca. 2 J
 
 
 
-# FlipFlops (Schaltwerk)
+## FlipFlops (Schaltwerk)
 
 Ein FlipFlop ist eine zeitabhängige Schaltung, wegen einer Gedächnisfunktion bzw. eines Zustandsspeicher, durch **Rückkopplung** von den Ausgängen zu den Eingängen.
 $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 
-# Nicht-Taktgesteuerte FlipFlops (Basis-FlipFlop)}
-# RS NOR-Latch
+### Nicht-Taktgesteuerte FlipFlops (Basis-FlipFlop)}
+#### RS NOR-Latch
 
 
 Speichert ein Bit, durch einen Reset $R$ und Set $S$ Eingang. $(R \land S)$ ist ein undefinierter Zustand.
@@ -280,8 +280,8 @@ Speichert ein Bit, durch einen Reset $R$ und Set $S$ Eingang. $(R \land S)$ ist 
 
 
 
-# Taktgesteuerte FlipFlops
-# RS-FlipFlop
+### Taktgesteuerte FlipFlops
+#### RS-FlipFlop
 
 
 Arbeitet wie eine RS NOR-Latch, jedoch nur wenn der Takt auf $\textcolor{LimeGreen}{W}$ ist, sonst wird der Zustand gespeichert.
@@ -291,7 +291,7 @@ Arbeitet wie eine RS NOR-Latch, jedoch nur wenn der Takt auf $\textcolor{LimeGre
 
 
 
-# D-FlipFlop
+#### D-FlipFlop
 
 
 Übernimmt den Zustand von $D$ und speichert diesen Während $T$ den Wert $\textcolor{red}{F}$ hat.
@@ -303,8 +303,8 @@ Arbeitet wie eine RS NOR-Latch, jedoch nur wenn der Takt auf $\textcolor{LimeGre
 
 
 
-# Flankengesteuerte FlipFlops
-# Impulsglied
+### Flankengesteuerte FlipFlops
+#### Impulsglied
 
 
 Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen ein Signal von $\textcolor{red}{F}$ zu $\textcolor{LimeGreen}{W}$ wechselt.
@@ -313,8 +313,8 @@ Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen 
 ![beispiel_impulsglied]()
 
 
-# Einflankengesteuerte FlipFlops
-# RS-FlipFlop
+#### Einflankengesteuerte FlipFlops
+##### RS-FlipFlop
 
 
 Arbeitet wie eine RS NOR-Latch , jedoch nur bei positiven Flanken von $T$, sonst wird der Zustand gespeichert.
@@ -324,7 +324,7 @@ Arbeitet wie eine RS NOR-Latch , jedoch nur bei positiven Flanken von $T$, sonst
 
 
 
-# D-FlipFlop
+##### D-FlipFlop
 
 
 Übernimmt den Zustand von $D$ während der positiven Taktflanken von $T$ und speichert diesen.
@@ -335,7 +335,7 @@ Arbeitet wie eine RS NOR-Latch , jedoch nur bei positiven Flanken von $T$, sonst
 
 
 
-# JK-FlipFlop
+##### JK-FlipFlop
 
 
 Arbeitet genau wie ein Einflankengesteuertes RS-FlipFlop, nur, dass $(R \land S)$ zum toggeln des gespeicherten Bit führt. (Toggle-Modus)
@@ -346,8 +346,8 @@ Arbeitet genau wie ein Einflankengesteuertes RS-FlipFlop, nur, dass $(R \land S)
 
 
 
-# Zweiflankengesteuerte FlipFlops
-# JK-FlipFlop
+#### Zweiflankengesteuerte FlipFlops
+##### JK-FlipFlop
 
 
 Arbeitet wie ein Einflankengesteuertes JK-FlipFlop, nur, dass es erst bei der negativen Flanke von $T$ das gespeicherte Bit ausgibt. (Retardierend)
@@ -358,7 +358,7 @@ Arbeitet wie ein Einflankengesteuertes JK-FlipFlop, nur, dass es erst bei der ne
 
 
 
-# Synthese-Tabelle
+### Synthese-Tabelle
 
 
 Eine Synthese-Tabelle ist eine abgewandelte Wahrheitstabelle um ein FlipFlop platzsparend zu charakterisieren.
@@ -378,7 +378,7 @@ Eine Synthese-Tabelle ist eine abgewandelte Wahrheitstabelle um ein FlipFlop pla
 
 
 
-# Endliche Automaten (Schaltwerk)
+## Endliche Automaten (Schaltwerk)
 
 
 
@@ -393,17 +393,17 @@ Bei der graphischen Darstellung werden Zustände über Übergänge verknüpft. E
 
 
 
-# Eigenschaften
+### Eigenschaften
 
 
-# Mealy-Automat
+#### Mealy-Automat
 Die Ausgabe kann sich ändern während $T \equiv 0$.
 Der Automat ist **ereignisorientiert**.
 $$\delta: X \times Z \rightarrow Z$$
 $$\lambda: X \times Z \rightarrow Y$$
 
 
-# Moore-Automat
+#### Moore-Automat
 Die Ausgabe ist nur durch den Zustand bestimmt.
 Der Automat ist **zustandsorientiert**.
 $$\delta: X \times Z \rightarrow Z$$
@@ -413,13 +413,13 @@ $$\lambda: Z \rightarrow Y$$
 
 
 
-# Medwedjew-Automat
+#### Medwedjew-Automat
 Die Ausgabe ist der Zustand.
 $$\delta: X \times Z \rightarrow Z$$
 $$\lambda = id_{Z}$$
 
 
-# Autonomer-Automat
+#### Autonomer-Automat
 Es gibt keine Eingänge.
 $$X = \left\{()\right\}$$
 $$\delta: X \times Z \rightarrow Z$$
@@ -430,7 +430,7 @@ $$\lambda: Z \rightarrow Y$$
 
 
 
-# Zustandsübergangs-Tabelle
+### Zustandsübergangs-Tabelle
 Eine Zustandsübergangs-Tabelle ist eine abgewandelte Wahrheitstabelle um einen Automaten zu charakterisieren.
 Das Beispiel rechts ist ein Automat, welcher entscheiden kann, ob eine Eingabe $e \in \{0, 1\}^*$ eine gerade Anzahl an $1$ enthält.
 
@@ -443,7 +443,7 @@ Das Beispiel rechts ist ein Automat, welcher entscheiden kann, ob eine Eingabe $
 | $\textcolor{LimeGreen}{W}$ | $z_1$ | $z_1$     |
 
 
-# Synchrone Zähler
+### Synchrone Zähler
 Um einen Automaten mit mehreren Zuständen zu realisieren, bildet man, für ein gewähltes FlipFlop, die Charakteristische Gleichung, also die Normalform. Danach bildet man die Normalform von jedem Ausgang einzeln, wobei man bei jedem die Ausgangs-variable nicht kürzen darf.
 Im nächsten Schritt wird für jede Normalform der Ausgänge ein Koeffizientenvergleich mit der Normalform des FlipFlops durchgeführt. Dadurch erhält man die Kombination aus Eingängen, welche an den jeweiligen Eingang der FlipFlops kommt.
 Um die Schaltung zu realisieren, werden die Eingänge der FlipFlops entsprechend verknüpft und die Clock wird mit allen FlipFlops verbunden.
