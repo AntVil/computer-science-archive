@@ -54,16 +54,16 @@ async function loadTopicContent(topicName){
     // convert equation markdown
     content = content.split("$$").reduce(function(s1, s2, i){
         if(i % 2 == 0){
-            return `${s1}</div>${s2}`;
+            return `${s1}\`</div>${s2}`;
         }else{
-            return `${s1}<div class="equation">${s2}`;
+            return `${s1}<div class="equation">\`${s2}`;
         }
     });
     content = content.split("$").reduce(function(s1, s2, i){
         if(i % 2 == 0){
-            return `${s1}</span>${s2}`;
+            return `${s1}\`</span>${s2}`;
         }else{
-            return `${s1}<span class="equation">${s2}`;
+            return `${s1}<span class="equation">\`${s2}`;
         }
     });
 
@@ -76,7 +76,8 @@ async function loadTopicContent(topicName){
     // render equations
     let equations = document.getElementsByClassName("equation");
     for(let equation of equations){
-        equation.innerHTML = katex.renderToString(equation.innerText, {
+        let mathCode = equation.innerText.replaceAll("`", "");
+        equation.innerHTML = katex.renderToString(mathCode, {
             "throwOnError": false
         });
     }
