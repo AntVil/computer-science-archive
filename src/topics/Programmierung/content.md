@@ -220,7 +220,7 @@ Eine Registermaschine hat sehr wenige Operationen, kann aber mit genug Zeit jede
 ![beispiel_registermaschine]()
 
 | Increment                      | Decrement                                                        | Konkatenation                                                    | Iteration                                       |
-| ------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------- |  |
+| ------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------- |
 | Erhöht das Register $x$ um $1$ | Verringert das Register $x$ um $1$ (wenn der Wert nicht $0$ ist) | Verringert das Register $x$ um $1$ (wenn der Wert nicht $0$ ist) | Führt $B$ aus bis Register $x$ den Wert $0$ hat |
 | $$a_x$$                        | $$s_x$$                                                          | $$AB$$                                                           | $$(B)_x$$                                       |
 
