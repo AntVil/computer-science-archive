@@ -24,10 +24,10 @@ Eine **unendliche** Menge heißt Abzählbar, wenn es eine bijektive Abbildung zw
 ### Mengen-Operationen
 Um Operationen auf Mengen auszuführen benötigt man ein **Universum** $U$, als Referenz Menge.
 
-| Vereinigung                                                                         | Schnitt                                                                         | Differenz                                                                         | Komplement                                                                         |
-| ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Vereinigung                   | Schnitt                   | Differenz                   | Komplement                   |
+| ----------------------------- | ------------------------- | --------------------------- | ---------------------------- |
 | <img src="./vereinigung.svg"> | <img src="./schnitt.svg"> | <img src="./differenz.svg"> | <img src="./komplement.svg"> |
-| $$M \cup N$$                                                                        | $$M \cap N$$                                                                    | $$M \setminus N$$                                                                 | $$M^C$$                                                                            |
+| $$M \cup N$$                  | $$M \cap N$$              | $$M \setminus N$$           | $$M^C$$                      |
 
 ### Kardinalität
 Mächtigkeit einer Menge
@@ -61,8 +61,8 @@ Mit $(a, b) \in R$ bezeichnet man, dass $a$ mit $b$ in Relation steht. Eine Rela
 
 ### Eigenschaften Relationen
 
-| Eigenschaft        | Definition                                            | Beschreibung                                                        | Darstellung                       |
-| ------------------ | ----------------------------------------------------- | ------------------------------------------------------------------- | --------------------------------- |
+| Eigenschaft        | Definition                                            | Beschreibung                                                        | Darstellung                            |
+| ------------------ | ----------------------------------------------------- | ------------------------------------------------------------------- | -------------------------------------- |
 | Reflexiv           | $$\forall a \in M: (a, a) \in R$$                     | Alles steht mit sich selbst in Relation                             | <img src="./reflexiv.svg"/>            |
 | Symmetrisch        | $$(a,b) \in R \Rightarrow (b,a) \in R$$               | Alle Relationen sind Beidseitig.                                    | <img src="./symmetrisch.svg"/>         |
 | Antisymmetrisch    | $$(a,b), (b,a) \in R \Rightarrow a = b$$              | Alle Relationen sind Einseitig.                                     | <img src="./antisymmetrisch.svg"/>     |
@@ -133,16 +133,16 @@ Mit $Abb(M, N)$ erhält man eine Menge aller Abbildungen von der Menge $M$ zur M
 
 ### Eigenschaften Abbildungen
 
-|                                     Injektiv                                     |                                      Surjektiv                                      |
-| :------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------: |
-| <img src="./injektiv.svg"> | <img src="./surjektiv.svg">() |
-|      Jedes Element aus dem Bildbereich wird <b>maximal einmal</b> getroffen      |       Jedes Element aus dem Bildbereich wird <b>minimal einmal</b> getroffen        |
-|               $$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$               |                   $$\forall b \in N: \exists a \in M: f(a) = b$$                    |
+|                                Injektiv                                |                               Surjektiv                                |
+| :--------------------------------------------------------------------: | :--------------------------------------------------------------------: |
+|                       <img src="./injektiv.svg">                       |                     <img src="./surjektiv.svg">()                      |
+| Jedes Element aus dem Bildbereich wird <b>maximal einmal</b> getroffen | Jedes Element aus dem Bildbereich wird <b>minimal einmal</b> getroffen |
+|          $$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$          |             $$\forall b \in N: \exists a \in M: f(a) = b$$             |
 
 
 |                                                      Bijektiv                                                       |
 | :-----------------------------------------------------------------------------------------------------------------: |
-|                  <img src="./bijektiv.svg">                   |
+|                                             <img src="./bijektiv.svg">                                              |
 | Jedes Element aus dem Bildbereich wird <b>genau einmal</b> getroffen. Bijektive Abbildungen sind immer invertierbar |
 |                                               Injektiv und Surjektiv                                                |
 
@@ -553,7 +553,7 @@ Eine Reihe ist eine besondere Folge. Bei ihr ist der Abstand zwischen aufeinande
 | Arithmetische Folge                                           | Geometrische Folge                                                                | Arithmetische Reihe                                                                                                            | Geometrische Reihe                                                                                                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | $$\textcolor{orange}{a_{n+1}} = \textcolor{orange}{a_n} + k$$ | $$\textcolor{cyan}{g_{n+1}} = \textcolor{cyan}{g_n} \cdot \textcolor{purple}{q}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{orange}{a_i} = \frac{n \cdot (\textcolor{orange}{a_1} + \textcolor{orange}{a_n})}{2}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{cyan}{g_i} = \textcolor{cyan}{g_1} \cdot \frac{\textcolor{purple}{q}^n - 1}{\textcolor{purple}{q} - 1}$$ |
-| <img src="./arithmetische_folge.svg"/>                             | <img src="./geometrische_folge.svg"/>                                                  | <img src="./arithmetische_reihe.svg"/>                                                                                              | <img src="./geometrische_reihe.svg"/>                                                                                                                 |
+| <img src="./arithmetische_folge.svg"/>                        | <img src="./geometrische_folge.svg"/>                                             | <img src="./arithmetische_reihe.svg"/>                                                                                         | <img src="./geometrische_reihe.svg"/>                                                                                                            |
 
 
 
@@ -564,8 +564,8 @@ $$\displaystyle\lim_{n \rightarrow \infty} (a_n) = g$$
 
 ### Reihen Konvergenz
 
-| Notwendiges Kriterium                                                      | Hinreichendes Kriterium                               | Hinreichendes Kriterium                                                                |
-| -------------------------------------------------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| Notwendiges Kriterium                                                      | Hinreichendes Kriterium                                                                                                                            | Hinreichendes Kriterium                                                                                                 |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | $$\displaystyle\lim_{n \rightarrow \infty}(\textcolor{#006666}{g_n}) = 0$$ | $$\displaystyle\lim_{n \rightarrow \infty}\left(\left \vert \frac{\textcolor{#006666}{g_{n+1}}}{\textcolor{#006666}{g_n}}\right\vert \right) < 1$$ | $$\displaystyle\lim_{n \rightarrow \infty}\left(\left \vert \sqrt[n]{\textcolor{#006666}{g_n}}\right\vert \right) < 1$$ |
 
 
@@ -585,8 +585,8 @@ $$r = \displaystyle\lim_{n \rightarrow \infty}\left(\left|\frac{a_n}{a_{n+1}}\ri
 ## Differenzialrechnung
 
 Die Ableitung einer Funktion ist eine Funktion. Die Ableitung gibt die Steigung der Stammfunktion an jedem definierten Punkt an. Die Ableitung von einer Funktion $f$ wird mit $f'$ bezeichnet. Mit der Schreibweise $f^{(n)}$ kann man die $n$-te Ableitung ausdrücken.
-$$\textcolor{orange}{f}(x) = 1 - \frac{x^2}{2} + \frac{x^3}{16} + \frac{x^4}{16}$$
-$$\textcolor{cyan}{f'}(x) = -x + \frac{3x^2}{16} + \frac{x^3}{6}$$
+$$\textcolor{orange}{f}(x) = x^2$$
+$$\textcolor{cyan}{f'}(x) = 2 \cdot x$$
 
 <img src="./ableitung.svg"/>
 
