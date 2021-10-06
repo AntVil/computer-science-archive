@@ -584,7 +584,7 @@ $$r = \displaystyle\lim_{n \rightarrow \infty}\left(\left|\frac{a_n}{a_{n+1}}\ri
 
 ## Differenzialrechnung
 
-Die Ableitung einer Funktion ist eine Funktion. Die Ableitung gibt die Steigung der Stammfunktion an jedem definierten Punkt an. Die Ableitung von einer Funktion $f$ wird mit $f'$ bezeichnet. Mit der Schreibweise $f^{(n)}$ kann man die $n$-te Ableitung ausdrücken.
+Die Ableitung einer Funktion ist eine Funktion. Die Ableitung gibt die Steigung der Stammfunktion an jedem definierten Punkt an. Die Ableitung von einer Funktion $f$ wird mit $f'$ bezeichnet. Mit der Schreibweise $f^{(n)}$ kann man die $n$-te Ableitung ausdrücken. Mit $\frac{\partial}{\partial x}f$ kann man für Funktionen mit mehreren Variablen angeben, nach welcher Variablen abgeleitet wird.
 $$\textcolor{orange}{f}(x) = x^2$$
 $$\textcolor{cyan}{f'}(x) = 2 \cdot x$$
 
@@ -616,6 +616,9 @@ $$(\ln(x))' = \frac{1}{x}$$
 Eine Taylor Reihe ist eine Potenzreihe, welche eine Funktion an der Stelle $x_0$ annähert. Sie kann verwendet werden um Funktionen wie $\sin$ oder $e^x$ anzunähern. Desto mehr Terme addiert werden, desto genauer wird die Annäherung.
 $$f(x) = \displaystyle\sum_{n=0}^{\infty}\frac{f^{(n)}(x_0)}{n!} \cdot (x-x_0)^n$$
 
+Für Funktionen mit zwei Variablen erhält man die Taylor Reihe wie folgt.
+$$f(x, y) = \displaystyle\sum_{i=0}^{\infty}\displaystyle\sum_{j=0}^{\infty}\frac{\frac{\partial^{i}}{\partial x^{i}}\frac{\partial^{j}}{\partial y^{j}}f(x_0, y_0)}{x! \cdot y!} \cdot (x - x_0)^{i} \cdot (y - y_0)^{j}$$
+
 ### Regel von L'Hôpital
 Mit Ableitungen kann man zuvor unlösbare Grenzwerte berechnen. Bedingung der Grenzwert eines Quotienten von zwei Funktionen strebt einem unbestimmbaren Wert an. (zum Beispiel $\frac{\infty}{\infty}$)
 $$\lim_{x \rightarrow x_0}\left(\frac{f(x)}{g(x)}\right) = \lim_{x \rightarrow x_0}\left(\frac{f'(x)}{g'(x)}\right)$$
@@ -625,7 +628,7 @@ Annäherungsverfahren für Nullstellen.
 $$x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}$$
 
 Bedingung für Startwert $x_0$.
-$$\left|\frac{f(x_0) \cdot f''(x_0)}{f'(x_0)}\right| &lt; 1$$
+$$\left|\frac{f(x_0) \cdot f''(x_0)}{f'(x_0)}\right| < 1$$
 
 
 
@@ -694,11 +697,13 @@ $$\displaystyle\int_{x_0}^{k}f(x)dx = \lim_{n \rightarrow k}\left(\displaystyle\
 Vektoren sind Teil eines Vektorraums und werden als Tupel dargestellt. Geometrisch können Vektoren auch als Pfeile im Raum verstanden werden.
 $$\vec{v} = \begin{pmatrix}v_0\\v_1\\\vdots\end{pmatrix}$$
 
-Sie können addiert und skaliert werden. Das Skalarprodukt zwischen zwei Vektoren ergibt einen Skalar.
-$$\vec{v_1} \cdot \vec{v_2} = \displaystyle\sum_{i=0}^{n}v_{1_i} \cdot v_{2_i}$$
-
 <img src="./vektor.svg"/>
 
+Sie können addiert und skaliert werden. Das Skalarprodukt zwischen zwei Vektoren ergibt einen Skalar.
+$$\vec{v_1} \cdot \vec{v_2} = \displaystyle\sum_{i=0}^{n}v_{1_i} \cdot v_{2_i} = |\vec{a}| \cdot |\vec{b}| \cdot \cos(\alpha)$$
+
+Das Vektorprodukt (*auch Kreuzprodukt*) zweier Vektoren ergibt einen Vektor, welcher orthogonal zu den beiden anderen Vektoren ist. Die Länge des Vektors entspricht der Fläche des Parallelograms, das durch die Vektoren gebildet wird.
+$$\vec{a} \times \vec{b} = \left(\begin{array}{c}a_2b_3 - a_3b_2\\a_3b_1 - a_1b_3\\a_1b_2 - a_2b_1\end{array}\right)$$
 
 
 ### Lineare Gleichungssysteme
@@ -734,6 +739,38 @@ Die Basis ist eine Teilmenge eines Vektorraums, wobei jeder Vektor eindeutig dur
 $$\left(\begin{array}{c|c|c}v_0 & v_1 & v_2\\\hline1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{array}\right)$$
 
 Mit Hilfe des Gauß Verfahrens jedoch auf <b>Spalten</b> bezogen, können nun die Vektoren oben zu Nullvektoren umgeformt werden, so weit es geht. Danach kann man unten ablesen, welche Linearkombinationen aus den anfangs Vektoren zu Nullvektoren geführt haben. Daraus kann man schließen, welche Vektoren eine Basis bilden.
+
+
+
+### Ebene
+Eine Ebene im drei-dimensionalen Raum braucht drei Punkte um eindeutig bestimmt zu sein.
+
+| Parameterform                                           | Koordinatenform                | Normalenform                               |
+| ------------------------------------------------------- | ------------------------------ | ------------------------------------------ |
+| $f(t, s) = t \cdot \vec{a} + s \cdot \vec{b} + \vec{c}$ | $f: \vec{n} \cdot \vec{x} = d$ | $f: (\vec{x} - \vec{c}) \cdot \vec{n} = 0$ |
+
+#### Normalenvektor
+Der Normalenvektor $\vec{n}$ ist ein Vektor, welcher orthogonal zu zwei anderen Vektoren liegt. Man kann ihn berechnen, indem man das Vektorprodukt der beiden Vektoren nimmt.
+$$\vec{n} = \vec{a} \times \vec{b}$$
+
+Falls man die Steigung in $x_1$ und $x_2$ richtung kennt, kann man auch folgende Formel anwenden.
+
+$$\vec{n} = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f(x_{1_0}, x_{2_0})\\\frac{\partial}{\partial x_2}f(x_{1_0}, x_{2_0})\\-1\end{array}\right)$$
+
+Diese Art der Berechnung des Normalenvektors bietet sich an um eine Tangentialebene zu bilden.
+
+#### Totales Differenzial
+$$f(x) \approx \displaystyle\sum_{i=1}^{n}$$
+
+### Gradient
+Der Gradient zeigt in Richtung des größten Zuwachses von $f$.
+$$\nabla f = grad(f) = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f\\\frac{\partial}{\partial x_1}f\\\vdots\end{array}\right)$$
+
+Mit Hilfe des Gradienten kann man die Ableitung in eine beliebige Richtung $r$ berechnen.
+$$\frac{\partial}{\partial r}f(\vec{x}) = \tan(\alpha) = grad(f)(\vec{x}) \cdot norm(\vec{a})$$
+
+
+
 
 
 

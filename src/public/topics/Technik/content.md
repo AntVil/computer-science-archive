@@ -5,7 +5,7 @@
 
 | Analoges Signal                           | Digitales Signal                       |
 | ----------------------------------------- | -------------------------------------- |
-| ![beispiel_analog]()                      | ![beispiel_digital]()                  |
+| <img src="./analog.svg" />                | <img src="./digital.svg" />            |
 | Kontinuierlicher Verlauf(Kurve, Fließend) | Diskreter Verlauf(Treppe, Abstufungen) |
 
 
@@ -131,7 +131,7 @@ Bekannte Codes wären 7-Bit ASCII, 8-Bit ASCII und Unicode.
 ### Fano-Bedingung
 Kein Wort einer Codierung ist ein Teil eines anderen Worts. Nur Blätter im Binärbaum werden codiert. (präfixfrei)
 
-![beispiel_fano_bedingung_1]()
+<img src="./fano_bedingung_1.svg" />
 
 | $a$  | $b$  | $c$  | $d$  | $e$ | $f$ |
 | ---- | ---- | ---- | ---- | --- | --- |
@@ -141,7 +141,7 @@ Erfüllt Bedingung nicht, wegen $e$, $f$.
 
 
 
-![beispiel_fano_bedingung_2]()
+<img src="./fano_bedingung_2.svg" />
 
 | $a$  | $b$  | $c$  | $d$  |
 | ---- | ---- | ---- | ---- |
@@ -184,10 +184,10 @@ Der Huffman-Code Algorithmus erstellt für einen Eingabetext einen Binär-Codier
 
 **brennen**
 
-![beispiel_huffman_1]()
+<img src="./huffman_1.svg" />
 
 
-![beispiel_huffman_2]()
+<img src="./huffman_2.svg" />
 
 
 ### Informationsreduzierende Codes
@@ -212,16 +212,16 @@ $\textcolor{LimeGreen}{W}$ ($\textcolor{LimeGreen}{HIGH}$) ist der Bereich, welc
 Die beiden Bereiche werden von einander getrennt durch einen Sicherheitsabstand in welchem nicht entschieden werden kann ob der Wert $\textcolor{red}{F}$ oder $\textcolor{LimeGreen}{W}$ ist.
 
 
-![beispiel_logische_bereiche]()
+<img src="./logische_bereiche.svg" />
 
 
 
 
 ### Logische-Gatter
 
-| not-Gatter        | and-Gatter        | or-Gatter        | xor-Gatter        | nand-Gatter        | nor-Gatter        | xnor-Gatter        |
-| ----------------- | ----------------- | ---------------- | ----------------- | ------------------ | ----------------- | ------------------ |
-| ![beispiel_not]() | ![beispiel_and]() | ![beispiel_or]() | ![beispiel_xor]() | ![beispiel_nand]() | ![beispiel_nor]() | ![beispiel_xnor]() |
+| not-Gatter              | and-Gatter              | or-Gatter              | xor-Gatter              | nand-Gatter              | nor-Gatter              | xnor-Gatter              |
+| ----------------------- | ----------------------- | ---------------------- | ----------------------- | ------------------------ | ----------------------- | ------------------------ |
+| <img src="./not.svg" /> | <img src="./and.svg" /> | <img src="./or.svg" /> | <img src="./xor.svg" /> | <img src="./nand.svg" /> | <img src="./nor.svg" /> | <img src="./xnor.svg" /> |
 
 
 
@@ -241,13 +241,13 @@ $$f(A, B, ...) = (Y_1, Y_2, ...)$$
 #### Halbaddierer (HA)
 Addiert zwei Bits
 $S$: Sum, $C$: Carry
-![beispiel_halbaddierer]()
+<img src="./halbaddierer.svg" />
 
 
 #### Volladdierer (VA)
 Addiert drei Bits
 $S$: Sum, $C$: Carry
-![beispiel_volladdierer]()
+<img src="./volladdierer.svg" />
 
 
 
@@ -276,7 +276,7 @@ $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 Speichert ein Bit, durch einen Reset $R$ und Set $S$ Eingang. $(R \land S)$ ist ein undefinierter Zustand.
 
 
-![beispiel_rs_nor_latch]()
+<img src="./rs_nor_latch.svg" />
 
 
 
@@ -287,7 +287,7 @@ Speichert ein Bit, durch einen Reset $R$ und Set $S$ Eingang. $(R \land S)$ ist 
 Arbeitet wie eine RS NOR-Latch, jedoch nur wenn der Takt auf $\textcolor{LimeGreen}{W}$ ist, sonst wird der Zustand gespeichert.
 
 
-![beispiel_taktgesteuertes_rs_flipflop]()
+<img src="./taktgesteuertes_rs_flipflop.svg" />
 
 
 
@@ -297,7 +297,7 @@ Arbeitet wie eine RS NOR-Latch, jedoch nur wenn der Takt auf $\textcolor{LimeGre
 Übernimmt den Zustand von $D$ und speichert diesen Während $T$ den Wert $\textcolor{red}{F}$ hat.
 
 
-![beispiel_taktgesteuertes_d_flipflop]()
+<img src="./taktgesteuertes_d_flipflop.svg" />
 
 
 
@@ -310,7 +310,7 @@ Arbeitet wie eine RS NOR-Latch, jedoch nur wenn der Takt auf $\textcolor{LimeGre
 Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen ein Signal von $\textcolor{red}{F}$ zu $\textcolor{LimeGreen}{W}$ wechselt.
 
 
-![beispiel_impulsglied]()
+<img src="./impulsglied.svg" />
 
 
 #### Einflankengesteuerte FlipFlops
@@ -320,7 +320,7 @@ Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen 
 Arbeitet wie eine RS NOR-Latch , jedoch nur bei positiven Flanken von $T$, sonst wird der Zustand gespeichert.
 
 
-![beispiel_einflankengesteuertes_rs_flipflop]()
+<img src="./einflankengesteuertes_rs_flipflop.svg" />
 
 
 
@@ -330,7 +330,7 @@ Arbeitet wie eine RS NOR-Latch , jedoch nur bei positiven Flanken von $T$, sonst
 Übernimmt den Zustand von $D$ während der positiven Taktflanken von $T$ und speichert diesen.
 
 
-![beispiel_einflankengesteuertes_d_flipflop]()
+<img src="./einflankengesteuertes_d_flipflop.svg" />
 
 
 
@@ -341,7 +341,7 @@ Arbeitet wie eine RS NOR-Latch , jedoch nur bei positiven Flanken von $T$, sonst
 Arbeitet genau wie ein Einflankengesteuertes RS-FlipFlop, nur, dass $(R \land S)$ zum toggeln des gespeicherten Bit führt. (Toggle-Modus)
 
 
-![beispiel_einflankengesteuertes_jk_flipflop]()
+<img src="./einflankengesteuertes_jk_flipflop.svg" />
 
 
 
@@ -353,7 +353,7 @@ Arbeitet genau wie ein Einflankengesteuertes RS-FlipFlop, nur, dass $(R \land S)
 Arbeitet wie ein Einflankengesteuertes JK-FlipFlop, nur, dass es erst bei der negativen Flanke von $T$ das gespeicherte Bit ausgibt. (Retardierend)
 
 
-![beispiel_zweiflankengesteuertes_jk_flipflop]()
+<img src="./zweiflankengesteuertes_jk_flipflop.svg" />
 
 
 
@@ -388,7 +388,7 @@ Ein Automat ist ein Modell für Taktgesteuerte FlipFlops, da Automaten schrittwe
 Bei der graphischen Darstellung werden Zustände über Übergänge verknüpft. Ein Übergang besteht aus den Eingängen welche anliegen müssen getrennt durch Kommas, danach folgen die Ausgänge.
 
 
-![beispiel_automat]()
+<img src="./automat.svg" />
 
 
 
@@ -460,34 +460,58 @@ Um die Schaltung zu realisieren, werden die Eingänge der FlipFlops entsprechend
 
 
 
+## Betriebssysteme
+
+Das Betriebssystem verwaltet alle Prozesse und bietet abstrakte Schnittstellen zu der Hardware. Zudem werden die Prozesse von einander getrennt und besitzen unterschiedliche Rechte.
+Der Benutzer kann maximal Administrator-Rechte besitzen/ausführen. Das Betriebssystem ist im Kernel-modus und hat damit noch höhere Rechte.
+
+### Betriebssystemkategorien
+| Betriebssystemkategorie              |
+| ------------------------------------ |
+| Großrechner                          |
+| Serverbetriebssyteme                 |
+| Personal Computer Betriebssytem      |
+| Echtzeit-Betriebssytem               |
+| Embedded Systems                     |
+| Betriebssytem für Tablets und Handys |
+| Smartcard-Betriebssytem              |
 
 
-Stapelbetrieb/Batch-Verarbeitung: nicht-interaktiv
-Dialogbetrieb/Prozessbetrieb: interaktiv, es läuft immer ein Prozess
-Echtzeitbetrieb: Verarbeitungszeit im voraus festgelegt
+### Betriebsarten
 
-Einprogrammbetrieb: immer nur ein Programm
-Mehrprogrammbetrieb: mehrere Programme gleichzeitig
-
-Einbenutzerbetrieb: 
-Mehrbenutzerbetrieb: mehrere Benutzer gleichzeitig
-
-Einprozessorbetrieb: 
-Mehrprozessorbetrieb: 
-
-
-Mehrprogrammverarbeitung: 
-
-Skalare und Superskalare Architektur: Parallelverarbeitung auf CPU selber
-
-Pipeline: Fließband
+| Betriebsart                      | Beschreibung                                     | Anwendung         |
+| -------------------------------- | ------------------------------------------------ | ----------------- |
+| Stapelbetrieb/Batch-Verarbeitung | nicht-interaktiv (Stapel/Queue abarbeitung)      |                   |
+| Dialogbetrieb/Prozessbetrieb     | interaktiv                                       | Personal-Computer |
+| Echtzeitbetrieb                  | Verarbeitungszeit festgelegt                     | Automation        |
+| Einprogrammbetrieb               | immer nur ein Programm                           |                   |
+| Mehrprogrammbetrieb              | mehrere Programme gleichzeitig                   |                   |
+| Einbenutzerbetrieb               | nur ein Nutzer zu bestimmten Zeitpunkt           | Personal-Computer |
+| Mehrbenutzerbetrieb              | mehrere Benutzer gleichzeitig                    | Server            |
+| Einprozessorbetrieb              | ein Prozessor für alles                          |                   |
+| Mehrprozessorbetrieb             | mehrere Prozessoren                              |                   |
+| Pipeline                         | wie Fließband - verarbeitung in vielen Stationen |                   |
 
 
-Betriebssystem ist im Kernel-modus und hat höhere Rechte als Admin
+### Speicherarten
 
-RAM/ROM Primärspeicher
+| Kategorie        | Beschreibung              | Beispiele     |
+| ---------------- | ------------------------- | ------------- |
+| Primärspeicher   | interne kurzzeit Speicher | RAM/ROM       |
+| Sekundärspeicher | interne langzeit Speicher | SSD/HDD       |
+| Tertiärspeicher  | externe Speicher          | CD/Magnetband |
 
-SSD/HDD Sekundärspeicher
 
-Parallel: Prozesse auf verschiendenen Kernen
-Quasi-Parallel: Prozesse auf gleichem Kern abwechselnd
+### Parallelisierung
+
+Ein Computer kann mehrere Prozesse auf verschiedene Arten gleichzeitig zu laufen bringen.
+
+| Quasi-Parallel                         | Parallel                           |
+| -------------------------------------- | ---------------------------------- |
+| Prozesse auf gleichem Kern abwechselnd | Prozesse auf verschiendenen Kernen |
+
+Die CPU eines Computers kann in der **Skalare Architektur** nur einen Befehl pro Taktzyklus ausführen. Die **Superskalare Architektur** hingegen führt mehrere Befehle auf einer CPU parallel aus. Es können auch konditionelle Befehle parallel zur Kondition ausgeführt werden, sodass nicht auf das Ergebnis der Kondition gewartet werden muss.
+
+
+### Betriebssystemvirtualisierung
+

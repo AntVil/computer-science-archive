@@ -1,28 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 140" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-    <rect x="10" y="10" width="40" height="120" rx="20" ry="20" fill="#0099FF" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 130 150" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <rect x="5" y="15" width="120" height="120" rx="10" ry="10" fill="#990099" />
 
-    <rect x="90" y="10" width="40" height="120" rx="20" ry="20" fill="#FF9900" />
-
-    <path d="M 30 30 L 110 30" stroke="#7777AA"/>
-    <path d="M 30 70 L 110 70" stroke="#7777AA"/>
-    <path d="M 30 110 L 110 110" stroke="#7777AA"/>
-    <path d="M 97 27 L 100 30 L 97 33" stroke="#7777AA" fill="none"/>
-    <path d="M 97 67 L 100 70 L 97 73" stroke="#7777AA" fill="none"/>
-    <path d="M 97 107 L 100 110 L 97 113" stroke="#7777AA" fill="none"/>
-
-    <ellipse cx="30" cy="30" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="70" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="110" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <ellipse cx="20" cy="30" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
+    <ellipse cx="20" cy="120" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
+    <ellipse cx="110" cy="30" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
     
-    <ellipse cx="110" cy="30" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    <ellipse cx="110" cy="70" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    <ellipse cx="110" cy="110" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    
-    <text x="30" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
-    <text x="30" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
-    <text x="30" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
-
-    <text x="110" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
-    <text x="110" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">e</text>
-    <text x="110" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">f</text>
+    <text x="20" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
+    <text x="20" y="120" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
+    <text x="110" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
 </svg>

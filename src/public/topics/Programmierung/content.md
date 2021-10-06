@@ -12,11 +12,11 @@ $$a = (...)$$
 Eine Liste ist eine flexiblere Datenstruktur, da die Größe dynamisch verringert oder erweitert werden kann. Listen basieren auf Knoten und Pointern, welche leichter verändert werden können. Die Pointer eines Listen Elements zeigen immer auf den Nachfolger in der Liste, so kann diese iterativ durchlaufen werden.
 Eine Liste ähnelt einer total Ordnung.
 
-![beispiel_liste]()
+<img src="./liste.svg" />
 
 Eine Liste kann auch bidirektional sein, die Pointer gehen in beide Richtungen. Dadurch kann die Listen einfach in beide Richtungen durchgegangen werden und wird noch flexibler.
 
-![beispiel_doppel_liste]()
+<img src="./doppel_liste.svg" />
 
 
 ### Stack
@@ -25,7 +25,7 @@ Eine Liste kann auch bidirektional sein, die Pointer gehen in beide Richtungen. 
 Ein Stack (auch Stapel oder Keller) ist eine sonder Form einer Liste, bei der nur am Anfang eingefügt und entfernt werden kann. Er funktioniert nach dem Last-in-First-out Prinzip (LIFO)
 
 
-![beispiel_stack]()
+<img src="./stack.svg" />
 
 
 
@@ -36,7 +36,7 @@ Ein Stack (auch Stapel oder Keller) ist eine sonder Form einer Liste, bei der nu
 Eine Queue (auch Schlange) ist eine sonder Form einer Liste, bei der nur am Ende eingefügt und am Anfang entfernt werden kann. Sie funktioniert nach dem First-in-First-out Prinzip (FIFO). Eine priority Queue funktioniert ähnlich wie eine normale Queue, jedoch haben Elemente eine Priorität, welche benutzt wird um beim Einfügen manche Elemente weiter vor zu ziehen, damit diese schneller bearbeitet werden.
 
 
-![beispiel_queue]()
+<img src="./queue.svg" />
 
 
 
@@ -45,7 +45,7 @@ Eine Queue (auch Schlange) ist eine sonder Form einer Liste, bei der nur am Ende
 Ein Baum ist eine Erweiterung der Liste. Wie bei der Liste hat jedes Element Nachfolger, jedoch kann ein Baum mehr als nur einen Nachfolger haben. Die maximale Anzahl an Nachfolgern wird mit der Ordnung angegeben. Die Tiefe beschreibt die Länge des größten Pfads im Baum. Der Anfang des Baums wird als Wurzel bezeichnet. Alle Knoten mit Nachfolger werden als Innere Knoten bezeichnet. Der Rest als Blätter.
 
 
-![beispiel_baum]()
+<img src="./baum.svg" />
 *Baum der Ordnung 3 und Tiefe 2*
 
 
@@ -60,9 +60,9 @@ Ein Baum ist eine Erweiterung der Liste. Wie bei der Liste hat jedes Element Nac
 
 #### Traversierung
 
-| Pre-Order              | In-Order              | Post-Order              |
-| ---------------------- | --------------------- | ----------------------- |
-| ![beispiel_preorder]() | ![beispiel_inorder]() | ![beispiel_postorder]() |
+| Pre-Order                    | In-Order                    | Post-Order                    |
+| ---------------------------- | --------------------------- | ----------------------------- |
+| <img src="./preorder.svg" /> | <img src="./inorder.svg" /> | <img src="./postorder.svg" /> |
 
 
 
@@ -72,10 +72,10 @@ Der Baum wird Ebenen-weise abgelesen inklusive Lücken. Das Array ermöglicht sc
 
 
 
-![beispiel_array_1]()
+<img src="./array_1.svg" />
 
 
-![beispiel_array_2]()
+<img src="./array_2.svg" />
 
 
 
@@ -88,19 +88,7 @@ Ein Heap ist ein fast vollständiger Binärbaum (Baum der Ordnung 2), bei dem al
 Ein AVL-Baum ist ein Baum, welcher nach jeder Operation balanciert wird, wodurch dieser besonders effizient arbeitet. Jeder Knoten speichert die Höhendifferenz der Teilbäume ab. Wenn der Betrag der Höhendifferenz größer als 1 ist wird eine Rotationsoperation durchgeführt.
 
 
-![beispiel_rotation]()
-
-
-$\rightarrow$
-
-
-![beispiel_balanciert]()
-
-
-$\leftarrow$
-
-
-![beispiel_doppelrotation]()
+<img src="./rotation.svg" />
 
 
 
@@ -117,7 +105,7 @@ $$g:R \rightarrow \mathbb{R}$$
 Graphen beschreiben Beziehungen zwischen Objekten. Mit der gewichtung der Kanten können zum Beispiel Kosten abgebildet werden.
 
 
-![beispiel_graph]()
+<img src="./graph.svg" />
 
 
 
@@ -149,22 +137,29 @@ Ein Graph kann mit einer Adjazenzliste (2-dimensionale Liste) dargestellt werden
 
 #### Suchen
 
-| Depth-First-Search                                                           | Breadth-First-Search                                                                                                                         |
-| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| Durchlaufen eines Graphen mit einem Stack, Knoten werden nur einmal besucht. | Durchlaufen eines Graphen mit einer Queue, Knoten werden nur einmal besucht. Breadth-First-Search findet den Kürzesten Pfad zu einem Knoten. |
+| Depth-First-Search                                                           | Breadth-First-Search                                                                                                                         | Iterative Depth-Search                                                                          |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Durchlaufen eines Graphen mit einem Stack, Knoten werden nur einmal besucht. | Durchlaufen eines Graphen mit einer Queue, Knoten werden nur einmal besucht. Breadth-First-Search findet den Kürzesten Pfad zu einem Knoten. | Iterativ Tiefergehend suchen. Iterative Depth-Search findet den Kürzesten Pfad zu einem Knoten. |
 
 
+Mit dem Branch and Bound Verfahren kann man unnötige Äste in einem Baum früh erkennen, indem man immer den besten Wert zwischen speichert und die Suche abbricht wenn der Wert überschritten wird.
 
+#### Minimax
+Für ein Spiel mit perfekter Information kann man alle einen Baum aufstellen, wobei Kanten abwechselnd Spielzüge der Spieler sind. Die Blätter enthalten einen niedrigen Wert bei Verlust für Spieler 1 und höheren Wert bei Gewinn. Rekursiv kann für jeder Ebene abwechselnd das Maximum und Minimum der Kinder genommen werden. In der Wurzel bleibt das zu erwartende Resultat übrig.
+Da der Minimax-Algorithmus extem schnell aufwendig wird gibt es die Alpha-Beta-Pruning methode. Dabei wird die Suche in einem Teilbaum abgebrochen, falls dieser nicht zum Ergebnis beiträgt, da die Spieler schon einen besseren Pfad nehmen können.
 
+<img src="./alpha_beta_pruning" />
+
+Zur weiteren Optimierung können zwischen Spielstände durch Markow-Ketten bewertet werden. Dabei wird aus einer **großen** Datenbasis die Gewinn-Wahrscheinlichkeit entnommen aufgrund der letzten $n$ Züge.
 
 #### Spannbaum
 Der Spannbaum eines Graphen ist ein Baum, welcher alle Knoten eines Graphen durchläuft.
 
-| Algorithmus von Kruskal             | Algorithmus von Prim                                     | Algorithmus von Dijkstra                                                  |
-| ----------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------- |
-| 1. Kanten Sortieren                 | 1. Start-Knoten zu Spannbaum hinzufügen                  | 1. Startknoten wird besucht                                               |
-| 2. Kanten hintereinander hinzufügen | 2. Jeweils kleinste Kante angrenzend zum Baum hinzufügen | 2. Jeweils kürzester entfernter unbesuchter Nachbar wird besucht          |
-| 3. Außer es entsteht ein Zyklus     | 3. Außer es entsteht ein Zyklus                          | 3. Vorgänger und Distanzen von Knoten werden gegebenenfalls überschrieben |
+| Algorithmus von Kruskal             | Algorithmus von Prim                                     | Algorithmus von Dijkstra                                                  | A* Algorithmus                                                                             |
+| ----------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1. Kanten Sortieren                 | 1. Start-Knoten zu Spannbaum hinzufügen                  | 1. Startknoten wird besucht                                               | 1. Startknoten wird besucht                                                                |
+| 2. Kanten hintereinander hinzufügen | 2. Jeweils kleinste Kante angrenzend zum Baum hinzufügen | 2. Jeweils kürzester entfernter unbesuchter Nachbar wird besucht          | 2. Jeweils Nachbar mit geringster Summe aus gelaufener und zu erwartender Distanz besuchen |
+| 3. Außer es entsteht ein Zyklus     | 3. Außer es entsteht ein Zyklus                          | 3. Vorgänger und Distanzen von Knoten werden gegebenenfalls überschrieben | 3. Vorgänger und Distanzen von Knoten werden gegebenenfalls überschrieben                  |
 
 
 
@@ -183,10 +178,12 @@ Der Maximale Fluss entspricht dem minimalen Schnitt. Es wird ein Schnitt durch n
 
 
 
+
+
 ### Symboltabellen (Hashtabelle)
 Eine Symboltabelle speichert Schlüssel-Wert-Paare. Sie ähnelt in der Funktionsweise einer Abbildung. Mit $put$ wird ein Paar hinzugefügt. Mit $get$ erhält man den Wert für einen Schlüssel.
 
-![beispiel_symboltabelle]()
+<img src="./symboltabelle.svg" />
 
 
 Eine Hashtabelle ist eine Möglichkeit eine Symboltabelle zu realisieren. Aus einem Schlüssel wird mit einer Hashfunktion ein Index berechnet. Mit dem Index kann man den Wert in ein Array an der Stelle des Index einsetzen.
@@ -217,7 +214,7 @@ $$...$$
 
 ### Registermaschinen
 Eine Registermaschine hat sehr wenige Operationen, kann aber mit genug Zeit jedes berechenbare Problem lösen. Eine Registermaschine besitzt für jede Natürliche Zahl $n \in \mathbb{N}_0$ ein Register, in dem eine Natürliche Zahl $m \in \mathbb{N}_0$ gespeichert werden kann.
-![beispiel_registermaschine]()
+<img src="./registermaschine.svg" />
 
 | Increment                      | Decrement                                                        | Konkatenation                                                    | Iteration                                       |
 | ------------------------------ | ---------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------- |

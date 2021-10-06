@@ -1,1 +1,8 @@
-Welcome to the computer-science-archive
+<img style="max-width: 700px;" src="./CSA.svg" />
+
+# Wilkommen im computer-science-archive!
+
+Diese Seite erhebt **keinen** Anspruch auf Korrektheit oder Vollständigkeit. Sie ist lediglich eine Zusammenfassung und kann sehr wohl Fehler enthalten. Bei Fehler Findung gerne melden.
+An manchen Stellen wird Vorwissen vorausgesetzt beziehungsweise werden manche Themen vorgegriffen, da die unterschiedlichen Bereiche nicht komplett von einander trennbar sind.
+
+*viel Spaß!*
