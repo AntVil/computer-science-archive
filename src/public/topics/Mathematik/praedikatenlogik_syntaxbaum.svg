@@ -1,28 +1,108 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 140" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-    <rect x="10" y="10" width="40" height="120" rx="20" ry="20" fill="#0099FF" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 370 300" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <rect x="10" y="10" width="350" height="270" rx="10" ry="10" fill="#990099" />
 
-    <rect x="90" y="10" width="40" height="120" rx="20" ry="20" fill="#FF9900" />
+    <rect x="20" y="130" width="330" height="140" rx="10" ry="10" fill="#FF9900" />
 
-    <path d="M 30 30 L 110 30" stroke="#7777AA"/>
-    <path d="M 30 70 L 110 70" stroke="#7777AA"/>
-    <path d="M 30 110 L 110 110" stroke="#7777AA"/>
-    <path d="M 97 27 L 100 30 L 97 33" stroke="#7777AA" fill="none"/>
-    <path d="M 97 67 L 100 70 L 97 73" stroke="#7777AA" fill="none"/>
-    <path d="M 97 107 L 100 110 L 97 113" stroke="#7777AA" fill="none"/>
+    <rect x="30" y="170" width="310" height="90" rx="10" ry="10" fill="#0099FF" />
 
-    <ellipse cx="30" cy="30" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="70" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="110" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <rect x="40" y="210" width="260" height="40" rx="10" ry="10" fill="#99FF00" />
+
     
-    <ellipse cx="110" cy="30" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    <ellipse cx="110" cy="70" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    <ellipse cx="110" cy="110" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    
-    <text x="30" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
-    <text x="30" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
-    <text x="30" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
 
-    <text x="110" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
-    <text x="110" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">e</text>
-    <text x="110" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">f</text>
+    <path d="M 280 30 L 240 70" stroke="#555599" fill="none"/>
+    <path d="M 280 30 L 320 70" stroke="#555599" fill="none"/>
+    
+    <path d="M 240 70 L 200 110" stroke="#555599" fill="none"/>
+    <path d="M 240 70 L 280 110" stroke="#555599" fill="none"/>
+
+    <path d="M 200 110 L 200 150" stroke="#555599" fill="none"/>
+    <path d="M 280 110 L 280 150" stroke="#555599" fill="none"/>
+
+    <path d="M 200 150 L 200 190" stroke="#555599" fill="none"/>
+    <path d="M 280 150 L 280 190" stroke="#555599" fill="none"/>
+
+    <path d="M 200 190 L 200 230" stroke="#555599" fill="none"/>
+    <path d="M 280 190 L 240 230" stroke="#555599" fill="none"/>
+    <path d="M 280 190 L 280 230" stroke="#555599" fill="none"/>
+    <path d="M 280 190 L 320 230" stroke="#555599" fill="none"/>
+
+    <path d="M 200 110 Q 135 170 200 230" stroke="#555599" fill="none" stroke-dasharray="2 1"/>
+    <path d="M 280 110 Q 235 150 240 230" stroke="#555599" fill="none" stroke-dasharray="2 1"/>
+    
+    
+    
+    <path d="M 247 60 L 247 63 L 250 63" stroke="#555599" fill="none"/>
+    <path d="M 313 60 L 313 63 L 310 63" stroke="#555599" fill="none"/>
+
+    <path d="M 207 100 L 207 103 L 210 103" stroke="#555599" fill="none"/>
+    <path d="M 273 100 L 273 103 L 270 103" stroke="#555599" fill="none"/>
+
+    <path d="M 198 138 L 200 140 L 202 138" stroke="#555599" fill="none"/>
+    <path d="M 278 138 L 280 140 L 282 138" stroke="#555599" fill="none"/>
+
+    <path d="M 198 178 L 200 180 L 202 178" stroke="#555599" fill="none"/>
+    <path d="M 278 178 L 280 180 L 282 178" stroke="#555599" fill="none"/>
+
+    <path d="M 193 220 L 193 223 L 190 223" stroke="#555599" fill="none"/>
+    <path d="M 198 218 L 200 220 L 202 218" stroke="#555599" fill="none"/>
+    <path d="M 238 218 L 240 220 L 242 218" stroke="#555599" fill="none"/>
+    <path d="M 247 220 L 247 223 L 250 223" stroke="#555599" fill="none"/>
+    <path d="M 278 218 L 280 220 L 282 218" stroke="#555599" fill="none"/>
+    <path d="M 313 220 L 313 223 L 310 223" stroke="#555599" fill="none"/>
+
+
+    
+    <!--path d="M 98 68 L 100 70 L 102 68" stroke="#555599" fill="none"/>
+    <path d="M 67.5 110 L 67.5 112.5 L 70 112.5" stroke="#555599" fill="none"/>
+    <path d="M 132.5 110 L 132.5 112.5 L 130 112.5" stroke="#555599" fill="none"/>
+    <path d="M 138 148 L 140 150 L 142 148" stroke="#555599" fill="none"/-->
+    
+
+    <ellipse cx="280" cy="30" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
+    
+    <ellipse cx="240" cy="70" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
+    <ellipse cx="320" cy="70" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
+    
+    <ellipse cx="200" cy="110" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
+    <ellipse cx="280" cy="110" rx="10" ry="10" fill="#CC00CC" stroke="#FF00FF" stroke-width="1"/>
+    
+    <ellipse cx="200" cy="150" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
+    <ellipse cx="280" cy="150" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
+    
+    <ellipse cx="200" cy="190" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <ellipse cx="280" cy="190" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+
+    <ellipse cx="200" cy="230" rx="10" ry="10" fill="#DD3333" stroke="#FF6666" stroke-width="1"/>
+    <ellipse cx="240" cy="230" rx="10" ry="10" fill="#DD3333" stroke="#FF6666" stroke-width="1"/>
+    <ellipse cx="280" cy="230" rx="10" ry="10" fill="#CCFF00" stroke="#FFFF00" stroke-width="1"/>
+    <ellipse cx="320" cy="230" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    
+
+    <text x="280" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">∨</text>
+
+    <text x="240" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">∧</text>
+    <text x="320" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₀</text>
+
+    <text x="200" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12" fill="#FF0000">∀x</text>
+    <text x="280" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12" fill="#FF0000">∃y</text>
+    
+    <text x="200" y="150" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₁</text>
+    <text x="280" y="150" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₁</text>
+    
+    <text x="200" y="190" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₁</text>
+    <text x="280" y="190" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₃</text>
+
+    <text x="200" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">x</text>
+    <text x="240" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">y</text>
+    <text x="280" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">x</text>
+    <text x="320" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₀</text>
+
+
+    <text x="20" y="40" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Formeln</text>
+    <text x="30" y="150" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Atomare Formeln</text>
+    <text x="40" y="190" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Terme</text>
+    <text x="50" y="230" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Variablen</text>
+
+    <text x="200" y="290" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#DD3333" font-size="12">gebunden</text>
+    <text x="280" y="290" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#99FF00" font-size="12">ungebunden</text>
 </svg>

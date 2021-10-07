@@ -12,7 +12,7 @@
         transition: left 0.25s, top 0.25s, right 0.25s, bottom 0.25s, opacity 0.15s, z-index 0.15s;
     }
 
-    strong, b, i{
+    strong, b, i, em{
         color: var(--highlight-color);
     }
     

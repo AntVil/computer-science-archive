@@ -387,7 +387,7 @@ Mit $Teilt$ erhält man alle Teilterme von einer Formel.
 ### Syntaxbaum
 $$((\forall x \textcolor{orange}{p_1}(\textcolor{cyan}{f_1}(\textcolor{red}{x})) \land \exists y \textcolor{orange}{p_1}(\textcolor{cyan}{f_2}(\textcolor{red}{y}, \textcolor{green}{x}, \textcolor{cyan}{f_0}))) \lor \textcolor{orange}{p_0})$$
 
-<img src="./praedikatenlogik_syntaxbaum.svg"/>
+<img style="max-width: 600px;" src="./praedikatenlogik_syntaxbaum.svg"/>
 
 *(Indices stehen für Stelligkeit)*
 
