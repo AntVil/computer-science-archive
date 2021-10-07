@@ -19,25 +19,6 @@ server.post("/getTopics", function(request, response){
     response.send(fs.readdirSync(path.join(__dirname, "public", "topics")));
 });
 
-server.post("/getTopicContent", function(request, response){
-    // savely extract topic name (remove misuseable characters)
-    let topicName = request.body.topicName.replace(new RegExp("[\\\./]*"), "");
-    
-    // get file content
-    let content = fs.readFileSync(
-        path.join(__dirname, "public", "topics", topicName, "content.md"),
-        {
-            "encoding": "utf-8"
-        }
-    );
-    
-    // return content
-    response.send({
-        "topic": topicName,
-        "content": content
-    });
-});
-
 server.listen(PORT, function(){
     console.log(`listening on port ${PORT}`);
 });

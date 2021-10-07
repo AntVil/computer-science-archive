@@ -187,7 +187,7 @@ $$(M, \oplus, \odot)$$
 ### Algebraische Strukturen
 Die Eigenschaften der Operationen auf der Menge bestimmen die Algebraische Struktur.
 
-<img src="./algebraische_strukturen.svg"/>
+<img style="max-width: 100%;" src="./algebraische_strukturen.svg"/>
 
 
 
