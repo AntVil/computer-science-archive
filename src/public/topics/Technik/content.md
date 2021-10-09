@@ -515,3 +515,39 @@ Die CPU eines Computers kann in der **Skalare Architektur** nur einen Befehl pro
 
 ### Betriebssystemvirtualisierung
 
+
+
+## Netzwerktechnik
+### OSI-Schichtenmodell
+| Schicht                   | Aufgabe                | system           |
+| ------------------------- | ---------------------- | ---------------- |
+| 7. Anwendungsschicht      |                        | anwendungssystem |
+| 6. Darstellungsschicht    |                        | anwendungssystem |
+| 5. Sitzungsschicht        | Anmelden               | anwendungssystem |
+| 4. Transportschicht       | Ziel am Computer (PORT)         |                  |
+| 3. Vermittlungsschicht    | Weltweite Adressierung () |                  |
+| 2. Sicherungsschicht      | Lokale Adressierung (MAC-Adresse)    |                  |
+| 1. Bitübertragungsschicht |                        |                  |
+| 0. Physikalische Schicht  |                        |                  |
+
+Netzwerktopologien
+- (Token-) Ring
+- Vermascht (Telefonnetz)
+- Stern (typisch)
+- Vollvermascht (Ausfallsicher)
+- Linie
+- Baum
+- Bus
+
+- LAN local area Network (grundstück)
+- MAN Metropolian Area Network (mehrere Grundstücke)
+- WAN Wide Area Network (mehrere Städte)
+- GAN Global Area Network (mehrere WAN)
+
+- Serielle Verbindung einfach langsam asynchron
+- Ethernet/LAN
+- DSL Modem
+- WLAN
+- DLAN
+- Bluetooth
+- NFC

@@ -3,12 +3,12 @@
     <path d="M 70 70 L 70 110" stroke="#7777AA" fill="none"/>
     <path d="M 70 70 L 110 110" stroke="#7777AA" fill="none"/>
     
-    <ellipse cx="70" cy="30" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="110" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <ellipse cx="70" cy="30" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
+    <ellipse cx="30" cy="110" rx="10" ry="10" fill="#CCFF00" stroke="#FFFF00" stroke-width="1"/>
     <ellipse cx="70" cy="70" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="70" cy="110" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="110" cy="70" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="110" cy="110" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <ellipse cx="70" cy="110" rx="10" ry="10" fill="#CCFF00" stroke="#FFFF00" stroke-width="1"/>
+    <ellipse cx="110" cy="70" rx="10" ry="10" fill="#CCFF00" stroke="#FFFF00" stroke-width="1"/>
+    <ellipse cx="110" cy="110" rx="10" ry="10" fill="#CCFF00" stroke="#FFFF00" stroke-width="1"/>
     
     <text x="70" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
     <text x="30" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
