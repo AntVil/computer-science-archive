@@ -1,28 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 140" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-    <rect x="10" y="10" width="40" height="120" rx="20" ry="20" fill="#0099FF" />
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <path d="M 10 70 L 90 70" stroke="#000000" fill="none" />
+    <path d="M 10 10 L 10 90" stroke="#000000" fill="none" />
+    <path d="M 8 12 L 10 10 L 12 12" stroke="#000000" fill="none" />
+    <path d="M 88 68 L 90 70 L 88 72" stroke="#000000" fill="none" />
 
-    <rect x="90" y="10" width="40" height="120" rx="20" ry="20" fill="#FF9900" />
+    <path d="M 10 70 L 10 20.0" stroke="#0099FF" fill="none" />
+    <path d="M 15 70 L 15 32.5" stroke="#0099FF" fill="none" />
+    <path d="M 20 70 L 20 41.875" stroke="#0099FF" fill="none" />
+    <path d="M 25 70 L 25 48.90625" stroke="#0099FF" fill="none" />
+    <path d="M 30 70 L 30 54.1796875" stroke="#0099FF" fill="none" />
+    <path d="M 35 70 L 35 58.134765625" stroke="#0099FF" fill="none" />
+    <path d="M 40 70 L 40 61.10107421875" stroke="#0099FF" fill="none" />
+    <path d="M 45 70 L 45 63.3258056640625" stroke="#0099FF" fill="none" />
+    <path d="M 50 70 L 50 64.99435424804688" stroke="#0099FF" fill="none" />
+    <path d="M 55 70 L 55 66.24576568603516" stroke="#0099FF" fill="none" />
+    <path d="M 60 70 L 60 67.18432426452637" stroke="#0099FF" fill="none" />
+    <path d="M 65 70 L 65 67.88824319839478" stroke="#0099FF" fill="none" />
+    <path d="M 70 70 L 70 68.41618239879608" stroke="#0099FF" fill="none" />
+    <path d="M 75 70 L 75 68.81213679909706" stroke="#0099FF" fill="none" />
+    <path d="M 80 70 L 80 69.1091025993228" stroke="#0099FF" fill="none" />
 
-    <path d="M 30 30 L 110 30" stroke="#7777AA"/>
-    <path d="M 30 70 L 110 70" stroke="#7777AA"/>
-    <path d="M 30 110 L 110 110" stroke="#7777AA"/>
-    <path d="M 97 27 L 100 30 L 97 33" stroke="#7777AA" fill="none"/>
-    <path d="M 97 67 L 100 70 L 97 73" stroke="#7777AA" fill="none"/>
-    <path d="M 97 107 L 100 110 L 97 113" stroke="#7777AA" fill="none"/>
-
-    <ellipse cx="30" cy="30" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="70" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    <ellipse cx="30" cy="110" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
-    
-    <ellipse cx="110" cy="30" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    <ellipse cx="110" cy="70" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    <ellipse cx="110" cy="110" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
-    
-    <text x="30" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
-    <text x="30" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
-    <text x="30" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
-
-    <text x="110" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
-    <text x="110" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">e</text>
-    <text x="110" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">f</text>
+    <ellipse cx="10" cy="20.0" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="15" cy="32.5" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="20" cy="41.875" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="25" cy="48.90625" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="30" cy="54.1796875" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="35" cy="58.134765625" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="40" cy="61.10107421875" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="45" cy="63.3258056640625" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="50" cy="64.99435424804688" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="55" cy="66.24576568603516" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="60" cy="67.18432426452637" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="65" cy="67.88824319839478" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="70" cy="68.41618239879608" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="75" cy="68.81213679909706" rx="1" ry="1" fill="#00CCFF" />
+    <ellipse cx="80" cy="69.1091025993228" rx="1" ry="1" fill="#00CCFF" />
 </svg>
