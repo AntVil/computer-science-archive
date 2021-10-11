@@ -541,6 +541,7 @@ $$d_0 \mapsto w_0$$
 $$\vdots$$
 
 <img src="./lineare_abbildung.svg"/>
+
 *Rotationsmatrix*
 
 Eine lineare Abbildung ist eine Matrixmultiplikation. Für sie gilt, dass der Ursprung im Definitionsbereich gleich dem im Bildbereich ist und dass Linear Kombinationen im Definitionsbereich transformiert im Bildbereich erhalten bleiben.
