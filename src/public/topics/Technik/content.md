@@ -14,7 +14,7 @@ Andernfalls können Frequenzen nicht korrekt wiedergegeben werden. (Alias Effekt
 
 
 ## Codierungen
-
+Ein Bit ist die kleinste Computereinheit und kann den Zustand Wahr oder Falsch haben.
 | Einheit  | Bits           |
 | -------- | -------------- |
 | $Nibble$ | $4Bits$        |
@@ -87,17 +87,12 @@ In Logischen Gattern werden die Logischen Werte Wahr und Falsch mit Bereichen de
 
 Logische Gatter sind Verknüpfungen aus der Aussagen Logik.
 
-| Gatter      | Schaltsymbol             | Beschreibung         |
-| ----------- | ------------------------ | -------------------- |
-| not-Gatter  | <img src="./not.svg" />  | Negation             |
-| and-Gatter  | <img src="./and.svg" />  | Konjunktion          |
-| or-Gatter   | <img src="./or.svg" />   | Disjunktion          |
-| xor-Gatter  | <img src="./xor.svg" />  | Äquivalenz           |
-| nand-Gatter | <img src="./nand.svg" /> | Negierte Konjunktion |
-| nor-Gatter  | <img src="./nor.svg" />  | Negierte Disjunktion |
-| xnor-Gatter | <img src="./xnor.svg" /> | Negierte Äquivalenz  |
+| not-Gatter              | and-Gatter              | or-Gatter              | xor-Gatter              | nand-Gatter              | nor-Gatter              | xnor-Gatter              |
+| ----------------------- | ----------------------- | ---------------------- | ----------------------- | ------------------------ | ----------------------- | ------------------------ |
+| <img src="./not.svg" /> | <img src="./and.svg" /> | <img src="./or.svg" /> | <img src="./xor.svg" /> | <img src="./nand.svg" /> | <img src="./nor.svg" /> | <img src="./xnor.svg" /> |
+| Negation                | Konjunktion             | Disjunktion            | Äquivalenz              | Negierte Konjunktion     | Negierte Disjunktion    | Negierte Äquivalenz      |
 
-Eine Menge an Gattern wird als vollständiges System bezeichnet, wenn mit der Menge alle Gatter gebildet werden können. Die Menge $\{nand\}$ wäre ein mögliches vollständiges System.
+Eine Menge an Gattern wird als vollständiges System bezeichnet, wenn mit der Menge alle möglichen Gatter gebildet werden können. Die Menge $\{nand\}$ wäre ein mögliches vollständiges System.
 
 ### Schaltnetz
 Ein Schaltnetz ist eine Zeitunabhängige Funktion, ohne Speicher.
@@ -122,7 +117,7 @@ $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 
 
 #### Flankengesteuerte FlipFlops
-Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen ein Signal von Falsch zu Wahr wechselt.
+Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen ein Signal von Falsch zu Wahr wechselt. Das Impulsglied kann diese Flanken erkennen.
 
 <img src="./impulsglied.svg" />
 
@@ -139,16 +134,26 @@ Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen 
 | ----------- | ------------------------------------------------------ | ------------ |
 | JK-FlipFlop | <img src="./zweiflankengesteuertes_jk_flipflop.svg" /> |              |
 
+
+
 ## Computer Hardware
 ### CPU
-| Architektur             |     |                         |
-| ----------------------- | --- | ----------------------- |
-| Von-Neumann-Architektur |     | langsam durch einen Bus |
-| Harvard-Architektur     |     | schnell aber komplex    |
+Die CPU ist das central processing unit. Es gibt verschiedene Architekturen, jedoch die Aufgaben der CPU sind eindeutig. Sie kontrolliert, steuert und verwendet alle anderen Hardware Komponenten.
+Dies funktioniert über Busse, kabel die zwei oder mehr Hardware Komponenten Verbinden.
+| Architektur             | Modell | Beschreibung            |
+| ----------------------- | ------ | ----------------------- |
+| Von-Neumann-Architektur |        | langsam durch einen Bus |
+| Harvard-Architektur     |        | schnell aber komplex    |
+
+Grundlegend besitzt eine CPU mindestens einen Kern. Jeder Kern hat ein Memory Managment Unit (MMU), ein Steuerwerk, einen Registersatz und ein Rechenwerk (ALU). Mit Hilfe des Caches können Daten schnell zwischen gespeichert werden. Im Fall von mehreren Kernen gibt es oft einen weiteren Cache, auf den alle Kerne zugreifen können. Die Kerne einer CPU arbeiten echt-parallel.
+Die CPU kann in der **Skalare Architektur** nur einen Befehl pro Taktzyklus ausführen. Die **Superskalare Architektur** hingegen führt mehrere Befehle auf einer CPU parallel aus. Es können auch konditionelle Befehle parallel zur Kondition ausgeführt werden, sodass nicht auf das Ergebnis der Kondition gewartet werden muss.
+
+#### Interrupt
+Im Gegensatz zum **Polling**, bei dem aktiv gewartet und abgefragt wird, wird bei einem **Interrupt** unterbrochen. Ein Interupt entsteht bei Fehlern, welche vom Betriebssystem abgefangen werden oder durch asynchrone Ereignisse, welche unabhängig vom System sind (Klick). Ein Interrupt wird vom Interrupt Controller ausgelöst, dieser benachrichtigt die CPU, welche daraufhin den Interrupt in der Interrupt service Tabelle nachschaut und die Jeweilige Interrupt service routine aufruft. Falls ein Interrupt länger benötigt wird er als ein deferred interrupt parallel zu den Prozessen ausgeführt. Je nach Priorität werden unterschiedliche Interrupts ausgeführt. Systemcalls sind spezielle Interrupts, welche das Betriebssystem im Kernel-modus auffordern bestimmt Aufgaben auszuführen.
 
 
 ### Speicher
-Speicher welche näher an der CPU sind, sind deutlich schneller, jedoch haben diese schon für geringe mengen Speicherplatz hohe Kosten. Langsamere Speicher sind oft billiger.
+Speicher welche näher an der CPU sind, sind deutlich schneller, jedoch haben diese schon für geringe Mengen Speicherplatz hohe Kosten. Langsamere Speicher sind oft billiger.
 
 | Kategorie        | Beschreibung              | Beispiele     |
 | ---------------- | ------------------------- | ------------- |
@@ -156,25 +161,23 @@ Speicher welche näher an der CPU sind, sind deutlich schneller, jedoch haben di
 | Sekundärspeicher | interne langzeit Speicher | SSD/HDD       |
 | Tertiärspeicher  | externe Speicher          | CD/Magnetband |
 
-Für optimale Performace wird ein großer Block an Daten aus einem Sekundär- oder Tertiärspeicher in den Primärspeicher geladen.
+Für optimale Performace wird oft ein großer Block an Daten aus einem Sekundär- oder Tertiärspeicher in den Primärspeicher geladen. Auf der CPU gibt es den Cache, welcher für diese Optimierung allein verwendet wird.
+
+
+### Motherboard
+Das Motherboard enthält eine CPU, welche mit der Northbridge verbunden ist. Diese greift auf den Arbeitsspeicher und Grafikprozeessor zu. Über die Northbridge gelangt man zur Southbridge, welche Externe Anbindungen verwaltet.
+
+
+### Emulation
+Mit einer Emulation kann auf einem beliebigen Gerät ein komplett anderes Gerät simuliert werden, da die Hardware komplett in der Software Nachgebildet wird.
 
 
 
 ## Betriebssysteme
-Das Betriebssystem verwaltet alle Prozesse, die Leistung und bietet abstrakte Schnittstellen zu der Hardware. Zudem werden die Prozesse von einander getrennt und besitzen unterschiedliche Rechte.
-Zudem werden Benutzer verwaltet. Ein Benutzer kann maximal Administrator-Rechte besitzen/ausführen. Das Betriebssystem ist im Kernel-modus und hat damit noch höhere Rechte.
+Das Betriebssystem verwaltet alle Prozesse (Job-Managment), die Leistung und bietet abstrakte Schnittstellen zu der Hardware (Task-Managment). Prozesse werden von einander getrennt und besitzen unterschiedliche Rechte.
+Zudem werden Benutzer verwaltet. Ein Benutzer kann maximal Administrator-Rechte besitzen/ausführen. Das Betriebssystem ist im Kernel-modus und hat damit noch höhere Rechte. Es werden auch Daten verwaltet in einem Dateikatalogsystem, wieder mit eingeschränkten Rechten (Data-Managment).
 
-- Job-Managment
-- Task-Managment
-- Data-Managment
-
-- Programm - Prozess - Thread
-
-- Monolithischer Kernel: schnell komplex
-- Schichtenmodell: flexibel aber langsamer
-- Mikrokern Architektur (server bereich)
-
-| Betriebssystemkategorie              |
+| Betriebssystemkategorien             |
 | ------------------------------------ |
 | Großrechner                          |
 | Serverbetriebssyteme                 |
@@ -199,35 +202,21 @@ Betriebssysteme können unterschiedlich betrieben werden.
 | Mehrprozessorbetrieb                   | mehrere Prozessoren                              |                   |
 | Pipeline                               | wie Fließband - verarbeitung in vielen Stationen |                   |
 
-
-### Betriebssystemvirtualisierung
-- Virtuelle Computer
-- Speicher Virtualisierung: Abstraktion von Speicheradressen (sicherer und einfacher)
-- Anwendungsvirtualisierung
-- Virtuelle Prozessumgebung
-- Virtuelle Prozessoren: Java Virtual Machine
-- Netzwerkvirtualisierung (vLAN): 
-
-- Emulation - Virtualisierung: Komplette Nachbildung der Hardware in Software - Geringer Teil muss nachgebildet werden
+Das Betriebssystem kann verschieden aufgebaut sein. Beim Monolithischen Kernel werden Module nach Aufgaben gebildet, wodurch diese schneller Arbeiten, aber schlecht zu warten sind. Das Schichtenmodell hingegen sorgt für Struktur, verlangsamt jedoch die Geschwindigkeit. Bei der Mikrokern Architektur gibt es einen minimalen Kernel, welcher nur grundlegende Aufgaben ausführt. Komplexere Aufgaben werden durch einen Prozess ausgeführt.
 
 
-JVM & .NET
+### Virtualisierung
+| Virtualisierung           | Beschreibung                                              |
+| ------------------------- | --------------------------------------------------------- |
+| Virtuelle Computer        |                                                           |
+| Speicher Virtualisierung  | Abstraktion von Speicheradressen (sicherer und einfacher) |
+| Anwendungsvirtualisierung |                                                           |
+| Virtuelle Prozessumgebung |                                                           |
+| Virtuelle Prozessoren     | Java Virtual Machine                                      |
+| Netzwerkvirtualisierung   | vLAN                                                      |
+|                           |                                                           |
 
 
-### Interrupts
-- Polling: aktives warten (permanent abfragen)
-- Interrupt: unterbrechen (sofortiges abfangen) Betriebssystembedingung (Fehler) asynchrones Ereignis (Klick)
-- synchron von CPU ausgelöst
-- asynchron unabhängig von System
-
-- interrupt service tabelle - Schnittstellen zu Betriebssystem
-- interrupt service routinen aufgerufen je nach interrupt
-
-deferred interrupt: interrupt später verarbeitet (niedrige priorität)
-
-animation interrupt wikipedia
-
-Systemcalls: schnittstellen zum betriebssystemkern
 
 
 ## Netzwerktechnik
