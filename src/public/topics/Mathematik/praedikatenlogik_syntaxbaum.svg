@@ -78,31 +78,31 @@
     <ellipse cx="320" cy="230" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
     
 
-    <text x="280" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">∨</text>
+    <text x="280" y="30" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">∨</text>
 
-    <text x="240" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">∧</text>
-    <text x="320" y="70" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₀</text>
+    <text x="240" y="70" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">∧</text>
+    <text x="320" y="70" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₀</text>
 
-    <text x="200" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12" fill="#FF0000">∀x</text>
-    <text x="280" y="110" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12" fill="#FF0000">∃y</text>
+    <text x="200" y="110" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12" fill="#FF0000">∀x</text>
+    <text x="280" y="110" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12" fill="#FF0000">∃y</text>
     
-    <text x="200" y="150" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₁</text>
-    <text x="280" y="150" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₁</text>
+    <text x="200" y="150" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₁</text>
+    <text x="280" y="150" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">p₁</text>
     
-    <text x="200" y="190" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₁</text>
-    <text x="280" y="190" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₃</text>
+    <text x="200" y="190" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₁</text>
+    <text x="280" y="190" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₃</text>
 
-    <text x="200" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">x</text>
-    <text x="240" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">y</text>
-    <text x="280" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">x</text>
-    <text x="320" y="230" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₀</text>
+    <text x="200" y="230" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">x</text>
+    <text x="240" y="230" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">y</text>
+    <text x="280" y="230" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">x</text>
+    <text x="320" y="230" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" font-size="12">f₀</text>
 
 
-    <text x="20" y="40" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Formeln</text>
-    <text x="30" y="150" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Atomare Formeln</text>
-    <text x="40" y="190" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Terme</text>
-    <text x="50" y="230" alignment-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Variablen</text>
+    <text x="20" y="40" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Formeln</text>
+    <text x="30" y="150" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Atomare Formeln</text>
+    <text x="40" y="190" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Terme</text>
+    <text x="50" y="230" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#FFFFFF">Variablen</text>
 
-    <text x="200" y="290" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#DD3333" font-size="12">gebunden</text>
-    <text x="280" y="290" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#99FF00" font-size="12">ungebunden</text>
+    <text x="200" y="290" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#DD3333" font-size="12">gebunden</text>
+    <text x="280" y="290" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#99FF00" font-size="12">ungebunden</text>
 </svg>

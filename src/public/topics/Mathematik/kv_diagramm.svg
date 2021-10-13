@@ -31,41 +31,41 @@
 
 
     
-    <text x="35" y="15" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">A</text>
-    <text x="55" y="15" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">A</text>
-    <text x="75" y="15" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬A</text>
-    <text x="95" y="15" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬A</text>
+    <text x="35" y="15" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">A</text>
+    <text x="55" y="15" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">A</text>
+    <text x="75" y="15" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬A</text>
+    <text x="95" y="15" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬A</text>
 
-    <text x="15" y="35" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">B</text>
-    <text x="35" y="35" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="55" y="35" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="75" y="35" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="95" y="35" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="115" y="35" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">D</text>
+    <text x="15" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">B</text>
+    <text x="35" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="55" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="75" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="95" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="115" y="35" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">D</text>
     
-    <text x="15" y="55" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">B</text>
-    <text x="35" y="55" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="55" y="55" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="75" y="55" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="95" y="55" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="115" y="55" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬D</text>
+    <text x="15" y="55" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">B</text>
+    <text x="35" y="55" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="55" y="55" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="75" y="55" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="95" y="55" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="115" y="55" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬D</text>
     
-    <text x="15" y="75" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬B</text>
-    <text x="35" y="75" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="55" y="75" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="75" y="75" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="95" y="75" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="115" y="75" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬D</text>
+    <text x="15" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬B</text>
+    <text x="35" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="55" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="75" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="95" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="115" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬D</text>
     
-    <text x="15" y="95" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬B</text>
-    <text x="35" y="95" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="55" y="95" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
-    <text x="75" y="95" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="95" y="95" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
-    <text x="115" y="95" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">D</text>
+    <text x="15" y="95" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬B</text>
+    <text x="35" y="95" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="55" y="95" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF0000">F</text>
+    <text x="75" y="95" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="95" y="95" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#00FF00">W</text>
+    <text x="115" y="95" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">D</text>
 
-    <text x="35" y="115" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">C</text>
-    <text x="55" y="115" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬C</text>
-    <text x="75" y="115" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬C</text>
-    <text x="95" y="115" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">C</text>
+    <text x="35" y="115" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">C</text>
+    <text x="55" y="115" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬C</text>
+    <text x="75" y="115" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">¬C</text>
+    <text x="95" y="115" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FF9900">C</text>
 </svg>

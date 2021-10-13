@@ -29,16 +29,16 @@
     <ellipse cx="140" cy="160" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
     
 
-    <text x="100" y="40" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">¬</text>
+    <text x="100" y="40" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">¬</text>
 
-    <text x="100" y="80" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">∧</text>
+    <text x="100" y="80" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">∧</text>
     
-    <text x="60" y="120" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">A</text>
-    <text x="140" y="120" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">¬</text>
+    <text x="60" y="120" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">A</text>
+    <text x="140" y="120" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">¬</text>
     
-    <text x="140" y="160" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">B</text>
+    <text x="140" y="160" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">B</text>
 
 
-    <text x="50" y="40" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FFFFFF">Formeln</text>
-    <text x="100" y="160" alignment-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FFFFFF">Atome</text>
+    <text x="50" y="40" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FFFFFF">Formeln</text>
+    <text x="100" y="160" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#FFFFFF">Atome</text>
 </svg>

@@ -3,5 +3,5 @@
 
     <ellipse cx="110" cy="120" rx="10" ry="10" fill="#FFCC00" stroke="#FFFF00" stroke-width="1"/>
     
-    <text x="110" y="120" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
+    <text x="110" y="120" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
 </svg>

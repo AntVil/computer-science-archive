@@ -5,6 +5,7 @@
         --aside-width: 6cm;
         --standard-gap: 3px;
         --border-size: 1px;
+        --indent-size: 10px;
     }
 
     /* generic styles */
@@ -133,10 +134,50 @@
         grid-template-columns: var(--aside-width) 1fr var(--aside-width);
     }
 
+    #outline{
+        height: calc(100vh - var(--header-height));
+    }
+
     #outline>*{
         background-color: var(--content-color);
         margin: var(--standard-gap);
         padding: var(--standard-gap);
+        white-space: nowrap;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    #outline>*::-webkit-scrollbar{
+        display: none;
+    }
+
+    #outline>*:last-child{
+        margin-bottom: calc(100vh - var(--header-height) - 4 * var(--standard-gap) - 16px);
+    }
+
+    #outline>*.outline-heading-1{
+        padding-left: calc(var(--standard-gap) + 0 * var(--indent-size));
+    }
+
+    #outline>*.outline-heading-2{
+        padding-left: calc(var(--standard-gap) + 1 * var(--indent-size));
+    }
+
+    #outline>*.outline-heading-3{
+        padding-left: calc(var(--standard-gap) + 2 * var(--indent-size));
+    }
+
+    #outline>*.outline-heading-4{
+        padding-left: calc(var(--standard-gap) + 3 * var(--indent-size));
+    }
+
+    #outline>*.outline-heading-5{
+        padding-left: calc(var(--standard-gap) + 4 * var(--indent-size));
+    }
+
+    #outline>*.outline-heading-6{
+        padding-left: calc(var(--standard-gap) + 5 * var(--indent-size));
     }
 
     #outline>*:hover{
@@ -145,11 +186,15 @@
     }
 
     #content{
-        height: calc(100vh - var(--header-height));
+        height: calc(100vh - var(--header-height) - 2 * var(--standard-gap));
         background-color: var(--content-color);
         border-left: var(--border-size) solid var(--border-color);
         border-right: var(--border-size) solid var(--border-color);
         padding: calc(2 * var(--standard-gap));
+    }
+
+    #content>*:last-child{
+        margin-bottom: calc(100vh - var(--header-height) - 2 * var(--standard-gap) - 16px);
     }
 
     /* page options */

@@ -145,13 +145,12 @@ $$\mathbb{Z} = \left\{((a,b), (c,d)) \in (\mathbb{N_0} \times \mathbb{N_0})^2 | 
 #### Restklassen
 Auf der Menge $\mathbb{Z}$ kann für ein gewähltes $n \in \mathbb{N}$ eine Restklasse definiert werden.
 
-$$\sim_n = \{(a, b) \in \mathbb{Z} \times \mathbb{Z}| \exists c \in \mathbb{Z}: a - b = c \cdot n\}$$
-$$[a]_{\sim_n} + [b]_{\sim_n} = [a + b]_{\sim_n}$$
-$$[a]_{\sim_n} - [b]_{\sim_n} = [a - b]_{\sim_n}$$
-$$[a]_{\sim_n} \cdot [b]_{\sim_n} = [a \cdot b]_{\sim_n}$$
+$$\mathbb{Z}/n\mathbb{Z} = \{(a, b) \in \mathbb{Z} \times \mathbb{Z}| \exists c \in \mathbb{Z}: a - b = c \cdot n\}$$
+$$[a]_{\mathbb{Z}/n\mathbb{Z}} + [b]_{\mathbb{Z}/n\mathbb{Z}} = [a + b]_{\mathbb{Z}/n\mathbb{Z}}$$
+$$[a]_{\mathbb{Z}/n\mathbb{Z}} - [b]_{\mathbb{Z}/n\mathbb{Z}} = [a - b]_{\mathbb{Z}/n\mathbb{Z}}$$
+$$[a]_{\mathbb{Z}/n\mathbb{Z}} \cdot [b]_{\mathbb{Z}/n\mathbb{Z}} = [a \cdot b]_{\mathbb{Z}/n\mathbb{Z}}$$
 
 Diese Restklassen sind Äquivalenzrelationen und können verkürzt dargestellt werden:
-$$\mathbb{Z}/n\mathbb{Z}$$
 $$a + b \equiv c \mod n$$
 $$a - b \equiv c \mod n$$
 $$a \cdot b \equiv c \mod n$$
@@ -359,6 +358,12 @@ $$valf_{S, v}(\forall x F) = W\text{, wenn für alle } u \in U valf_{S, v_{x}^{u
 $$valf_{S, v}(\exists x F) = W\text{, wenn es für mindestens ein } u \in U valf_{S, v_{x}^{u}}(F) \text{ gilt}$$
 
 
+## Statistik
+### Kombinatorik
+
+
+
+
 ## Analysis
 ### Folgen und Reihen
 Eine (Zahlen-)Folge ist eine unendliche geordnete Sammlung an Reellen Zahlen. Sie wird mit einem Buchstaben und einem Index $n \in \mathbb{N}_0$ angegeben. Sie kann auch als ein Tupel ausgeschrieben werden.
@@ -461,7 +466,7 @@ $$f(k) \notin \mathbb{R}$$
 $$\displaystyle\int_{x_0}^{k}f(x)dx = \lim_{n \rightarrow k}\left(\displaystyle\int_{x_0}^{n}f(x)dx\right)$$
 
 
-## lineare Algebra
+## Lineare Algebra
 ### Vektoren
 Vektoren sind Teil eines Vektorraums und werden als Tupel dargestellt. Geometrisch können Vektoren auch als Pfeile im Raum verstanden werden.
 $$\vec{v} = \begin{pmatrix}v_0\\v_1\\\vdots\end{pmatrix}$$
@@ -516,12 +521,15 @@ $$\vec{n} = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f(x_{1_0}, x_{2_0
 
 Diese Art der Berechnung des Normalenvektors bietet sich an um eine Tangentialebene zu bilden.
 
+##### Totales Differenzial
+Mit dem totalen Differenzial kann man für komplizierte Funktionen die Änderung in beliebige Richtungen annähern.
+
 #### Gradient
 Der Gradient zeigt in Richtung des größten Zuwachses von $f$.
 $$\nabla f = grad(f) = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f\\\frac{\partial}{\partial x_1}f\\\vdots\end{array}\right)$$
 
 Mit Hilfe des Gradienten kann man die Ableitung in eine beliebige Richtung $r$ berechnen.
-$$\frac{\partial}{\partial r}f(\vec{x}) = \tan(\alpha) = grad(f)(\vec{x}) \cdot norm(\vec{a})$$
+$$\frac{\partial}{\partial r}f(\vec{x}) = \tan(\alpha) = grad(f(\vec{x})) \cdot norm(\vec{a})$$
 
 
 ### Lineare Transformationen

@@ -1,9 +1,9 @@
 :root{
-    --text-color: #464579;
-    --aside-color: #50253b;
-    --content-color: #fa6956;
-    --border-color: #351727;
-    --highlight-color: #fff474;
+    --text-color: #4c2f53;
+    --aside-color: #9b5f48;
+    --content-color: #e0905a;
+    --border-color: #5e442a;
+    --highlight-color: #ffce74;
 }
 
 *{

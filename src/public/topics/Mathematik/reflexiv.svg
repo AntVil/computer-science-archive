@@ -15,8 +15,8 @@
     <ellipse cx="80" cy="30" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
     <ellipse cx="110" cy="30" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
     
-    <text x="20" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
-    <text x="50" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
-    <text x="80" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
-    <text x="110" y="30" alignment-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
+    <text x="20" y="30" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
+    <text x="50" y="30" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
+    <text x="80" y="30" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
+    <text x="110" y="30" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">d</text>
 </svg>

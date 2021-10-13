@@ -15,6 +15,7 @@ Andernfalls können Frequenzen nicht korrekt wiedergegeben werden. (Alias Effekt
 
 ## Codierungen
 Ein Bit ist die kleinste Computereinheit und kann den Zustand Wahr oder Falsch haben.
+
 | Einheit  | Bits           |
 | -------- | -------------- |
 | $Nibble$ | $4Bits$        |
@@ -104,9 +105,9 @@ Ein Schaltwerk ist eine Zeitabhängige Funktion. Dies würd durch **Rückkopplun
 $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 
 #### Nicht-Taktgesteuerte FlipFlops (Basis-FlipFlop)
-| FlipFlop     | Schaltung                            | Beschreibung |
-| ------------ | ------------------------------------ | ------------ |
-| RS NOR-Latch | <img src="./rs_nor_latch.svg.svg" /> |              |
+| FlipFlop     | Schaltung                        | Beschreibung |
+| ------------ | -------------------------------- | ------------ |
+| RS NOR-Latch | <img src="./rs_nor_latch.svg" /> |              |
 
 
 #### Taktgesteuerte FlipFlops
@@ -140,6 +141,7 @@ Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen 
 ### CPU
 Die CPU ist das central processing unit. Es gibt verschiedene Architekturen, jedoch die Aufgaben der CPU sind eindeutig. Sie kontrolliert, steuert und verwendet alle anderen Hardware Komponenten.
 Dies funktioniert über Busse, kabel die zwei oder mehr Hardware Komponenten Verbinden.
+
 | Architektur             | Modell | Beschreibung            |
 | ----------------------- | ------ | ----------------------- |
 | Von-Neumann-Architektur |        | langsam durch einen Bus |
@@ -220,4 +222,35 @@ Das Betriebssystem kann verschieden aufgebaut sein. Beim Monolithischen Kernel w
 
 
 ## Netzwerktechnik
+### Netzwerke
+Ein Netzwerk ist ein Zusammenschluss mehrerer Geräte. Dieser Zusammenschluss kann unterschiedlich aussehen.
 
+| Topologie     | Darstellung                       | Beschreibung                  |
+| ------------- | --------------------------------- | ----------------------------- |
+| Linie         | <img src="./linie.svg" />         | Geringste Verkabelung         |
+| Bus           | <img src="./bus.svg" />           | Alle verbunden mit Bus        |
+| (Token-) Ring | <img src="./ring.svg" />          | Nur mit Token kann man senden |
+| Baum          | <img src="./baum.svg" />          | Hierachisch Verkabelt         |
+| Stern         | <img src="./stern.svg" />         | Zentral Verkabelt             |
+| Vermascht     | <img src="./vermascht.svg" />     | Enthält Ringe                 |
+| Vollvermascht | <img src="./vollvermascht.svg" /> | Komplette Verkabelung         |
+
+Die größe des Netzes kann grob kategorisiert werden.
+
+| LAN (local area network) | MAN (metropolian area network) | WAN (wide area network) | GAN (global area network) |
+| ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
+| Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
+
+Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschiedliche Verbindungen.
+
+| Verbindungen        | Beschreibung |
+| ------------------- | ------------ |
+| Serielle Verbindung |              |
+| Ethernet/LAN        |              |
+| DSL Modem           |              |
+| WLAN                |              |
+| DLAN                |              |
+| Bluetooth           |              |
+| NFC                 |              |
+
+### OSI-Schichtenmodell

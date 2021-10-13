@@ -24,26 +24,26 @@
     <rect x="460" y="165" width="20" height="20" rx="10" ry="10" fill="#FF0099" />
     
 
-    <text x="80" y="90" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Halbgruppe</text>
-    <text x="80" y="130" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Monoid</text>
-    <text x="80" y="155" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Gruppe</text>
-    <text x="80" y="180" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Kommutative Gruppe</text>
+    <text x="80" y="90" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Halbgruppe</text>
+    <text x="80" y="130" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Monoid</text>
+    <text x="80" y="155" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Gruppe</text>
+    <text x="80" y="180" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Kommutative Gruppe</text>
 
-    <text x="260" y="90" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Abgeschlossen</text>
-    <text x="260" y="105" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Assoziativ</text>
-    <text x="260" y="130" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Neutral Element</text>
-    <text x="260" y="155" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Inverse Elemente</text>
-    <text x="260" y="180" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Kommutativ</text>
+    <text x="260" y="90" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Abgeschlossen</text>
+    <text x="260" y="105" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Assoziativ</text>
+    <text x="260" y="130" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Neutral Element</text>
+    <text x="260" y="155" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Inverse Elemente</text>
+    <text x="260" y="180" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕ Kommutativ</text>
 
-    <text x="480" y="90" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Abgeschlossen</text>
-    <text x="480" y="105" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Assoziativ</text>
-    <text x="480" y="130" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕, ⊙ Distributiv</text>
-    <text x="480" y="155" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Kommutativ</text>
-    <text x="480" y="180" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Neutral Element</text>
-    <text x="480" y="195" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Inverse Elemente</text>
+    <text x="480" y="90" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Abgeschlossen</text>
+    <text x="480" y="105" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Assoziativ</text>
+    <text x="480" y="130" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊕, ⊙ Distributiv</text>
+    <text x="480" y="155" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Kommutativ</text>
+    <text x="480" y="180" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Neutral Element</text>
+    <text x="480" y="195" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">⊙ Inverse Elemente</text>
 
-    <text x="660" y="90" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Halbgruppe</text>
-    <text x="660" y="130" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Ring</text>
-    <text x="660" y="155" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Kommutativer Ring</text>
-    <text x="660" y="180" font-size="15" alignment-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Körper</text>
+    <text x="660" y="90" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Halbgruppe</text>
+    <text x="660" y="130" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Ring</text>
+    <text x="660" y="155" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Kommutativer Ring</text>
+    <text x="660" y="180" font-size="15" dominant-baseline="top" text-anchor="start" font-family="Consolas" fill="#FFFFFF">Körper</text>
 </svg>

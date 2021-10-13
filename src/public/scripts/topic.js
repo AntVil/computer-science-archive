@@ -40,6 +40,22 @@ async function loadTopicContent(topicName){
 
     content = content.replaceAll("./", `./topics/${topicName}/`)
 
+    // convert outline
+    document.getElementById("outline").innerHTML = "";
+    for(let line of content.split("\n")){
+        if(line[0] == "#"){
+            let k = line.split("#").length - 2;
+            let text = line.replaceAll("#", "").slice(1, -1);
+            let element = document.createElement("div");
+            element.classList.add(`outline-heading-${k}`);
+            element.innerText = text;
+            element.onclick = function(){
+                toHeading(text);
+            }
+            document.getElementById("outline").appendChild(element);
+        }
+    }
+    
     // convert equation markdown
     content = content.split("$$").reduce(function(s1, s2, i){
         if(i % 2 == 0){
@@ -69,5 +85,21 @@ async function loadTopicContent(topicName){
         equation.innerHTML = katex.renderToString(mathCode, {
             "throwOnError": false
         });
+    }
+}
+
+/**
+ * scrolls to the specified heading
+ * @param {String} headingText 
+ */
+function toHeading(headingText){
+    for(let i=1;i<7;i++){
+        let headings = document.getElementsByTagName(`h${i}`);
+        for(let j=0;j<headings.length;j++){
+            if(headings[j].innerText == headingText){
+                headings[j].scrollIntoView({behavior: "smooth"});
+                return;
+            }
+        }
     }
 }
