@@ -360,6 +360,11 @@ $$valf_{S, v}(\exists x F) = W\text{, wenn es für mindestens ein } u \in U valf
 
 ## Statistik
 ### Kombinatorik
+Kombinatorik beschäftigt sich mit der Anzahl an Möglichkeiten Ausschnitte aus einer Menge zu bilden, wobei $n$ die Größe der Menge und $k$ die Größe des Ausschnitss bezeichnet.
+| Einschränkung       | Variation (geordnet)  | Kombination (ungeordnet)                       |
+| ------------------- | --------------------- | ---------------------------------------------- |
+| mit Wiederholungen  | $$\frac{n!}{(n-k)!}$$ | $$\frac{n!}{k! \cdot (n-k)!} = {n \choose k}$$ |
+| ohne Wiederholungen | $$n^k$$               | $${n+1-k \choose k}$$                          |
 
 
 
@@ -522,14 +527,15 @@ $$\vec{n} = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f(x_{1_0}, x_{2_0
 Diese Art der Berechnung des Normalenvektors bietet sich an um eine Tangentialebene zu bilden.
 
 ##### Totales Differenzial
-Mit dem totalen Differenzial kann man für komplizierte Funktionen die Änderung in beliebige Richtungen annähern.
+Mit dem totalen Differenzial kann man für komplizierte Funktionen die Änderung in beliebige Richtungen annähern. Dabei gibt $\Delta$ die Änderung der Variablen an.
+$$\Delta x_3 \approx \frac{\partial}{\partial x_1}f(x_1, x_2) \cdot \Delta x_1 + \frac{\partial}{\partial x_2}f(x_1, x_2) \cdot \Delta x_2$$
 
 #### Gradient
 Der Gradient zeigt in Richtung des größten Zuwachses von $f$.
 $$\nabla f = grad(f) = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f\\\frac{\partial}{\partial x_1}f\\\vdots\end{array}\right)$$
 
 Mit Hilfe des Gradienten kann man die Ableitung in eine beliebige Richtung $r$ berechnen.
-$$\frac{\partial}{\partial r}f(\vec{x}) = \tan(\alpha) = grad(f(\vec{x})) \cdot norm(\vec{a})$$
+$$\frac{\partial}{\partial r}f(\vec{x}) = \tan(\alpha) = grad(f(\vec{x})) \cdot norm(\vec{r})$$
 
 
 ### Lineare Transformationen

@@ -37,14 +37,42 @@ Ein NP-vollständiges Problem ist NP-hart und liegt selbst in NP.
 
 ## Datenstrukturen
 ### Array
+Ein Array ist eine geordnete Sammlung, wobei jedes Element schnell über einen Index abgerufen oder verändert werden kann. Arrays können mehrere Dimensionen haben, jedoch muss die Größe eines Arrays bei seiner Erstellung vorgegeben werden und kann nicht verändert werden. Ein Array ähnelt einem Tupel.
+$$a = (...)$$
+
 
 ### Liste
+Eine Liste ist eine flexiblere Datenstruktur, da die Größe dynamisch verringert oder erweitert werden kann. Listen basieren auf Knoten und Pointern, welche leichter verändert werden können. Die Pointer eines Listen Elements zeigen immer auf den Nachfolger in der Liste, so kann diese iterativ durchlaufen werden.
+Eine Liste ähnelt einer total Ordnung.
+
+<img src="./liste.svg" />
+
+Eine Liste kann auch bidirektional sein, die Pointer gehen in beide Richtungen. Dadurch kann die Listen einfach in beide Richtungen durchgegangen werden und wird noch flexibler.
+
+<img src="./doppel_liste.svg" />
+
 
 ### Stack
+Ein Stack (auch Stapel oder Keller) ist eine sonder Form einer Liste, bei der nur am Anfang eingefügt und entfernt werden kann. Er funktioniert nach dem Last-in-First-out Prinzip (LIFO)
+
+<img src="./stack.svg" />
+
 
 ### Queue
+Eine Queue (auch Schlange) ist eine sonder Form einer Liste, bei der nur am Ende eingefügt und am Anfang entfernt werden kann. Sie funktioniert nach dem First-in-First-out Prinzip (FIFO). Eine priority Queue funktioniert ähnlich wie eine normale Queue, jedoch haben Elemente eine Priorität, welche benutzt wird um beim Einfügen manche Elemente weiter vor zu ziehen, damit diese schneller bearbeitet werden.
+
+<img src="./queue.svg" />
+
 
 ### Baum
+Ein Baum ist eine Erweiterung der Liste. Wie bei der Liste hat jedes Element Nachfolger, jedoch kann ein Baum mehr als nur einen Nachfolger haben. Die maximale Anzahl an Nachfolgern wird mit der Ordnung angegeben.
+
+<img src="./baum.svg" />
+
+Ein Baum kann verschiedene Eigenschaften haben.
+| balanciert                                                                                            | vollständig                                         | fast vollständig                                      |
+| ----------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
+| Für jeden Knoten gilt, die Höhe des linken und rechten Teilbaum unterscheidet sich höchstens um eins. | Jede Ebene ist entweder leer oder komplett befüllt. | Beim Zeilenweise ablesen trifft man nicht auf Lücken. |
 
 #### AVL-Baum
 
