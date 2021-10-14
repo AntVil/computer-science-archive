@@ -237,20 +237,30 @@ Ein Netzwerk ist ein Zusammenschluss mehrerer Geräte. Dieser Zusammenschluss ka
 
 Die größe des Netzes kann grob kategorisiert werden.
 
-| LAN (local area network) | MAN (metropolian area network) | WAN (wide area network) | GAN (global area network) |
-| ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
-| Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
+| PAN (personal area network) | LAN (local area network) | MAN (metropolian area network) | WAN (wide area network) | GAN (global area network) |
+| --------------------------- | ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
+|                             | Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
 
 Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschiedliche Verbindungen.
 
-| Verbindungen        | Beschreibung |
-| ------------------- | ------------ |
-| Serielle Verbindung |              |
-| Ethernet/LAN        |              |
-| DSL Modem           |              |
-| WLAN                |              |
-| DLAN                |              |
-| Bluetooth           |              |
-| NFC                 |              |
+| Verbindungen        | Beschreibung                                                                                                                       |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| Serielle Verbindung | ohne Takt (manuelle Einstellung)                                                                                                   |
+| Ethernet/LAN        | Koaxialkabel (mehrfache Isolation), Twisted Pair (Elektrische Felder heben sich auf),  Power over Ethernet (PoE, LAN + Versorgung) |
+| DSL Modem           |                                                                                                                                    |
+| WLAN                |                                                                                                                                    |
+| DLAN                |                                                                                                                                    |
+| Bluetooth           |                                                                                                                                    |
+| NFC                 |                                                                                                                                    |
 
 ### OSI-Schichtenmodell
+
+| Schicht                | Aufgabe                         |
+| ---------------------- | ------------------------------- |
+| Anwendungsschicht      |                                 |
+| Darstellungsschicht    |                                 |
+| Sitzungsschicht        |                                 |
+| Transportschicht       | Gibt den Port im Ziel an        |
+| Vermittlungsschicht    | Gibt die Systemweite Adresse an |
+| Sicherungsschicht      | Gibt die Lokale Adresse an      |
+| Bitübertragungsschicht | Überträgt die Daten             |
