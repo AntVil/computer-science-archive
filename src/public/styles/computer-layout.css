@@ -10,7 +10,7 @@
 
     /* generic styles */
     *{
-        transition: left 0.25s, top 0.25s, right 0.25s, bottom 0.25s, opacity 0.15s, z-index 0.15s;
+        transition: left 0.25s, top 0.25s, right 0.25s, bottom 0.25s, opacity 0.25s, z-index 0.15s, color 1s, background-color 1s;
     }
 
     strong, b, i, em{

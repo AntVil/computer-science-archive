@@ -6,3 +6,7 @@ in the terminal navigate to `src` and run the `npm install` command to install a
 cd src
 npm install
 ```
+start the webserver
+```
+node src
+```

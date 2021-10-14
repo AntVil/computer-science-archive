@@ -47,7 +47,7 @@ Eine Liste ähnelt einer total Ordnung.
 
 <img src="./liste.svg" />
 
-Eine Liste kann auch bidirektional sein, die Pointer gehen in beide Richtungen. Dadurch kann die Listen einfach in beide Richtungen durchgegangen werden und wird noch flexibler.
+Eine Liste kann auch bidirektional sein, die Pointer gehen in beide Richtungen. Dadurch kann die Liste einfach in beide Richtungen durchgegangen werden und wird noch flexibler.
 
 <img src="./doppel_liste.svg" />
 
@@ -70,24 +70,99 @@ Ein Baum ist eine Erweiterung der Liste. Wie bei der Liste hat jedes Element Nac
 <img src="./baum.svg" />
 
 Ein Baum kann verschiedene Eigenschaften haben.
+
 | balanciert                                                                                            | vollständig                                         | fast vollständig                                      |
 | ----------------------------------------------------------------------------------------------------- | --------------------------------------------------- | ----------------------------------------------------- |
 | Für jeden Knoten gilt, die Höhe des linken und rechten Teilbaum unterscheidet sich höchstens um eins. | Jede Ebene ist entweder leer oder komplett befüllt. | Beim Zeilenweise ablesen trifft man nicht auf Lücken. |
 
+Ein Baum kann verschieden Durchlaufen werden, man sagt auch Traversieren.
+
+| Pre-Order                    | In-Order                    | Post-Order                    |
+| ---------------------------- | --------------------------- | ----------------------------- |
+| <img src="./preorder.svg" /> | <img src="./inorder.svg" /> | <img src="./postorder.svg" /> |
+
+Zusätzlich kann man einen Baum als Array darstellen. Der Baum wird Ebenen-weise abgelesen inklusive Lücken. Das Array ermöglicht schnellere Tauschoperationen im Baum, jedoch ist die Struktur statisch.
+
 #### AVL-Baum
+Ein AVL-Baum ist ein Baum, welcher nach jeder Operation balanciert wird, wodurch dieser besonders effizient arbeitet. Jeder Knoten speichert die Höhendifferenz der Teilbäume ab. Wenn der Betrag der Höhendifferenz größer als 1 ist wird eine Rotationsoperation durchgeführt.
+
+<img src="./rotation.svg" />
 
 #### Heap
+Ein Heap ist ein fast vollständiger Binärbaum (Baum der Ordnung 2), bei dem alle Nachfolger eines Knotens entweder kleiner (Max Heap) oder größer (Min Heap) sind. Er bildet eine effizientere priority Queue. Elemente werden an das Ende eingefügt und nach oben vertauscht bei Bedarf. Elemente können nur vom Anfang entfernt werden, wonach immer das Element mit dem größeren Wert hoch rutscht. Das Sortierverfahren Heapsort fügt alle Elemente in einen Heap ein. Danach werden die Elemente vom Heap entfernt, wodurch eine sortierte Folge entsteht.
 
 ### Graph
+Ein Graph beschreiben Beziehungen zwischen Objekten. Mit der gewichtung der Kanten können zum Beispiel Kosten abgebildet werden.
+Ein Graph kann als Matrix (Tabelle) dargestellt werden. Ob es eine Kante gibt, beziehungsweise dessen Gewicht, wird in die jeweilige Zeile und Spalte eingetragen. Der Kanten Ursprung bestimmt die Spalte, das Ziel die Zeile.
+$$\begin{pmatrix}1 & 1 & 1 & 1\\1 & 1 & 0 & 1\\0 & 1 & 1 & 1\\0 & 0 & 0 & 1\\\end{pmatrix}$$
+
+Zusätzlich kann ein Graph mit einer Adjazenzliste (2-dimensionale Liste) dargestellt werden. In jeder Spalte werden alle Nachbarn untereinander eingetragen, gegebenenfalls mit deren Gewicht.
+
+| a   | b   | c   | d   |
+| --- | --- | --- | --- |
+| a   | a   | b   | d   |
+| b   | b   | c   |     |
+| c   | d   | d   |     |
+| d   |     |     |     |
+
+#### Suchalgorithmen
+| Depth-First-Search                                                           | Breadth-First-Search                                                                                                                         | Iterative Depth-Search                                                                          |
+| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Durchlaufen eines Graphen mit einem Stack, Knoten werden nur einmal besucht. | Durchlaufen eines Graphen mit einer Queue, Knoten werden nur einmal besucht. Breadth-First-Search findet den Kürzesten Pfad zu einem Knoten. | Iterativ Tiefergehend suchen. Iterative Depth-Search findet den Kürzesten Pfad zu einem Knoten. |
+| hoher Suchbedarf                                                             | hoher Speicherverbrauch                                                                                                                      | Optimum beider                                                                                  |
+
+
+Mit dem Branch and Bound Verfahren kann man unnötige Äste in einem Baum früh erkennen, indem man immer den besten Wert zwischen speichert und die Suche abbricht wenn der Wert überschritten wird.
+
+#### Minimax
+Für ein Spiel mit perfekter Information kann man alle einen Baum aufstellen, wobei Kanten abwechselnd Spielzüge der Spieler sind. Die Blätter enthalten einen niedrigen Wert bei Verlust für Spieler 1 und höheren Wert bei Gewinn. Rekursiv kann für jeder Ebene abwechselnd das Maximum und Minimum der Kinder genommen werden. In der Wurzel bleibt das zu erwartende Resultat übrig.
+Da der Minimax-Algorithmus extem schnell aufwendig wird gibt es die Alpha-Beta-Pruning methode. Dabei wird die Suche in einem Teilbaum abgebrochen, falls dieser nicht zum Ergebnis beiträgt, da die Spieler schon einen besseren Pfad nehmen können.
+
+<img src="./alpha_beta_pruning.svg" />
+
+Zur weiteren Optimierung können zwischen Spielstände durch Markow-Ketten bewertet werden. Dabei wird aus einer **großen** Datenbasis die Gewinn-Wahrscheinlichkeit entnommen aufgrund der letzten $n$ Züge.
+
+#### Spannbaum
+Der Spannbaum eines Graphen ist ein Baum, welcher alle Knoten eines Graphen durchläuft.
+
+| Algorithmus von Kruskal             | Algorithmus von Prim                                     | Algorithmus von Dijkstra                                                  | A* Algorithmus                                                                             |
+| ----------------------------------- | -------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| 1. Kanten Sortieren                 | 1. Start-Knoten zu Spannbaum hinzufügen                  | 1. Startknoten wird besucht                                               | 1. Startknoten wird besucht                                                                |
+| 2. Kanten hintereinander hinzufügen | 2. Jeweils kleinste Kante angrenzend zum Baum hinzufügen | 2. Jeweils kürzester entfernter unbesuchter Nachbar wird besucht          | 2. Jeweils Nachbar mit geringster Summe aus gelaufener und zu erwartender Distanz besuchen |
+| 3. Außer es entsteht ein Zyklus     | 3. Außer es entsteht ein Zyklus                          | 3. Vorgänger und Distanzen von Knoten werden gegebenenfalls überschrieben | 3. Vorgänger und Distanzen von Knoten werden gegebenenfalls überschrieben                  |
+
+
+
+#### Maximaler Fluss
+Der Maximale Fluss beschreibt ein Problem, bei dem man versucht von einem Start-Knoten zu einem End-Knoten so viel Wasser wie möglich durch zu leiten.
+Die Gewichte der Kanten sind dabei die maximale Kapazität die eine Leitung halten kann.
+
+| Ford-Fulkerson-Algorithmus                                                                                                                   |
+| -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1. Vom Start-Knoten zum End-Knoten werden mögliche Pfade gesucht                                                                             |
+| 2. Der Durchfluss auf den Pfaden wird so hoch wie die kleinste Kapazität es erlaubt gesetzt                                                  |
+| 3. Pfade können bereits verwendete Kanten auch Rückwerts durchlaufen, wobei dabei der Durchfluss an der Stelle verringert statt erhöht wird. |
+
+Der Maximale Fluss entspricht dem minimalen Schnitt. Es wird ein Schnitt durch nur vollständig verwendete Kanten gesetzt. Die Summe der geschnittenen Kanten entspricht dem Maximalem Fluss.
 
 ### Symboltabellen
+Eine Symboltabelle speichert Schlüssel-Wert-Paare. Sie ähnelt in der Funktionsweise einer Abbildung. Mit $put$ wird ein Paar hinzugefügt. Mit $get$ erhält man den Wert für einen Schlüssel.
+
+<img src="./symboltabelle.svg" />
 
 
+Eine Hashtabelle ist eine Möglichkeit eine Symboltabelle zu realisieren. Aus einem Schlüssel wird mit einer Hashfunktion ein Index berechnet. Mit dem Index kann man den Wert in ein Array an der Stelle des Index einsetzen.
 
+$$hash: M \rightarrow \mathbb{N}_0$$
+$$m \mapsto 0$$
+$$...$$
 
-### Iterative Tiefensuche
-- optimal
-- geringerer Suchaufwand als bei Tiefensuche
-- vollständig
-- geringerer Platzbedarf (wie Tiefensuche)
+#### Kollision
+Eine Hashfunktion ist meist nur surjektiv, also kann man für zwei verschiedene Schlüssel den selben Index erhalten. Dies nennt man eine Kollision.
 
+| Lineares Sondieren                                                                              | Quadratisches sondieren                                                                       | Überläufer Verkettung       |
+| ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------- |
+| Bei Kollision werden Werte so lange nach links verschoben, bis eine freie Stelle gefunden wird. | Bei Kollision werden Werte in Quadratischen Abständen (links und rechts) vom Index eingefügt. | Das Array verwaltet Listen. |
+
+## Dynamische Programmierung
+Bei dynamischer Programmierung wird ein Algorithmus in sich überlappende Teilprobleme aufgeteilt. Die Lösungen zu den Teilproblemen wird abgespeichert, wodurch komplexere optimierungs Probleme effizienter gelöst werden.

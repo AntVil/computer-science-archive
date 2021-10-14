@@ -34,10 +34,13 @@
  * @param {String} topicName 
  */
 async function loadTopicContent(topicName){
+    // hide elements until everything is loaded and atleast 0.5 seconds passed
+    setTopicVisibility(false);
+    let startTime = window.performance.now();
+
+    // get content
     let url = [...window.location.href.split("/").slice(0, -1), "topics", topicName, "content.md"].join("/");
-
     let content = await (await fetch(url)).text();
-
     content = content.replaceAll("./", `./topics/${topicName}/`)
 
     // convert outline
@@ -86,6 +89,11 @@ async function loadTopicContent(topicName){
             "throwOnError": false
         });
     }
+
+    // show elements only after 0.5 seconds passed
+    setTimeout(function(){
+        setTopicVisibility(true);
+    }, Math.max(500 - (window.performance.now() - startTime), 0))
 }
 
 /**
@@ -101,5 +109,17 @@ function toHeading(headingText){
                 return;
             }
         }
+    }
+}
+
+/**
+ * hides and shows
+ * @param {boolean} visable 
+ */
+function setTopicVisibility(visable){
+    if(visable){
+        document.getElementById("js-topic-transitions").innerHTML = "#content>*{opacity: 1}#outline>*{opacity: 1}";
+    }else{
+        document.getElementById("js-topic-transitions").innerHTML = "#content>*{opacity: 0}#outline>*{opacity: 0}";
     }
 }
