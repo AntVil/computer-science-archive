@@ -86,15 +86,18 @@ Zusätzlich kann man einen Baum als Array darstellen. Der Baum wird Ebenen-weise
 #### AVL-Baum
 Ein AVL-Baum ist ein Baum, welcher nach jeder Operation balanciert wird, wodurch dieser besonders effizient arbeitet. Jeder Knoten speichert die Höhendifferenz der Teilbäume ab. Wenn der Betrag der Höhendifferenz größer als 1 ist wird eine Rotationsoperation durchgeführt.
 
-<img src="./rotation.svg" />
+<img style="max-width: 800px" src="./rotation.svg" />
 
 #### Heap
 Ein Heap ist ein fast vollständiger Binärbaum (Baum der Ordnung 2), bei dem alle Nachfolger eines Knotens entweder kleiner (Max Heap) oder größer (Min Heap) sind. Er bildet eine effizientere priority Queue. Elemente werden an das Ende eingefügt und nach oben vertauscht bei Bedarf. Elemente können nur vom Anfang entfernt werden, wonach immer das Element mit dem größeren Wert hoch rutscht. Das Sortierverfahren Heapsort fügt alle Elemente in einen Heap ein. Danach werden die Elemente vom Heap entfernt, wodurch eine sortierte Folge entsteht.
 
 ### Graph
 Ein Graph beschreiben Beziehungen zwischen Objekten. Mit der gewichtung der Kanten können zum Beispiel Kosten abgebildet werden.
+
+<img src="./graph.svg" />
+
 Ein Graph kann als Matrix (Tabelle) dargestellt werden. Ob es eine Kante gibt, beziehungsweise dessen Gewicht, wird in die jeweilige Zeile und Spalte eingetragen. Der Kanten Ursprung bestimmt die Spalte, das Ziel die Zeile.
-$$\begin{pmatrix}1 & 1 & 1 & 1\\1 & 1 & 0 & 1\\0 & 1 & 1 & 1\\0 & 0 & 0 & 1\\\end{pmatrix}$$
+$$\begin{pmatrix}1 & 1 & 0 & 0\\1 & 1 & 1 & 0\\1 & 0 & 1 & 0\\1 & 1 & 1 & 1\end{pmatrix}$$
 
 Zusätzlich kann ein Graph mit einer Adjazenzliste (2-dimensionale Liste) dargestellt werden. In jeder Spalte werden alle Nachbarn untereinander eingetragen, gegebenenfalls mit deren Gewicht.
 

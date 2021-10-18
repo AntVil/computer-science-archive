@@ -206,6 +206,15 @@ Betriebssysteme können unterschiedlich betrieben werden.
 
 Das Betriebssystem kann verschieden aufgebaut sein. Beim Monolithischen Kernel werden Module nach Aufgaben gebildet, wodurch diese schneller Arbeiten, aber schlecht zu warten sind. Das Schichtenmodell hingegen sorgt für Struktur, verlangsamt jedoch die Geschwindigkeit. Bei der Mikrokern Architektur gibt es einen minimalen Kernel, welcher nur grundlegende Aufgaben ausführt. Komplexere Aufgaben werden durch einen Prozess ausgeführt.
 
+### Prozesse
+Mit einem Auftrag wird ein Prozess gestartet. Seine Daten werden in den Speicher geladen und eine **PID** wird erstellt. Dieser Prozess kann Teil eines Programms mit mehreren Prozessen sein, oder allein stehend. Für einen Prozess kann ein Thread oder mehrere Treads laufen. Threads eines Prozesses teilen sich den Adressbereich. Jeder Thread hat einen eigenen virtuellen Prozessor. Mehrere virtuelle Prozessoren werden auf einem Prozessor simuliert. Zwischen den virutellen Prozessen wird ständig gewechselt.
+
+<img src="./prozesszustandsmodell.svg" />
+
+Nach der Initialisierung eines Prozess wird dieser in eine Warteschlange eingefügt. Ein Prozess aus der Warteschlange kann im Nutzermodus bearbeitet werden. Falls höhere Rechte erforderlich sind kann, durch einen Interrupt, in den Kernelmodus gewechselt werden. Nachdem ein Prozess für eine Weile bearbeitet wurde kann dieser zurück in die Warteschlange. Falls der Prozess auf ein Ereignis wartet, wird dieser blockiert, bis das Ereignis eintritt. Hierfür wird für jedes mögliche Ereignis eine seperate Warteschlange angelegt. Ein Prozess kann suspendiert werden, falls dieser nicht aktiv genutzt wird. Dadurch werden Resourcen für andere Prozesse frei.
+
+Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zwischen gespeichert und geladen werden. Der Wechsel zwischen Threads ist einfacher und schneller, da dabei nicht der gesamte Kontext gewechselt werden muss. Der Wechsel zwischen Threads erfordert meist sehr viel Koordination, da sonst Kollisionen zwischen den Threads entstehen. Dabei können entweder unerwartete Ergebnisse auftreten oder die Threads blockieren sich gegenseitig. Um diese Probleme zu lösen gibt es **Semaphore**. Sie verwalten Zeitpunkte in denen ein Thread im kritischen Abschnitt ist. Zu diesen Zeitpunkten kann der Thread nicht unterbrochen werden.
+
 
 ### Virtualisierung
 | Virtualisierung           | Beschreibung                                              |
