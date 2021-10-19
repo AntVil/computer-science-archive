@@ -14,7 +14,9 @@
         <link rel="stylesheet" type="text/css" href="./styles/classes.css">
         <link rel="stylesheet" type="text/css" href="./styles/computer-layout.css">
         <link rel="stylesheet" type="text/css" href="./styles/mobile-layout.css">
+        <!-- stylesheet for dynamic themes -->
         <link id="theme" rel="stylesheet" type="text/css" href="./styles/themes/theme-1.css">
+        <!-- stylesheet for transition animations -->
         <style id="js-topic-transitions"></style>
 
         <!--scripts -->
@@ -36,25 +38,14 @@
 
             <div id="header">
                 <img id="logo" src="images/logo.svg" onclick="loadTopicContent('Home')" />
-                <div id="nav">
-                    <span>Home</span>
-                </div>
+                <div id="nav"></div>
                 <label class="no-select" for="page-options-toggle">≡</label>
             </div>
 
             <div id="main">
-                <div id="outline" class="hidden-scrollbar">
-                    <div><a>heading 1</a></div>
-                    <div><a>heading 2</a></div>
-                </div>
-
-                <div id="content" class="hidden-scrollbar">
-                    content
-                </div>
-
-                <div id="content-options">
-                    
-                </div>
+                <div id="outline" class="hidden-scrollbar"></div>
+                <div id="content" class="hidden-scrollbar"></div>
+                <div id="content-options"></div>
             </div>
 
             <div id="page-options">

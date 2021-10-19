@@ -1,7 +1,7 @@
 /**
- * loads all topics and the home page
+ * loads all topics and the home page (on a reload loads last topic)
  */
- async function initTopics(){
+async function initTopics(){
     let url = [...window.location.href.split("/").slice(0, -1), "getTopics"].join("/");
 
     let response = await fetch(url, {
@@ -26,7 +26,7 @@
         navElement.appendChild(element);
     }
 
-    loadTopicContent("Home");
+    loadTopicContent(window.sessionStorage.getItem("topic") || "Home");
 }
 
 /**
@@ -81,6 +81,8 @@ async function loadTopicContent(topicName){
     // display on page
     document.getElementById("content").innerHTML = content;
 
+    document.getElementById("content").scrollTop = 0;
+
     // render equations
     let equations = document.getElementsByClassName("equation");
     for(let equation of equations){
@@ -93,7 +95,9 @@ async function loadTopicContent(topicName){
     // show elements only after 0.5 seconds passed
     setTimeout(function(){
         setTopicVisibility(true);
-    }, Math.max(500 - (window.performance.now() - startTime), 0))
+    }, Math.max(500 - (window.performance.now() - startTime), 0));
+
+    window.sessionStorage.setItem("topic", topicName)
 }
 
 /**

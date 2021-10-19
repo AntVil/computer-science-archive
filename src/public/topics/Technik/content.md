@@ -2,7 +2,7 @@
 ## Analog-Digital
 | Analoges Signal                           | Digitales Signal                       |
 | ----------------------------------------- | -------------------------------------- |
-| <img src="./analog.svg" />                | <img src="./digital.svg" />            |
+| <img src="./images/analog.svg" />                | <img src="./images/digital.svg" />            |
 | Kontinuierlicher Verlauf(Kurve, Fließend) | Diskreter Verlauf(Treppe, Abstufungen) |
 
 Eine Konversion von Analog zu Digital erfolgt durch einen **adc**. Mit der **Abtastung** wird Zeitachse diskretisiert. Mit der **Quantisierung** wird die Werteachse diskretisiert. Die Gegenoperation wird von einem **dac** durchgeführt.
@@ -84,13 +84,13 @@ Die Komplexität integrierter Schaltkreise verdoppelt sich regelmäßig (ca. 2 J
 ### Logische Gatter
 In Logischen Gattern werden die Logischen Werte Wahr und Falsch mit Bereichen definiert. Dabei ist der Bereich näher an $+\infty$ Wahr und der Bereich näher an $-\infty$ Falsch. Zwischen den Bereichen ist ein Sicherheitsabstand, welcher undefiniert ist.
 
-<img src="./logische_bereiche.svg" />
+<img src="./images/logische_bereiche.svg" />
 
 Logische Gatter sind Verknüpfungen aus der Aussagen Logik.
 
 | not-Gatter              | and-Gatter              | or-Gatter              | xor-Gatter              | nand-Gatter              | nor-Gatter              | xnor-Gatter              |
 | ----------------------- | ----------------------- | ---------------------- | ----------------------- | ------------------------ | ----------------------- | ------------------------ |
-| <img src="./not.svg" /> | <img src="./and.svg" /> | <img src="./or.svg" /> | <img src="./xor.svg" /> | <img src="./nand.svg" /> | <img src="./nor.svg" /> | <img src="./xnor.svg" /> |
+| <img src="./images/not.svg" /> | <img src="./images/and.svg" /> | <img src="./images/or.svg" /> | <img src="./images/xor.svg" /> | <img src="./images/nand.svg" /> | <img src="./images/nor.svg" /> | <img src="./images/xnor.svg" /> |
 | Negation                | Konjunktion             | Disjunktion            | Äquivalenz              | Negierte Konjunktion     | Negierte Disjunktion    | Negierte Äquivalenz      |
 
 Eine Menge an Gattern wird als vollständiges System bezeichnet, wenn mit der Menge alle möglichen Gatter gebildet werden können. Die Menge $\{nand\}$ wäre ein mögliches vollständiges System.
@@ -107,33 +107,33 @@ $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 #### Nicht-Taktgesteuerte FlipFlops (Basis-FlipFlop)
 | FlipFlop     | Schaltung                        | Beschreibung |
 | ------------ | -------------------------------- | ------------ |
-| RS NOR-Latch | <img src="./rs_nor_latch.svg" /> |              |
+| RS NOR-Latch | <img src="./images/rs_nor_latch.svg" /> |              |
 
 
 #### Taktgesteuerte FlipFlops
 | FlipFlop    | Schaltung                                       | Beschreibung |
 | ----------- | ----------------------------------------------- | ------------ |
-| RS-FlipFlop | <img src="./taktgesteuertes_rs_flipflop.svg" /> |              |
-| D-FlipFlop  | <img src="./taktgesteuertes_d_flipflop.svg" />  |              |
+| RS-FlipFlop | <img src="./images/taktgesteuertes_rs_flipflop.svg" /> |              |
+| D-FlipFlop  | <img src="./images/taktgesteuertes_d_flipflop.svg" />  |              |
 
 
 #### Flankengesteuerte FlipFlops
 Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen ein Signal von Falsch zu Wahr wechselt. Das Impulsglied kann diese Flanken erkennen.
 
-<img src="./impulsglied.svg" />
+<img src="./images/impulsglied.svg" />
 
 ##### Einflankengesteuerte FlipFlops
 | FlipFlop    | Schaltung                                             | Beschreibung |
 | ----------- | ----------------------------------------------------- | ------------ |
-| RS-FlipFlop | <img src="./einflankengesteuertes_rs_flipflop.svg" /> |              |
-| D-FlipFlop  | <img src="./einflankengesteuertes_d_flipflop.svg" />  |              |
-| JK-FlipFlop | <img src="./einflankengesteuertes_jk_flipflop.svg" /> |              |
+| RS-FlipFlop | <img src="./images/einflankengesteuertes_rs_flipflop.svg" /> |              |
+| D-FlipFlop  | <img src="./images/einflankengesteuertes_d_flipflop.svg" />  |              |
+| JK-FlipFlop | <img src="./images/einflankengesteuertes_jk_flipflop.svg" /> |              |
 
 
 ##### Zweiflankengesteuerte FlipFlops
 | FlipFlop    | Schaltung                                              | Beschreibung |
 | ----------- | ------------------------------------------------------ | ------------ |
-| JK-FlipFlop | <img src="./zweiflankengesteuertes_jk_flipflop.svg" /> |              |
+| JK-FlipFlop | <img src="./images/zweiflankengesteuertes_jk_flipflop.svg" /> |              |
 
 
 
@@ -209,7 +209,7 @@ Das Betriebssystem kann verschieden aufgebaut sein. Beim Monolithischen Kernel w
 ### Prozesse
 Mit einem Auftrag wird ein Prozess gestartet. Seine Daten werden in den Speicher geladen und eine **PID** wird erstellt. Dieser Prozess kann Teil eines Programms mit mehreren Prozessen sein, oder allein stehend. Für einen Prozess kann ein Thread oder mehrere Treads laufen. Threads eines Prozesses teilen sich den Adressbereich. Jeder Thread hat einen eigenen virtuellen Prozessor. Mehrere virtuelle Prozessoren werden auf einem Prozessor simuliert. Zwischen den virutellen Prozessen wird ständig gewechselt.
 
-<img src="./prozesszustandsmodell.svg" />
+<img src="./images/prozesszustandsmodell.svg" />
 
 Nach der Initialisierung eines Prozess wird dieser in eine Warteschlange eingefügt. Ein Prozess aus der Warteschlange kann im Nutzermodus bearbeitet werden. Falls höhere Rechte erforderlich sind kann, durch einen Interrupt, in den Kernelmodus gewechselt werden. Nachdem ein Prozess für eine Weile bearbeitet wurde kann dieser zurück in die Warteschlange. Falls der Prozess auf ein Ereignis wartet, wird dieser blockiert, bis das Ereignis eintritt. Hierfür wird für jedes mögliche Ereignis eine seperate Warteschlange angelegt. Ein Prozess kann suspendiert werden, falls dieser nicht aktiv genutzt wird. Dadurch werden Resourcen für andere Prozesse frei.
 
@@ -236,13 +236,13 @@ Ein Netzwerk ist ein Zusammenschluss mehrerer Geräte. Dieser Zusammenschluss ka
 
 | Topologie     | Darstellung                       | Beschreibung                  |
 | ------------- | --------------------------------- | ----------------------------- |
-| Linie         | <img src="./linie.svg" />         | Geringste Verkabelung         |
-| Bus           | <img src="./bus.svg" />           | Alle verbunden mit Bus        |
-| (Token-) Ring | <img src="./ring.svg" />          | Nur mit Token kann man senden |
-| Baum          | <img src="./baum.svg" />          | Hierachisch Verkabelt         |
-| Stern         | <img src="./stern.svg" />         | Zentral Verkabelt             |
-| Vermascht     | <img src="./vermascht.svg" />     | Enthält Ringe                 |
-| Vollvermascht | <img src="./vollvermascht.svg" /> | Komplette Verkabelung         |
+| Linie         | <img src="./images/linie.svg" />         | Geringste Verkabelung         |
+| Bus           | <img src="./images/bus.svg" />           | Alle verbunden mit Bus        |
+| (Token-) Ring | <img src="./images/ring.svg" />          | Nur mit Token kann man senden |
+| Baum          | <img src="./images/baum.svg" />          | Hierachisch Verkabelt         |
+| Stern         | <img src="./images/stern.svg" />         | Zentral Verkabelt             |
+| Vermascht     | <img src="./images/vermascht.svg" />     | Enthält Ringe                 |
+| Vollvermascht | <img src="./images/vollvermascht.svg" /> | Komplette Verkabelung         |
 
 Die größe des Netzes kann grob kategorisiert werden.
 

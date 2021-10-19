@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <rect x="10" y="10" width="40" height="80" rx="10" ry="10" fill="#0099FF" />
+
+    <path d="M 10 5 L 15 5 L 20 10" stroke="#7777AA" fill="none"/>
+    <path d="M 40 10 L 45 5 L 50 5" stroke="#7777AA" fill="none"/>
+
+    <path d="M 17 10 L 20 10 L 20 7" stroke="#7777AA" fill="none"/>
+    <path d="M 48 3 L 50 5 L 48 7" stroke="#7777AA" fill="none"/>
+
+    <ellipse cx="30" cy="25" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <ellipse cx="30" cy="50" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    <ellipse cx="30" cy="75" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+    
+    <text x="30" y="25" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">a</text>
+    <text x="30" y="50" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">b</text>
+    <text x="30" y="75" dominant-baseline="middle" text-anchor="middle" font-family="Consolas">c</text>
+</svg>

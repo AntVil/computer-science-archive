@@ -45,29 +45,29 @@ $$a = (...)$$
 Eine Liste ist eine flexiblere Datenstruktur, da die Größe dynamisch verringert oder erweitert werden kann. Listen basieren auf Knoten und Pointern, welche leichter verändert werden können. Die Pointer eines Listen Elements zeigen immer auf den Nachfolger in der Liste, so kann diese iterativ durchlaufen werden.
 Eine Liste ähnelt einer total Ordnung.
 
-<img src="./liste.svg" />
+<img src="./images/liste.svg" />
 
 Eine Liste kann auch bidirektional sein, die Pointer gehen in beide Richtungen. Dadurch kann die Liste einfach in beide Richtungen durchgegangen werden und wird noch flexibler.
 
-<img src="./doppel_liste.svg" />
+<img src="./images/doppel_liste.svg" />
 
 
 ### Stack
 Ein Stack (auch Stapel oder Keller) ist eine sonder Form einer Liste, bei der nur am Anfang eingefügt und entfernt werden kann. Er funktioniert nach dem Last-in-First-out Prinzip (LIFO)
 
-<img src="./stack.svg" />
+<img style="max-width: 150px" src="./images/stack.svg" />
 
 
 ### Queue
 Eine Queue (auch Schlange) ist eine sonder Form einer Liste, bei der nur am Ende eingefügt und am Anfang entfernt werden kann. Sie funktioniert nach dem First-in-First-out Prinzip (FIFO). Eine priority Queue funktioniert ähnlich wie eine normale Queue, jedoch haben Elemente eine Priorität, welche benutzt wird um beim Einfügen manche Elemente weiter vor zu ziehen, damit diese schneller bearbeitet werden.
 
-<img src="./queue.svg" />
+<img src="./images/queue.svg" />
 
 
 ### Baum
 Ein Baum ist eine Erweiterung der Liste. Wie bei der Liste hat jedes Element Nachfolger, jedoch kann ein Baum mehr als nur einen Nachfolger haben. Die maximale Anzahl an Nachfolgern wird mit der Ordnung angegeben.
 
-<img src="./baum.svg" />
+<img src="./images/baum.svg" />
 
 Ein Baum kann verschiedene Eigenschaften haben.
 
@@ -79,14 +79,14 @@ Ein Baum kann verschieden Durchlaufen werden, man sagt auch Traversieren.
 
 | Pre-Order                    | In-Order                    | Post-Order                    |
 | ---------------------------- | --------------------------- | ----------------------------- |
-| <img src="./preorder.svg" /> | <img src="./inorder.svg" /> | <img src="./postorder.svg" /> |
+| <img src="./images/preorder.svg" /> | <img src="./images/inorder.svg" /> | <img src="./images/postorder.svg" /> |
 
 Zusätzlich kann man einen Baum als Array darstellen. Der Baum wird Ebenen-weise abgelesen inklusive Lücken. Das Array ermöglicht schnellere Tauschoperationen im Baum, jedoch ist die Struktur statisch.
 
 #### AVL-Baum
 Ein AVL-Baum ist ein Baum, welcher nach jeder Operation balanciert wird, wodurch dieser besonders effizient arbeitet. Jeder Knoten speichert die Höhendifferenz der Teilbäume ab. Wenn der Betrag der Höhendifferenz größer als 1 ist wird eine Rotationsoperation durchgeführt.
 
-<img style="max-width: 800px" src="./rotation.svg" />
+<img style="max-width: 800px" src="./images/rotation.svg" />
 
 #### Heap
 Ein Heap ist ein fast vollständiger Binärbaum (Baum der Ordnung 2), bei dem alle Nachfolger eines Knotens entweder kleiner (Max Heap) oder größer (Min Heap) sind. Er bildet eine effizientere priority Queue. Elemente werden an das Ende eingefügt und nach oben vertauscht bei Bedarf. Elemente können nur vom Anfang entfernt werden, wonach immer das Element mit dem größeren Wert hoch rutscht. Das Sortierverfahren Heapsort fügt alle Elemente in einen Heap ein. Danach werden die Elemente vom Heap entfernt, wodurch eine sortierte Folge entsteht.
@@ -94,7 +94,7 @@ Ein Heap ist ein fast vollständiger Binärbaum (Baum der Ordnung 2), bei dem al
 ### Graph
 Ein Graph beschreiben Beziehungen zwischen Objekten. Mit der gewichtung der Kanten können zum Beispiel Kosten abgebildet werden.
 
-<img src="./graph.svg" />
+<img src="./images/graph.svg" />
 
 Ein Graph kann als Matrix (Tabelle) dargestellt werden. Ob es eine Kante gibt, beziehungsweise dessen Gewicht, wird in die jeweilige Zeile und Spalte eingetragen. Der Kanten Ursprung bestimmt die Spalte, das Ziel die Zeile.
 $$\begin{pmatrix}1 & 1 & 0 & 0\\1 & 1 & 1 & 0\\1 & 0 & 1 & 0\\1 & 1 & 1 & 1\end{pmatrix}$$
@@ -121,7 +121,7 @@ Mit dem Branch and Bound Verfahren kann man unnötige Äste in einem Baum früh 
 Für ein Spiel mit perfekter Information kann man alle einen Baum aufstellen, wobei Kanten abwechselnd Spielzüge der Spieler sind. Die Blätter enthalten einen niedrigen Wert bei Verlust für Spieler 1 und höheren Wert bei Gewinn. Rekursiv kann für jeder Ebene abwechselnd das Maximum und Minimum der Kinder genommen werden. In der Wurzel bleibt das zu erwartende Resultat übrig.
 Da der Minimax-Algorithmus extem schnell aufwendig wird gibt es die Alpha-Beta-Pruning methode. Dabei wird die Suche in einem Teilbaum abgebrochen, falls dieser nicht zum Ergebnis beiträgt, da die Spieler schon einen besseren Pfad nehmen können.
 
-<img src="./alpha_beta_pruning.svg" />
+<img src="./images/alpha_beta_pruning.svg" />
 
 Zur weiteren Optimierung können zwischen Spielstände durch Markow-Ketten bewertet werden. Dabei wird aus einer **großen** Datenbasis die Gewinn-Wahrscheinlichkeit entnommen aufgrund der letzten $n$ Züge.
 
@@ -151,7 +151,7 @@ Der Maximale Fluss entspricht dem minimalen Schnitt. Es wird ein Schnitt durch n
 ### Symboltabellen
 Eine Symboltabelle speichert Schlüssel-Wert-Paare. Sie ähnelt in der Funktionsweise einer Abbildung. Mit $put$ wird ein Paar hinzugefügt. Mit $get$ erhält man den Wert für einen Schlüssel.
 
-<img src="./symboltabelle.svg" />
+<img src="./images/symboltabelle.svg" />
 
 
 Eine Hashtabelle ist eine Möglichkeit eine Symboltabelle zu realisieren. Aus einem Schlüssel wird mit einer Hashfunktion ein Index berechnet. Mit dem Index kann man den Wert in ein Array an der Stelle des Index einsetzen.
@@ -167,5 +167,12 @@ Eine Hashfunktion ist meist nur surjektiv, also kann man für zwei verschiedene 
 | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------- |
 | Bei Kollision werden Werte so lange nach links verschoben, bis eine freie Stelle gefunden wird. | Bei Kollision werden Werte in Quadratischen Abständen (links und rechts) vom Index eingefügt. | Das Array verwaltet Listen. |
 
-## Dynamische Programmierung
+## Programmierung
+### Rekursive Programmierung
+Anders als bei der **iterativen Programmierung**, bei der Probleme schrittweise mit Schleifen gelöst werden, wird bei der **rekursiven Programmierung** das Problem unterteil. Diese Unterteilung erfolgt durch wiederholtes Aufrufen einer Funktion durch sich selbst.
+
+### Dynamische Programmierung
 Bei dynamischer Programmierung wird ein Algorithmus in sich überlappende Teilprobleme aufgeteilt. Die Lösungen zu den Teilproblemen wird abgespeichert, wodurch komplexere optimierungs Probleme effizienter gelöst werden.
+
+### Lineare Programmierung
+Lineare Programmierung beschäftigt sich mit Optimierung

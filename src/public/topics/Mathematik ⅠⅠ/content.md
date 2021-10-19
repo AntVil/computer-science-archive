@@ -14,7 +14,7 @@ Eine Reihe ist eine besondere Folge. Bei ihr ist der Abstand zwischen aufeinande
 | Arithmetische Folge                                           | Geometrische Folge                                                                | Arithmetische Reihe                                                                                                            | Geometrische Reihe                                                                                                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | $$\textcolor{orange}{a_{n+1}} = \textcolor{orange}{a_n} + k$$ | $$\textcolor{cyan}{g_{n+1}} = \textcolor{cyan}{g_n} \cdot \textcolor{purple}{q}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{orange}{a_i} = \frac{n \cdot (\textcolor{orange}{a_1} + \textcolor{orange}{a_n})}{2}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{cyan}{g_i} = \textcolor{cyan}{g_1} \cdot \frac{\textcolor{purple}{q}^n - 1}{\textcolor{purple}{q} - 1}$$ |
-| <img src="./arithmetische_folge.svg"/>                        | <img src="./geometrische_folge.svg"/>                                             | <img src="./arithmetische_reihe.svg"/>                                                                                         | <img src="./geometrische_reihe.svg"/>                                                                                                            |
+| <img src="./images/arithmetische_folge.svg"/>                        | <img src="./images/geometrische_folge.svg"/>                                             | <img src="./images/arithmetische_reihe.svg"/>                                                                                         | <img src="./images/geometrische_reihe.svg"/>                                                                                                            |
 #### Konvergenz
 Mit Konvergenz kann man Grenzwert-Betrachtungen einer Folge oder Funktion für undefinierte Werte anstellen, wie zum Beispiel welchen Wert eine Folge $a_n$ hat, wenn man für $n$ gegen unendlich strebt. Der Grenzwert wird meist mit $g$ bezeichnet.
 $$\displaystyle\lim_{n \rightarrow \infty} (a_n) = g$$
@@ -29,7 +29,7 @@ Die Ableitung einer Funktion ist eine Funktion. Die Ableitung gibt die Steigung 
 $$\textcolor{orange}{f}(x) = x^2$$
 $$\textcolor{cyan}{f'}(x) = 2 \cdot x$$
 
-<img src="./ableitung.svg"/>
+<img src="./images/ableitung.svg"/>
 
 $$(x^n)' = n \cdot x^{n-1}$$
 
@@ -107,7 +107,7 @@ $$\displaystyle\int_{x_0}^{k}f(x)dx = \lim_{n \rightarrow k}\left(\displaystyle\
 Vektoren sind Teil eines Vektorraums und werden als Tupel dargestellt. Geometrisch können Vektoren auch als Pfeile im Raum verstanden werden.
 $$\vec{v} = \begin{pmatrix}v_0\\v_1\\\vdots\end{pmatrix}$$
 
-<img src="./vektor.svg"/>
+<img src="./images/vektor.svg"/>
 
 Sie können addiert und skaliert werden. Das Skalarprodukt zwischen zwei Vektoren ergibt einen Skalar.
 $$\vec{v_1} \cdot \vec{v_2} = \displaystyle\sum_{i=0}^{n}v_{1_i} \cdot v_{2_i} = |\vec{a}| \cdot |\vec{b}| \cdot \cos(\alpha)$$
@@ -124,7 +124,7 @@ $$norm(\vec{v})$$
 #### Basis
 
 Jeder Vektor ist eine Linearkombination aus einer Menge an Vektoren, der Basis. Die Basis enthält die minimale Anzahl an Vektoren um alle Vektoren des Vektorraums zu bilden.
-<img src="./basis.svg" />
+<img src="./images/basis.svg" />
 
 $$\vec{y} = \displaystyle\sum_{i=0}^{n}a_i \cdot \vec{v_i}$$
 
@@ -140,7 +140,7 @@ Diese Anzahl der Vektoren in der Basis wird als die Dimension bezeichnet.
 Die Lineare Hülle ist die Menge aller Linearkombinationen von Vektoren eines Vektorraums. Damit kann Geometrisch gesehen ein Punkt, eine Gerade, eine Ebene, etc. durch den Ursprung beschrieben werden.
 $$\text{span}(\vec{v_0}, \vec{v_1}, ..., \vec{v_m}) = \left\{\vec{v} \in K^n \land a_i \in K \left| \vec{v} = \displaystyle\sum_{i=0}^{m} a_i \cdot \vec{v_i}\right.\right\}$$
 
-<img src="./span.svg"/>
+<img src="./images/span.svg"/>
 
 Eine allgemeine Ebene im drei-dimensionalen Raum braucht drei Punkte um eindeutig bestimmt zu sein. Man kann die Ebene auf verschiedene Arten mathematisch darstellen.
 
@@ -185,7 +185,7 @@ $$D \rightarrow W$$
 $$d_0 \mapsto w_0$$
 $$\vdots$$
 
-<img src="./lineare_abbildung.svg"/>
+<img src="./images/lineare_abbildung.svg"/>
 
 *Rotationsmatrix*
 

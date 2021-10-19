@@ -4,7 +4,7 @@
 ### Mengen
 Eine Menge ist eine **ungeordnete** Sammlung von Objekten, den Elementen. Man schreibt $m \in M$ um auszudrücken, dass das Objekt $m$ ein Element der Menge $M$ ist. Mit $m \notin M$ wird das Gegeteil ausgedrückt. Mengen können auch andere Mengen enthalten, jedoch nicht sich selbst. Mengen können auf zwei verschiedene Arten definiert werden. Durch Aufzählung der Elemente oder durch deren Charakteristische Eigenschaft.
 
-<img src="./menge.svg">
+<img src="./images/menge.svg">
 
 $$\left\{a, b, c, d\right\}$$
 
@@ -46,14 +46,14 @@ Mit $\left(a, b\right) \in R$ bezeichnet man, dass $a$ mit $b$ in Relation steht
 #### Relationen-Eigenschaften
 | Eigenschaft        | Definition                                            | Beschreibung                                                         | Beispiel Graph                         |
 | ------------------ | ----------------------------------------------------- | -------------------------------------------------------------------- | -------------------------------------- |
-| Reflexiv           | $$\forall a \in M: (a, a) \in R$$                     | Alles steht mit sich selbst in Relation                              | <img src="./reflexiv.svg"/>            |
-| Symmetrisch        | $$(a,b) \in R \Rightarrow (b,a) \in R$$               | Alle Relationen sind Beidseitig.                                     | <img src="./symmetrisch.svg"/>         |
-| Antisymmetrisch    | $$(a,b), (b,a) \in R \Rightarrow a = b$$              | Alle Relationen sind Einseitig.                                      | <img src="./antisymmetrisch.svg"/>     |
-| Transitiv          | $$(a,b),(b,c)\in R \Rightarrow (a,c)\in R$$           | Über zwei Relationen verknüpfte Elemente sind auch direkt verknüpft. | <img src="./transitiv.svg"/>           |
-| Total              | $$\forall a,b \in M: (a,b) \in R \lor (b,a) \in R$$   | Alles steht mit allem mindestens Einseitig in Relation.              | <img src="./total.svg"/>               |
-| Halbordnung        | Reflexiv, <b>Antisymmetrisch</b> und Transitiv.       | -                                                                    | <img src="./halbordnung.svg"/>         |
-| Totalordnung       | Reflexiv, <b>Antisymmetrisch</b> Transitiv und Total. | Die Relation gibt den Elementen eine Reihenfolge.                    | <img src="./totalordnung.svg"/>        |
-| Äquivalenzrelation | Reflexiv, <b>Symmetrisch</b> und Transitiv            | Die Relation unterteilt eine Menge in Äquivalenzklassen.             | <img src="./aequivalenzrelation.svg"/> |
+| Reflexiv           | $$\forall a \in M: (a, a) \in R$$                     | Alles steht mit sich selbst in Relation                              | <img src="./images/reflexiv.svg"/>            |
+| Symmetrisch        | $$(a,b) \in R \Rightarrow (b,a) \in R$$               | Alle Relationen sind Beidseitig.                                     | <img src="./images/symmetrisch.svg"/>         |
+| Antisymmetrisch    | $$(a,b), (b,a) \in R \Rightarrow a = b$$              | Alle Relationen sind Einseitig.                                      | <img src="./images/antisymmetrisch.svg"/>     |
+| Transitiv          | $$(a,b),(b,c)\in R \Rightarrow (a,c)\in R$$           | Über zwei Relationen verknüpfte Elemente sind auch direkt verknüpft. | <img src="./images/transitiv.svg"/>           |
+| Total              | $$\forall a,b \in M: (a,b) \in R \lor (b,a) \in R$$   | Alles steht mit allem mindestens Einseitig in Relation.              | <img src="./images/total.svg"/>               |
+| Halbordnung        | Reflexiv, <b>Antisymmetrisch</b> und Transitiv.       | -                                                                    | <img src="./images/halbordnung.svg"/>         |
+| Totalordnung       | Reflexiv, <b>Antisymmetrisch</b> Transitiv und Total. | Die Relation gibt den Elementen eine Reihenfolge.                    | <img src="./images/totalordnung.svg"/>        |
+| Äquivalenzrelation | Reflexiv, <b>Symmetrisch</b> und Transitiv            | Die Relation unterteilt eine Menge in Äquivalenzklassen.             | <img src="./images/aequivalenzrelation.svg"/> |
 
 
 #### Äquivalenzklassen
@@ -61,7 +61,7 @@ Alle Elemente einer Äquivalenzklasse sind Äquivalent.
 
 | Äquivalenzklasse 1                                | Äquivalenzklasse 2                     |
 | ------------------------------------------------- | -------------------------------------- |
-| <img src="./aequivalenzklasse_1.svg"/>            | <img src="./aequivalenzklasse_2.svg"/> |
+| <img src="./images/aequivalenzklasse_1.svg"/>            | <img src="./images/aequivalenzklasse_2.svg"/> |
 | $$[a]_R = [b]_R = [c]_R$$ $$[a]_R = \{a, b, c\}$$ | $$[d]_R$$ $$[d]_R = \{d\}$$            |
 
 Die Menge der Äquivalenzklassen lautet wie folgt.
@@ -106,13 +106,13 @@ Mit $Abb(M, N)$ erhält man eine Menge aller Abbildungen von der Menge $M$ zur M
 
 |                              Injektiv                               |                              Surjektiv                              |
 | :-----------------------------------------------------------------: | :-----------------------------------------------------------------: |
-|                     <img src="./injektiv.svg">                      |                     <img src="./surjektiv.svg">                     |
+|                     <img src="./images/injektiv.svg">                      |                     <img src="./images/surjektiv.svg">                     |
 | Jedes Element aus dem Bildbereich wird **maximal einmal** getroffen | Jedes Element aus dem Bildbereich wird **minimal einmal** getroffen |
 |        $$\forall a,b \in M: f(a) = f(b) \Rightarrow a = b$$         |           $$\forall b \in N: \exists a \in M: f(a) = b$$            |
 
 |                                                     Bijektiv                                                     |
 | :--------------------------------------------------------------------------------------------------------------: |
-|                                            <img src="./bijektiv.svg">                                            |
+|                                            <img src="./images/bijektiv.svg">                                            |
 | Jedes Element aus dem Bildbereich wird **genau einmal** getroffen. Bijektive Abbildungen sind immer invertierbar |
 
 
@@ -121,7 +121,7 @@ Um Operationen auf Mengen auszuführen benötigt man ein **Universum** $U$, als 
 
 | Vereinigung                   | Schnitt                   | Differenz                   | Komplement                   |
 | ----------------------------- | ------------------------- | --------------------------- | ---------------------------- |
-| <img src="./vereinigung.svg"> | <img src="./schnitt.svg"> | <img src="./differenz.svg"> | <img src="./komplement.svg"> |
+| <img src="./images/vereinigung.svg"> | <img src="./images/schnitt.svg"> | <img src="./images/differenz.svg"> | <img src="./images/komplement.svg"> |
 | $$M \cup N$$                  | $$M \cap N$$              | $$M \setminus N$$           | $$M^C$$                      |
 
 Die Menge aller Teilmengen der Menge $M$ erhält man wie folgt.
@@ -182,7 +182,7 @@ Operationen können unterschiedliche Eigenschaften haben.
 
 Die Eigenschaften der Operationen auf der Menge bestimmen die Algebraische Struktur.
 
-<img style="max-width: 100%;" src="./algebraische_strukturen.svg"/>
+<img style="max-width: 100%;" src="./images/algebraische_strukturen.svg"/>
 
 #### Vektorraum
 Über einem Körper $M$ kann ein Vektorraum $M^n (n \in \mathbb{N_0})$ definiert werden. Elemente $v$ des Vektorraums $M^n$ werden mit $\vec{v}$ bezeichnet um sie von Elementen des Körpers zu unterscheiden. In solchen Vektorräumen sind zwei Operationen definiert.
@@ -200,13 +200,13 @@ $$R = M^2$$
 $$G = (M, R)$$
 
 Graphen eignen sich zur visualisierung von Relationen.
-![](./graph.svg)
+![](./images/graph.svg)
 
 Ein Graph ist **ungerichtet**, falls die Relation $R$ symmetrisch ist, ansonsten ist der Graph **gerichtet**. Wenn jeder Knoten von jedem Knoten erreichbar ist, wird der Graph als **zusammenhängend** bezeichnet. Ein zusammenhängender Graph ohne Zyklen wird als Baum bezeichnet.
-![](./baum.svg)
+![](./images/baum.svg)
 
 In einem Baum ist der Weg von jedem Knoten zu jedem Knoten eindeutig. In manchen Fällen wird ein Start für einen Baum definiert, die **Wurzel** (orange). Jeder Knoten, welcher nur eine Kante besitzt wird als **Blatt** (lime) bezeichnet. Alle anderen Knoten werden als **Innereknoten** (cyan) bezeichnet.
-![](./baum_hierachie.svg)
+![](./images/baum_hierachie.svg)
 
 Die Tiefe eines Baums ist die maximale Länge eines Pfades von der Wurzel zu einem Blatt.
 
@@ -236,7 +236,7 @@ $$Teilf(\neg (\textcolor{orange}{A} \land \neg \textcolor{orange}{B})) = \{\neg 
 
 $$\neg (\textcolor{orange}{A} \land \neg \textcolor{orange}{B})$$
 
-<img src="./aussagenlogik_syntaxbaum.svg"/>
+<img src="./images/aussagenlogik_syntaxbaum.svg"/>
 
 Um eine Formel auszuwerten benötigt man eine Interpretation $I$, welche den Atomen aus $\Sigma$ die Werte $\textcolor{LimeGreen}{W}$ für Wahr und $\textcolor{red}{F}$ für Falsch zuweist. Mit $val_I$ wird eine Abbildung definiert die nun alle Formeln aus $For0_\Sigma$ auswerten kann, durch eine Rekursive Definition der Operationen (*ausgelassen*).
 
@@ -296,7 +296,7 @@ $$DNF \equiv Y \equiv KNF$$
 
 Um die minimale Normalform zu bekommen kann man das KV-Diagramm verwenden. Dabei werden größtmögliche Rechtecke der Größe $2^n$ gebildet. Diese ergeben die Primimplika(n)te (minimierte Terme). Für die KNF müssen alle Eingänge noch invertiert werden.
 
-<img src="./kv_diagramm.svg"/>
+<img src="./images/kv_diagramm.svg"/>
 
 | Minterme                                     | Maxterme                                         |
 | -------------------------------------------- | ------------------------------------------------ |
@@ -329,7 +329,7 @@ Mit $Teilt$ erhält man alle Teilterme von einer Formel.
 
 $$((\forall x \textcolor{orange}{p_1}(\textcolor{cyan}{f_1}(\textcolor{red}{x})) \land \exists y \textcolor{orange}{p_1}(\textcolor{cyan}{f_2}(\textcolor{red}{y}, \textcolor{green}{x}, \textcolor{cyan}{f_0}))) \lor \textcolor{orange}{p_0})$$
 
-<img style="max-width: 600px;" src="./praedikatenlogik_syntaxbaum.svg"/>
+<img style="max-width: 600px;" src="./images/praedikatenlogik_syntaxbaum.svg"/>
 
 *(Indices stehen für Stelligkeit)*
 

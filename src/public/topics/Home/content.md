@@ -1,4 +1,4 @@
-<img style="max-width: 700px;" src="./CSA.svg" />
+<img style="max-width: 700px;" src="./images/CSA.svg" />
 
 # Willkommen im computer-science-archive!
 
