@@ -246,23 +246,39 @@ Ein Netzwerk ist ein Zusammenschluss mehrerer Geräte. Dieser Zusammenschluss ka
 
 Die größe des Netzes kann grob kategorisiert werden.
 
-| PAN (personal area network) | LAN (local area network) | MAN (metropolian area network) | WAN (wide area network) | GAN (global area network) |
-| --------------------------- | ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
-|                             | Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
+| LAN (local area network) | MAN (metropolian area network) | WAN (wide area network) | GAN (global area network) |
+| ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
+| Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
 
 Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschiedliche Verbindungen.
 
-| Verbindungen        | Beschreibung                                                                                                                       |
-| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| Serielle Verbindung | ohne Takt (manuelle Einstellung)                                                                                                   |
-| Ethernet/LAN        | Koaxialkabel (mehrfache Isolation), Twisted Pair (Elektrische Felder heben sich auf),  Power over Ethernet (PoE, LAN + Versorgung) |
-| DSL Modem           |                                                                                                                                    |
-| WLAN                |                                                                                                                                    |
-| DLAN                |                                                                                                                                    |
-| Bluetooth           |                                                                                                                                    |
-| NFC                 |                                                                                                                                    |
+| Verbindungen        | Beschreibung                                                                                                                                                            |
+| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Serielle Verbindung | ohne Takt (manuelle Einstellung)                                                                                                                                        |
+| Ethernet/LAN        | Koaxialkabel (mehrfache Isolation), Twisted Pair (Elektrische Felder heben sich auf), Power over Ethernet (PoE, LAN + Versorgung), LWL (Lichtwellenleiter, Abhörsicher) |
+| DSL Modem           |                                                                                                                                                                         |
+| WLAN                |                                                                                                                                                                         |
+| DLAN                |                                                                                                                                                                         |
+| Bluetooth           |                                                                                                                                                                         |
+| NFC                 |                                                                                                                                                                         |
 
-### OSI-Schichtenmodell
+| Verbindung                                     | Beschreibung                      | Geschwindigkeit | Distanz |         |
+| ---------------------------------------------- | --------------------------------- | --------------- | ------- | ------- |
+| Serielle Verbindung                            | Ohne Takt (manuelle Einstellung)  |                 |         |         |
+| Koaxialkabel                                   | Mehrfache Isolation               |                 |         | LAN     |
+| Twisted Pair                                   | Elektrische Felder heben sich auf |                 |         | LAN     |
+| Power over Ethernet (PoE)                      | LAN + Versorgung                  |                 |         | LAN     |
+| Lichtwellenleiter (LWL)                        | Abhörsicher                       |                 |         | LAN     |
+| DSL (Digital Subscriber Line)                  |                                   |                 |         | MAN/WAN |
+| WLAN                                           |                                   |                 |         |         |
+| DLAN (direct LAN) PLC (Powerline Comunication) |                                   |                 |         |         |
+SDSL: download = upload
+ADSL: download != upload
+
+DSLAM (Provider)
+DSL-Modem (Client)
+
+### OSI-Schichtenmodell (Open Systems Interconnection)
 
 | Schicht                | Aufgabe                         |
 | ---------------------- | ------------------------------- |
