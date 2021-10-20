@@ -356,13 +356,3 @@ $$S = (U, I)$$
 
 $$valf_{S, v}(\forall x F) = W\text{, wenn für alle } u \in U valf_{S, v_{x}^{u}}(F) \text{ gilt}$$
 $$valf_{S, v}(\exists x F) = W\text{, wenn es für mindestens ein } u \in U valf_{S, v_{x}^{u}}(F) \text{ gilt}$$
-
-
-## Statistik
-### Kombinatorik
-Kombinatorik beschäftigt sich mit der Anzahl an Möglichkeiten Ausschnitte aus einer Menge zu bilden, wobei $n$ die Größe der Menge und $k$ die Größe des Ausschnitss bezeichnet.
-
-| Einschränkung       | Variation (geordnet)  | Kombination (ungeordnet)                       |
-| ------------------- | --------------------- | ---------------------------------------------- |
-| mit Wiederholungen  | $$\frac{n!}{(n-k)!}$$ | $$\frac{n!}{k! \cdot (n-k)!} = {n \choose k}$$ |
-| ohne Wiederholungen | $$n^k$$               | $${n+1-k \choose k}$$                          |

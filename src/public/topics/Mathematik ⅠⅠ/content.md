@@ -1,4 +1,31 @@
 # Mathematik ⅠⅠ
+## Statistik
+### Kombinatorik
+Kombinatorik beschäftigt sich mit der Anzahl an Möglichkeiten Ausschnitte aus einer Menge zu bilden, wobei $n$ die Größe der Menge und $k$ die Größe des Ausschnitss bezeichnet.
+
+| Einschränkung       | Variation (geordnet)  | Kombination (ungeordnet)                       |
+| ------------------- | --------------------- | ---------------------------------------------- |
+| mit Wiederholungen  | $$\frac{n!}{(n-k)!}$$ | $$\frac{n!}{k! \cdot (n-k)!} = {n \choose k}$$ |
+| ohne Wiederholungen | $$n^k$$               | $${n+1-k \choose k}$$                          |
+
+### Statistische Variablen
+Bei einer Stichprobe mit dem Umfang $n$ gibt es $n$ Messwerte $x_i$. Die absolute Häufigkeit wird mit $h_i$ bestimmt die relative Häufigkeit mit $f_i$. Die kommulierte Häufigkeit wird mit $H_i$ beziehungsweise $F_i$ bezeichnet.
+
+#### Lorenzkurve
+Die Lorenzkurve beschreibt die Konzentration der Verteilung. Es wird die kommulierte relative Häufigkeit $F_i$ gegen die kommulierte relative Merkmalssume $L_i$ gezeichnet.
+$$l_i = \frac{h_i \cdot x_i}{\displaystyle\sum_{j=0}^{n}h_j \cdot x_j}$$
+
+<img src="./images/lorenzkurve.svg"/>
+
+#### Maßzahlen
+| Modus               | Quantil$_k$                                                           | Arithmetisches Mittel                        | Geometrisches Mittel                         | Harmonisches Mittel                                    | Quadratisches Mittel |
+| ------------------- | --------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- | ------------------------------------------------------ |-|
+| Häufigster Messwert | Wert sodass $\frac{k}{4}$ darüber und $\frac{1-k}{k}$ darunter liegen | $$x_a = \frac{\displaystyle\sum_{i=0}^{n}x_i}{n}$$ | $$x_g = \sqrt[n]{\displaystyle\prod_{i=0}^{n}x_i}$$ | $$x_h = \frac{n}{\displaystyle\sum_{i=0}^{n}\frac{1}{x_i}}$$ |$$ x_q = \sqrt{\frac{\displaystyle\sum_{i=0}^{n}x_i^2}{n}}$$|
+
+#### Streuung
+Die Varianz $s^2$ und die Standartabweichung $s$ geben die Streung von Messwerten an.
+$$s^2 = (x^2)_a - (x_a)^2$$
+
 
 ## Analysis
 ### Folgen und Reihen
@@ -14,7 +41,7 @@ Eine Reihe ist eine besondere Folge. Bei ihr ist der Abstand zwischen aufeinande
 | Arithmetische Folge                                           | Geometrische Folge                                                                | Arithmetische Reihe                                                                                                            | Geometrische Reihe                                                                                                                               |
 | ------------------------------------------------------------- | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | $$\textcolor{orange}{a_{n+1}} = \textcolor{orange}{a_n} + k$$ | $$\textcolor{cyan}{g_{n+1}} = \textcolor{cyan}{g_n} \cdot \textcolor{purple}{q}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{orange}{a_i} = \frac{n \cdot (\textcolor{orange}{a_1} + \textcolor{orange}{a_n})}{2}$$ | $$\displaystyle\sum_{i=0}^{n}\textcolor{cyan}{g_i} = \textcolor{cyan}{g_1} \cdot \frac{\textcolor{purple}{q}^n - 1}{\textcolor{purple}{q} - 1}$$ |
-| <img src="./images/arithmetische_folge.svg"/>                        | <img src="./images/geometrische_folge.svg"/>                                             | <img src="./images/arithmetische_reihe.svg"/>                                                                                         | <img src="./images/geometrische_reihe.svg"/>                                                                                                            |
+| <img src="./images/arithmetische_folge.svg"/>                 | <img src="./images/geometrische_folge.svg"/>                                      | <img src="./images/arithmetische_reihe.svg"/>                                                                                  | <img src="./images/geometrische_reihe.svg"/>                                                                                                     |
 #### Konvergenz
 Mit Konvergenz kann man Grenzwert-Betrachtungen einer Folge oder Funktion für undefinierte Werte anstellen, wie zum Beispiel welchen Wert eine Folge $a_n$ hat, wenn man für $n$ gegen unendlich strebt. Der Grenzwert wird meist mit $g$ bezeichnet.
 $$\displaystyle\lim_{n \rightarrow \infty} (a_n) = g$$
