@@ -2,8 +2,8 @@
 ## Analog-Digital
 | Analoges Signal                           | Digitales Signal                       |
 | ----------------------------------------- | -------------------------------------- |
-| <img src="./images/analog.svg" />                | <img src="./images/digital.svg" />            |
-| Kontinuierlicher Verlauf(Kurve, Fließend) | Diskreter Verlauf(Treppe, Abstufungen) |
+| <img src="./images/analog.svg" />         | <img src="./images/digital.svg" />     |
+| Kontinuierlicher Verlauf (Kurve, Fließend) | Diskreter Verlauf (Treppe, Abstufungen) |
 
 Eine Konversion von Analog zu Digital erfolgt durch einen **adc**. Mit der **Abtastung** wird Zeitachse diskretisiert. Mit der **Quantisierung** wird die Werteachse diskretisiert. Die Gegenoperation wird von einem **dac** durchgeführt.
 
@@ -32,11 +32,11 @@ $$1001_{(2)} = 1 \cdot 2^3 + 0 \cdot 2^2 + 0 \cdot 2^1 + 1 \cdot 2^0$$
 
 Um eine Zahl binär zu codieren wird sie durch zwei mit Rest geteilt bis null herauskommt. Danach werden die Reste rückwärts abgelesen.
 
-$$19 : 2 = 9 |R:1$$
-$$9 : 2 = 4 |R:1$$
-$$4 : 2 = 2 |R:0$$
-$$2 : 2 = 1 |R:0$$
-$$1 : 2 = 0 |R:1$$
+$$19 : 2 = 9 \;\; R:1$$
+$$9 : 2 = 4 \;\; R:1$$
+$$4 : 2 = 2 \;\; R:0$$
+$$2 : 2 = 1 \;\; R:0$$
+$$1 : 2 = 0 \;\; R:1$$
 <br>
 $$19_{(10)} = 10011_{(2)}$$
 
@@ -88,10 +88,10 @@ In Logischen Gattern werden die Logischen Werte Wahr und Falsch mit Bereichen de
 
 Logische Gatter sind Verknüpfungen aus der Aussagen Logik.
 
-| not-Gatter              | and-Gatter              | or-Gatter              | xor-Gatter              | nand-Gatter              | nor-Gatter              | xnor-Gatter              |
-| ----------------------- | ----------------------- | ---------------------- | ----------------------- | ------------------------ | ----------------------- | ------------------------ |
+| not-Gatter                     | and-Gatter                     | or-Gatter                     | xor-Gatter                     | nand-Gatter                     | nor-Gatter                     | xnor-Gatter                     |
+| ------------------------------ | ------------------------------ | ----------------------------- | ------------------------------ | ------------------------------- | ------------------------------ | ------------------------------- |
 | <img src="./images/not.svg" /> | <img src="./images/and.svg" /> | <img src="./images/or.svg" /> | <img src="./images/xor.svg" /> | <img src="./images/nand.svg" /> | <img src="./images/nor.svg" /> | <img src="./images/xnor.svg" /> |
-| Negation                | Konjunktion             | Disjunktion            | Äquivalenz              | Negierte Konjunktion     | Negierte Disjunktion    | Negierte Äquivalenz      |
+| Negation                       | Konjunktion                    | Disjunktion                   | Äquivalenz                     | Negierte Konjunktion            | Negierte Disjunktion           | Negierte Äquivalenz             |
 
 Eine Menge an Gattern wird als vollständiges System bezeichnet, wenn mit der Menge alle möglichen Gatter gebildet werden können. Die Menge $\{nand\}$ wäre ein mögliches vollständiges System.
 
@@ -105,14 +105,14 @@ Ein Schaltwerk ist eine Zeitabhängige Funktion. Dies würd durch **Rückkopplun
 $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 
 #### Nicht-Taktgesteuerte FlipFlops (Basis-FlipFlop)
-| FlipFlop     | Schaltung                        | Beschreibung |
-| ------------ | -------------------------------- | ------------ |
+| FlipFlop     | Schaltung                               | Beschreibung |
+| ------------ | --------------------------------------- | ------------ |
 | RS NOR-Latch | <img src="./images/rs_nor_latch.svg" /> |              |
 
 
 #### Taktgesteuerte FlipFlops
-| FlipFlop    | Schaltung                                       | Beschreibung |
-| ----------- | ----------------------------------------------- | ------------ |
+| FlipFlop    | Schaltung                                              | Beschreibung |
+| ----------- | ------------------------------------------------------ | ------------ |
 | RS-FlipFlop | <img src="./images/taktgesteuertes_rs_flipflop.svg" /> |              |
 | D-FlipFlop  | <img src="./images/taktgesteuertes_d_flipflop.svg" />  |              |
 
@@ -123,16 +123,16 @@ Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen 
 <img src="./images/impulsglied.svg" />
 
 ##### Einflankengesteuerte FlipFlops
-| FlipFlop    | Schaltung                                             | Beschreibung |
-| ----------- | ----------------------------------------------------- | ------------ |
+| FlipFlop    | Schaltung                                                    | Beschreibung |
+| ----------- | ------------------------------------------------------------ | ------------ |
 | RS-FlipFlop | <img src="./images/einflankengesteuertes_rs_flipflop.svg" /> |              |
 | D-FlipFlop  | <img src="./images/einflankengesteuertes_d_flipflop.svg" />  |              |
 | JK-FlipFlop | <img src="./images/einflankengesteuertes_jk_flipflop.svg" /> |              |
 
 
 ##### Zweiflankengesteuerte FlipFlops
-| FlipFlop    | Schaltung                                              | Beschreibung |
-| ----------- | ------------------------------------------------------ | ------------ |
+| FlipFlop    | Schaltung                                                     | Beschreibung |
+| ----------- | ------------------------------------------------------------- | ------------ |
 | JK-FlipFlop | <img src="./images/zweiflankengesteuertes_jk_flipflop.svg" /> |              |
 
 
@@ -215,6 +215,9 @@ Nach der Initialisierung eines Prozess wird dieser in eine Warteschlange eingef�
 
 Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zwischen gespeichert und geladen werden. Der Wechsel zwischen Threads ist einfacher und schneller, da dabei nicht der gesamte Kontext gewechselt werden muss. Der Wechsel zwischen Threads erfordert meist sehr viel Koordination, da sonst Kollisionen zwischen den Threads entstehen. Dabei können entweder unerwartete Ergebnisse auftreten oder die Threads blockieren sich gegenseitig. Um diese Probleme zu lösen gibt es **Semaphore**. Sie verwalten Zeitpunkte in denen ein Thread im kritischen Abschnitt ist. Zu diesen Zeitpunkten kann der Thread nicht unterbrochen werden.
 
+### Scheduling
+
+### Deadlock
 
 ### Virtualisierung
 | Virtualisierung           | Beschreibung                                              |
@@ -234,8 +237,8 @@ Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zw
 ### Netzwerke
 Ein Netzwerk ist ein Zusammenschluss mehrerer Geräte. Dieser Zusammenschluss kann unterschiedlich aussehen.
 
-| Topologie     | Darstellung                       | Beschreibung                  |
-| ------------- | --------------------------------- | ----------------------------- |
+| Topologie     | Darstellung                              | Beschreibung                  |
+| ------------- | ---------------------------------------- | ----------------------------- |
 | Linie         | <img src="./images/linie.svg" />         | Geringste Verkabelung         |
 | Bus           | <img src="./images/bus.svg" />           | Alle verbunden mit Bus        |
 | (Token-) Ring | <img src="./images/ring.svg" />          | Nur mit Token kann man senden |
@@ -250,42 +253,42 @@ Die größe des Netzes kann grob kategorisiert werden.
 | ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
 | Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
 
-Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschiedliche Verbindungen.
+Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschiedliche Medien.
 
-| Verbindungen        | Beschreibung                                                                                                                                                            |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Serielle Verbindung | ohne Takt (manuelle Einstellung)                                                                                                                                        |
-| Ethernet/LAN        | Koaxialkabel (mehrfache Isolation), Twisted Pair (Elektrische Felder heben sich auf), Power over Ethernet (PoE, LAN + Versorgung), LWL (Lichtwellenleiter, Abhörsicher) |
-| DSL Modem           |                                                                                                                                                                         |
-| WLAN                |                                                                                                                                                                         |
-| DLAN                |                                                                                                                                                                         |
-| Bluetooth           |                                                                                                                                                                         |
-| NFC                 |                                                                                                                                                                         |
-
-| Verbindung                                     | Beschreibung                      | Geschwindigkeit | Distanz |         |
-| ---------------------------------------------- | --------------------------------- | --------------- | ------- | ------- |
-| Serielle Verbindung                            | Ohne Takt (manuelle Einstellung)  |                 |         |         |
-| Koaxialkabel                                   | Mehrfache Isolation               |                 |         | LAN     |
-| Twisted Pair                                   | Elektrische Felder heben sich auf |                 |         | LAN     |
-| Power over Ethernet (PoE)                      | LAN + Versorgung                  |                 |         | LAN     |
-| Lichtwellenleiter (LWL)                        | Abhörsicher                       |                 |         | LAN     |
-| DSL (Digital Subscriber Line)                  |                                   |                 |         | MAN/WAN |
-| WLAN                                           |                                   |                 |         |         |
-| DLAN (direct LAN) PLC (Powerline Comunication) |                                   |                 |         |         |
-SDSL: download = upload
-ADSL: download != upload
-
-DSLAM (Provider)
-DSL-Modem (Client)
+| Medium                   | Frequenz        | Übertragungsrate | Shared Medium | Beschreibung                                     |
+| ------------------------ | --------------- | ---------------- | ------------- | ------------------------------------------------ |
+| Koaxialkabel             |                 | < 10MBit         | shared (Bus)  | veraltet ohne Taktung                            |
+| Twisted Pair             |                 | 10M - 100GBit    | nicht shared  | Störsicher                                       |
+| Power over Ethernet      |                 |                  | nicht shared  | Versorgung über Kabel                            |
+| Lichtwellenleiter        |                 | 100M - 1TBit     | nicht shared  | Abhör & Störsicher                               |
+| Digital Subscriber Line  | 4 - 30MHz       | 1 - 400MBit      | nicht shared  | Anbindung an Provider (Symmetrisch/Asymmetrisch) |
+| Wireless LAN             | 2.4/5/60GHz     | 1M-2GBit         | shared        | Kollisionsanfällig & Bluetooth Shared            |
+| DLAN                     | 4 - 30MHz       | 1M-2GBit         | shared        | leicht Abhörbar                                  |
+| Bluetooth                | 2.4GHz          | 732k-50GBit      | shared        | WLAN Shared                                      |
+| Near Field Communication | 125k/13M/858MHz | 10k-1MBit        | shared        |                                                  |
 
 ### OSI-Schichtenmodell (Open Systems Interconnection)
 
-| Schicht                | Aufgabe                         |
-| ---------------------- | ------------------------------- |
-| Anwendungsschicht      |                                 |
-| Darstellungsschicht    |                                 |
-| Sitzungsschicht        |                                 |
-| Transportschicht       | Gibt den Port im Ziel an        |
-| Vermittlungsschicht    | Gibt die Systemweite Adresse an |
-| Sicherungsschicht      | Gibt die Lokale Adresse an      |
-| Bitübertragungsschicht | Überträgt die Daten             |
+| Schicht                   | Aufgabe                         |
+| ------------------------- | ------------------------------- |
+| 7. Anwendungsschicht      |                                 |
+| 6. Darstellungsschicht    |                                 |
+| 5. Sitzungsschicht        |                                 |
+| 4. Transportschicht       | Gibt den Port im Ziel an        |
+| 3. Vermittlungsschicht    | Gibt die Systemweite Adresse an |
+| 2. Sicherungsschicht      | Gibt die Lokale Adresse an      |
+| 1. Bitübertragungsschicht | Überträgt die Daten             |
+
+| Gerät    | Schicht | Beschreibung               | Kollisionsdomäne                 |
+| -------- | :-----: | -------------------------- | -------------------------------- |
+| Hub      |    1    | Schickt an alle Teilnehmer | Domäne vergrößert sich           |
+| Repeater |    1    |                            |                                  |
+| Bridge   |    2    | Schaltet frei wenn nötig   | Domäne vergrößert nur wenn nötig |
+| Switch   |    2    | Besteht aus Bridges        | mehrere kleine Domänen           |
+| Router   |    3    |                            |                                  |
+| Proxy    |    7    |                            |                                  |
+| Gateway  |    7    |                            |                                  |
+
+MAC-Adresse 6 byte (hersteller + schnittstellenerkennung)
+
+Ethernet-frame

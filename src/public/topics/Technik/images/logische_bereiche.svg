@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
-    <path d="M 50 10 L 50 90" stroke="#000000"/>
-    <path d="M 10 50 L 90 50" stroke="#000000"/>
-    <path d="M 87 47 L 90 50 L 87 53" stroke="#000000" fill="none"/>
-    <path d="M 53 13 L 50 10 L 47 13" stroke="#000000" fill="none"/>
-    
-    <path d="M 38 14 L 39 19.75 L 40 25 L 41 29.75 L 42 34 L 43 37.75 L 44 41 L 45 43.75 L 46 46 L 47 47.75 L 48 49 L 49 49.75 L 50 50 L 51 49.75 L 52 49 L 53 47.75 L 54 46 L 55 43.75 L 56 41 L 57 37.75 L 58 34 L 59 29.75 L 60 25 L 61 19.75 L 62 14" stroke="#FF9900" fill="none"/>
-    <path d="M 32.5 85 L 67.5 15" stroke="#0099FF" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 150 100" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <path d="M 30 40 L 30 60" stroke="#999999"/>
+    <path d="M 30 10 L 30 40" stroke="#CCFF00"/>
+    <path d="M 30 60 L 30 90" stroke="#DD3333"/>
+    <path d="M 33 13 L 30 10 L 27 13" stroke="#CCFF00" fill="none"/>
+    <path d="M 33 87 L 30 90 L 27 87" stroke="#DD3333" fill="none"/>
+    <text x="40" y="25" font-size="8" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#CCFF00">Wahr</text>
+    <text x="40" y="50" font-size="8" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#999999">Sicherheitsabstand</text>
+    <text x="40" y="75" font-size="8" dominant-baseline="middle" text-anchor="left" font-family="Consolas" fill="#DD3333">Falsch</text>
 </svg>

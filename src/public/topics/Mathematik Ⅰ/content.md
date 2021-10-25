@@ -200,13 +200,13 @@ $$R = M^2$$
 $$G = (M, R)$$
 
 Graphen eignen sich zur visualisierung von Relationen.
-![](./images/graph.svg)
+<img src="./images/graph.svg"/>
 
 Ein Graph ist **ungerichtet**, falls die Relation $R$ symmetrisch ist, ansonsten ist der Graph **gerichtet**. Wenn jeder Knoten von jedem Knoten erreichbar ist, wird der Graph als **zusammenhängend** bezeichnet. Ein zusammenhängender Graph ohne Zyklen wird als Baum bezeichnet.
-![](./images/baum.svg)
+<img src="./images/baum.svg"/>
 
 In einem Baum ist der Weg von jedem Knoten zu jedem Knoten eindeutig. In manchen Fällen wird ein Start für einen Baum definiert, die **Wurzel** (orange). Jeder Knoten, welcher nur eine Kante besitzt wird als **Blatt** (lime) bezeichnet. Alle anderen Knoten werden als **Innereknoten** (cyan) bezeichnet.
-![](./images/baum_hierachie.svg)
+<img src="./images/baum_hierachie.svg"/>
 
 Die Tiefe eines Baums ist die maximale Länge eines Pfades von der Wurzel zu einem Blatt.
 
@@ -215,6 +215,7 @@ Die Tiefe eines Baums ist die maximale Länge eines Pfades von der Wurzel zu ein
 
 ### Automaten
 
+## Logik
 ### Aussagen Logik
 Die Aussagen Logik beschäftigt sich mit Formeln. Formeln bestehen aus, den Symbolen $0$, $1$ den Atomen der Menge $\Sigma$ (Signatur) oder Verknüpfungen von bekannten Formeln mit den fünf definieren Operationen. In Folgenden Beispielen gilt $\Sigma = \{\textcolor{orange}{A}, \textcolor{orange}{B}\}$. Die Menge aller Formeln auf $\Sigma$ wird mit $For0_{\Sigma}$ bezeichnet. 
 $$0, 1 \in For0_{\Sigma}$$
