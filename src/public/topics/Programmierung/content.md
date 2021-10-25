@@ -77,8 +77,8 @@ Ein Baum kann verschiedene Eigenschaften haben.
 
 Ein Baum kann verschieden Durchlaufen werden, man sagt auch Traversieren.
 
-| Pre-Order                    | In-Order                    | Post-Order                    |
-| ---------------------------- | --------------------------- | ----------------------------- |
+| Pre-Order                           | In-Order                           | Post-Order                           |
+| ----------------------------------- | ---------------------------------- | ------------------------------------ |
 | <img src="./images/preorder.svg" /> | <img src="./images/inorder.svg" /> | <img src="./images/postorder.svg" /> |
 
 Zusätzlich kann man einen Baum als Array darstellen. Der Baum wird Ebenen-weise abgelesen inklusive Lücken. Das Array ermöglicht schnellere Tauschoperationen im Baum, jedoch ist die Struktur statisch.
@@ -175,4 +175,14 @@ Anders als bei der **iterativen Programmierung**, bei der Probleme schrittweise 
 Bei dynamischer Programmierung wird ein Algorithmus in sich überlappende Teilprobleme aufgeteilt. Die Lösungen zu den Teilproblemen wird abgespeichert, wodurch komplexere optimierungs Probleme effizienter gelöst werden.
 
 ### Lineare Programmierung
-Lineare Programmierung beschäftigt sich mit Optimierung
+Lineare Programmierung beschäftigt sich mit Optimierung mehrerer Ungleichungen zur Maximierung bzw. Minimierung einer Zielfunktion. Der Simplexalgorithmus ist ein Beispiel Algorithmus.
+
+| Simplex Algorithmus                                                      |
+| ------------------------------------------------------------------------ |
+| 1. Umformen der Bedingungen in die Form $\vec{a} \cdot \vec{x} \leq b_i$ |
+| 2. Schlupfvariablen einfügen: $\vec{a} \cdot \vec{x} + s_i = b_i$        |
+| 3. Eintragen in Matrix                                                   |
+| 4. Spalte mit größtem Zielfunktionsvorfaktor wählen                      |
+| 5. Zeile mit kleinstem Quotient von Faktor und $b_i$ wählen              |
+| 6. Matrix umformen sodass pivot 1 und Rest der Spalte 0 ergibt           |
+| 7. Wiederholen bis Zielfunktionsvorfaktoren nicht positiv                |
