@@ -189,12 +189,16 @@ Mit dem totalen Differenzial kann man für komplizierte Funktionen die Änderung
 $$\Delta x_3 \approx \frac{\partial}{\partial x_1}f(x_1, x_2) \cdot \Delta x_1 + \frac{\partial}{\partial x_2}f(x_1, x_2) \cdot \Delta x_2$$
 
 #### Gradient
-Der Gradient zeigt in Richtung des größten Zuwachses von $f$.
+Für eine Funktion $f$ zeigt der Gradient in Richtung des größten Zuwachses von $f$.
 $$\nabla f = grad(f) = \left(\begin{array}{c}\frac{\partial}{\partial x_1}f\\\frac{\partial}{\partial x_1}f\\\vdots\end{array}\right)$$
 
 Mit Hilfe des Gradienten kann man die Ableitung in eine beliebige Richtung $r$ berechnen.
 $$\frac{\partial}{\partial r}f(\vec{x}) = \tan(\alpha) = grad(f(\vec{x})) \cdot norm(\vec{r})$$
 
+Um Extremwerte zu bestimmen muss das Gleichungssystem $grad(f(\vec{x_0})) = \vec{0}$ gelten.
+$$H(f(\vec{x_0}) = \begin{pmatrix}\frac{\partial^2}{\partial x_1\partial x_1}f(\vec{x_0}) & \frac{\partial^2}{\partial x_1\partial x_2}f(\vec{x_0})\\\frac{\partial^2}{\partial x_2\partial x_1}f(\vec{x_0}) & \frac{\partial^2}{\partial x_2\partial x_2}f(\vec{x_0})\end{pmatrix}$$
+
+Wenn die Eigenwerte der Hessematrix $H(f(\vec{x}))$ positiv sind handelt es sich um ein Minimum, wenn alle negativ sind um ein Maximum und bei positiven und negativen Einträgen um einen Sattelpunkt.
 
 ### Lineare Transformationen
 #### Matrizen

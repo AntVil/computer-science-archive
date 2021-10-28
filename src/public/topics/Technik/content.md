@@ -1,8 +1,8 @@
 # Technik
 ## Analog-Digital
-| Analoges Signal                           | Digitales Signal                       |
-| ----------------------------------------- | -------------------------------------- |
-| <img src="./images/analog.svg" />         | <img src="./images/digital.svg" />     |
+| Analoges Signal                            | Digitales Signal                        |
+| ------------------------------------------ | --------------------------------------- |
+| <img src="./images/analog.svg" />          | <img src="./images/digital.svg" />      |
 | Kontinuierlicher Verlauf (Kurve, Fließend) | Diskreter Verlauf (Treppe, Abstufungen) |
 
 Eine Konversion von Analog zu Digital erfolgt durch einen **adc**. Mit der **Abtastung** wird Zeitachse diskretisiert. Mit der **Quantisierung** wird die Werteachse diskretisiert. Die Gegenoperation wird von einem **dac** durchgeführt.
@@ -49,7 +49,7 @@ Negativ Zahlen werden durch das **Zweierkomplement** gebildet. Dabei werden die 
 | ungenau       | genau                  |
 | werte-genau   | fließend               |
 | eingeschränkt | flexibel               |
-| *Komma-fest*  | $\pm$ + Exp + Mantisse |
+| *Komma-fest*  | ± + Exp + Mantisse |
 
 ### Codes
 Codes können spezielle Eigenschaften haben.
@@ -104,37 +104,9 @@ $$f(A, B, ...) = (Y_1, Y_2, ...)$$
 Ein Schaltwerk ist eine Zeitabhängige Funktion. Dies würd durch **Rückkopplung** der Eingänge erreicht.
 $$f(A, B, ..., Y_{n-1, 1}, ...) = (Y_{n, 1}, Y_{n, 2}, ...)$$
 
-#### Nicht-Taktgesteuerte FlipFlops (Basis-FlipFlop)
-| FlipFlop     | Schaltung                               | Beschreibung |
-| ------------ | --------------------------------------- | ------------ |
-| RS NOR-Latch | <img src="./images/rs_nor_latch.svg" /> |              |
+FlipFlops werden Unterteil in **nicht-taktgesteuert**, **taktgesteuert**, **einflankengesteuert** und **zweiflankengesteuert**. Das einfachste FlipFlop ist die RS-NOR-Latch.
 
-
-#### Taktgesteuerte FlipFlops
-| FlipFlop    | Schaltung                                              | Beschreibung |
-| ----------- | ------------------------------------------------------ | ------------ |
-| RS-FlipFlop | <img src="./images/taktgesteuertes_rs_flipflop.svg" /> |              |
-| D-FlipFlop  | <img src="./images/taktgesteuertes_d_flipflop.svg" />  |              |
-
-
-#### Flankengesteuerte FlipFlops
-Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen ein Signal von Falsch zu Wahr wechselt. Das Impulsglied kann diese Flanken erkennen.
-
-<img src="./images/impulsglied.svg" />
-
-##### Einflankengesteuerte FlipFlops
-| FlipFlop    | Schaltung                                                    | Beschreibung |
-| ----------- | ------------------------------------------------------------ | ------------ |
-| RS-FlipFlop | <img src="./images/einflankengesteuertes_rs_flipflop.svg" /> |              |
-| D-FlipFlop  | <img src="./images/einflankengesteuertes_d_flipflop.svg" />  |              |
-| JK-FlipFlop | <img src="./images/einflankengesteuertes_jk_flipflop.svg" /> |              |
-
-
-##### Zweiflankengesteuerte FlipFlops
-| FlipFlop    | Schaltung                                                     | Beschreibung |
-| ----------- | ------------------------------------------------------------- | ------------ |
-| JK-FlipFlop | <img src="./images/zweiflankengesteuertes_jk_flipflop.svg" /> |              |
-
+<img src="./images/rs_nor_latch.svg">
 
 
 ## Computer Hardware
@@ -142,10 +114,10 @@ Ein Impulsglied erkennt positive Flanken eines Signals, die Zeitpunkte zu denen 
 Die CPU ist das central processing unit. Es gibt verschiedene Architekturen, jedoch die Aufgaben der CPU sind eindeutig. Sie kontrolliert, steuert und verwendet alle anderen Hardware Komponenten.
 Dies funktioniert über Busse, kabel die zwei oder mehr Hardware Komponenten Verbinden.
 
-| Architektur             | Modell | Beschreibung            |
-| ----------------------- | ------ | ----------------------- |
-| Von-Neumann-Architektur |        | langsam durch einen Bus |
-| Harvard-Architektur     |        | schnell aber komplex    |
+| Architektur             | Beschreibung            |
+| ----------------------- | ----------------------- |
+| Von-Neumann-Architektur | langsam durch einen Bus |
+| Harvard-Architektur     | schnell aber komplex    |
 
 Grundlegend besitzt eine CPU mindestens einen Kern. Jeder Kern hat ein Memory Managment Unit (MMU), ein Steuerwerk, einen Registersatz und ein Rechenwerk (ALU). Mit Hilfe des Caches können Daten schnell zwischen gespeichert werden. Im Fall von mehreren Kernen gibt es oft einen weiteren Cache, auf den alle Kerne zugreifen können. Die Kerne einer CPU arbeiten echt-parallel.
 Die CPU kann in der **Skalare Architektur** nur einen Befehl pro Taktzyklus ausführen. Die **Superskalare Architektur** hingegen führt mehrere Befehle auf einer CPU parallel aus. Es können auch konditionelle Befehle parallel zur Kondition ausgeführt werden, sodass nicht auf das Ergebnis der Kondition gewartet werden muss.
@@ -209,7 +181,7 @@ Das Betriebssystem kann verschieden aufgebaut sein. Beim Monolithischen Kernel w
 ### Prozesse
 Mit einem Auftrag wird ein Prozess gestartet. Seine Daten werden in den Speicher geladen und eine **PID** wird erstellt. Dieser Prozess kann Teil eines Programms mit mehreren Prozessen sein, oder allein stehend. Für einen Prozess kann ein Thread oder mehrere Treads laufen. Threads eines Prozesses teilen sich den Adressbereich. Jeder Thread hat einen eigenen virtuellen Prozessor. Mehrere virtuelle Prozessoren werden auf einem Prozessor simuliert. Zwischen den virutellen Prozessen wird ständig gewechselt.
 
-<img src="./images/prozesszustandsmodell.svg" />
+<img style="max-width: 600px;" src="./images/prozesszustandsmodell.svg" />
 
 Nach der Initialisierung eines Prozess wird dieser in eine Warteschlange eingefügt. Ein Prozess aus der Warteschlange kann im Nutzermodus bearbeitet werden. Falls höhere Rechte erforderlich sind kann, durch einen Interrupt, in den Kernelmodus gewechselt werden. Nachdem ein Prozess für eine Weile bearbeitet wurde kann dieser zurück in die Warteschlange. Falls der Prozess auf ein Ereignis wartet, wird dieser blockiert, bis das Ereignis eintritt. Hierfür wird für jedes mögliche Ereignis eine seperate Warteschlange angelegt. Ein Prozess kann suspendiert werden, falls dieser nicht aktiv genutzt wird. Dadurch werden Resourcen für andere Prozesse frei.
 
@@ -217,7 +189,6 @@ Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zw
 
 ### Scheduling
 
-### Deadlock
 
 ### Virtualisierung
 | Virtualisierung           | Beschreibung                                              |
@@ -269,15 +240,15 @@ Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschied
 
 ### OSI-Schichtenmodell (Open Systems Interconnection)
 
-| Schicht                   | Aufgabe                         |
-| ------------------------- | ------------------------------- |
-| 7. Anwendungsschicht      |                                 |
-| 6. Darstellungsschicht    |                                 |
-| 5. Sitzungsschicht        |                                 |
-| 4. Transportschicht       | Gibt den Port im Ziel an        |
-| 3. Vermittlungsschicht    | Gibt die Systemweite Adresse an |
-| 2. Sicherungsschicht      | Gibt die Lokale Adresse an      |
-| 1. Bitübertragungsschicht | Überträgt die Daten             |
+| Schicht                                     | Aufgabe                         |
+| ------------------------------------------- | ------------------------------- |
+| 7. Anwendungsschicht (Application Layer)    |                                 |
+| 6. Darstellungsschicht (Presentation Layer) |                                 |
+| 5. Sitzungsschicht (Session Layer)          |                                 |
+| 4. Transportschicht (Transport Layer)       | Gibt den Port im Ziel an        |
+| 3. Vermittlungsschicht (Network Layer)      | Gibt die Systemweite Adresse an |
+| 2. Sicherungsschicht (Data Link Layer)      | Gibt die Lokale Adresse an      |
+| 1. Bitübertragungsschicht (Physical Layer)  | Überträgt die Daten             |
 
 | Gerät    | Schicht | Beschreibung               | Kollisionsdomäne                 |
 | -------- | :-----: | -------------------------- | -------------------------------- |
