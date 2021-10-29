@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 300 50" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+    <g transform="translate(0,0)">
+        <path d="M 20 20 L 80 20" stroke="#7777AA" fill="none"/>
+        
+        <path d="M 68 18 L 70 20 L 68 22" stroke="#7777AA" fill="none"/>
+        
+        <ellipse cx="20" cy="20" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+        <ellipse cx="80" cy="20" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+
+        <text x="50" y="40" font-size="10" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#7777AA">Simplex</text>
+    </g>
+
+    <g transform="translate(100,0)">
+        <path d="M 20 20 L 80 20" stroke="#7777AA" fill="none"/>
+        
+        <path d="M 68 18 L 70 20 L 68 22" stroke="#7777AA" fill="none"/>
+        <path d="M 32 18 L 30 20 L 32 22" stroke="#7777AA" fill="none"/>
+        
+        <ellipse cx="20" cy="20" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+        <ellipse cx="80" cy="20" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+
+        <text x="50" y="40" font-size="10" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#7777AA">Halbduplex</text>
+    </g>
+
+    <g transform="translate(200,0)">
+        <path d="M 20 20 Q 50 0 80 20" stroke="#7777AA" fill="none"/>
+        <path d="M 20 20 Q 50 40 80 20" stroke="#7777AA" fill="none"/>
+        
+        <path d="M 69 16 L 71 14.5 L 70 12.5" stroke="#7777AA" fill="none"/>
+        <path d="M 31 24 L 29 25.5 L 30 27.5" stroke="#7777AA" fill="none"/>
+        
+        <ellipse cx="20" cy="20" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+        <ellipse cx="80" cy="20" rx="10" ry="10" fill="#00CCFF" stroke="#00FFFF" stroke-width="1"/>
+        
+        <text x="50" y="40" font-size="10" dominant-baseline="middle" text-anchor="middle" font-family="Consolas" fill="#7777AA">Vollduplex</text>
+    </g>
+</svg>

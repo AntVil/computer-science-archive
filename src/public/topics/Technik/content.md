@@ -43,12 +43,12 @@ $$19_{(10)} = 10011_{(2)}$$
 Negativ Zahlen werden durch das **Zweierkomplement** gebildet. Dabei werden die Stellen der Positiven Zahl invertiert und eins addiert.
 
 #### Kommazahlen
-| Festkomma     | Gleitkomma             |
-| ------------- | ---------------------- |
-| einfach       | komplex                |
-| ungenau       | genau                  |
-| werte-genau   | fließend               |
-| eingeschränkt | flexibel               |
+| Festkomma     | Gleitkomma         |
+| ------------- | ------------------ |
+| einfach       | komplex            |
+| ungenau       | genau              |
+| werte-genau   | fließend           |
+| eingeschränkt | flexibel           |
 | *Komma-fest*  | ± + Exp + Mantisse |
 
 ### Codes
@@ -206,6 +206,7 @@ Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zw
 
 ## Netzwerktechnik
 ### Netzwerke
+#### Netzwerk Kategorien
 Ein Netzwerk ist ein Zusammenschluss mehrerer Geräte. Dieser Zusammenschluss kann unterschiedlich aussehen.
 
 | Topologie     | Darstellung                              | Beschreibung                  |
@@ -224,19 +225,43 @@ Die größe des Netzes kann grob kategorisiert werden.
 | ------------------------ | ------------------------------ | ----------------------- | ------------------------- |
 | Grundstück               | mehrere Grundstücke            | mehrere Städte          | mehrere WAN               |
 
+#### Medien
 Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschiedliche Medien.
 
 | Medium                   | Frequenz        | Übertragungsrate | Shared Medium | Beschreibung                                     |
 | ------------------------ | --------------- | ---------------- | ------------- | ------------------------------------------------ |
 | Koaxialkabel             |                 | < 10MBit         | shared (Bus)  | veraltet ohne Taktung                            |
 | Twisted Pair             |                 | 10M - 100GBit    | nicht shared  | Störsicher                                       |
-| Power over Ethernet      |                 |                  | nicht shared  | Versorgung über Kabel                            |
+| Power over Ethernet      |                 |                  | nicht shared  | Stromversorgung über Kabel                       |
 | Lichtwellenleiter        |                 | 100M - 1TBit     | nicht shared  | Abhör & Störsicher                               |
 | Digital Subscriber Line  | 4 - 30MHz       | 1 - 400MBit      | nicht shared  | Anbindung an Provider (Symmetrisch/Asymmetrisch) |
 | Wireless LAN             | 2.4/5/60GHz     | 1M-2GBit         | shared        | Kollisionsanfällig & Bluetooth Shared            |
 | DLAN                     | 4 - 30MHz       | 1M-2GBit         | shared        | leicht Abhörbar                                  |
 | Bluetooth                | 2.4GHz          | 732k-50GBit      | shared        | WLAN Shared                                      |
 | Near Field Communication | 125k/13M/858MHz | 10k-1MBit        | shared        |                                                  |
+
+Anschlüsse können verschieden verwendet werden.
+<img style="max-width: 700px;" src="./images/kommunikation.svg"/>
+Bei einem Halbduplex Anschluss können Kollisionen entstehen, falls beide Teilnehmer gleichzeitig senden.
+
+#### Netzwerkanbindungen
+Netzwerke können unterschiedlich verbunden werden.
+
+| Gerät    | Schicht | Beschreibung                                    | Kollisionsdomäne                 |
+| -------- | :-----: | ----------------------------------------------- | -------------------------------- |
+| Hub      |    1    | Schickt an alle Teilnehmer                      | Domäne vergrößert sich           |
+| Repeater |    1    | Verstärkt Signal                                |                                  |
+| Bridge   |    2    | Schaltet nur frei wenn nötig                    | Domäne vergrößert nur wenn nötig |
+| Switch   |    2    | Besteht aus Bridges. Schaltet im Notfall zu Hub | mehrere kleine Domänen           |
+| Router   |    3    |                                                 |                                  |
+| Proxy    |    7    |                                                 |                                  |
+| Gateway  |    7    |                                                 |                                  |
+
+Store & Foreword: Empfangen dann senden (fehler werden erkannt)
+Cut-Through: Lesen und fast sofort senden
+
+IPv6: 128 Bit
+IPv4: 32 Bit
 
 ### OSI-Schichtenmodell (Open Systems Interconnection)
 
@@ -245,20 +270,11 @@ Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschied
 | 7. Anwendungsschicht (Application Layer)    |                                 |
 | 6. Darstellungsschicht (Presentation Layer) |                                 |
 | 5. Sitzungsschicht (Session Layer)          |                                 |
-| 4. Transportschicht (Transport Layer)       | Gibt den Port im Ziel an        |
-| 3. Vermittlungsschicht (Network Layer)      | Gibt die Systemweite Adresse an |
+| 4. Transportschicht (Transport Layer)       | Gibt den Port im Ziel an       TCP |
+| 3. Vermittlungsschicht (Network Layer)      | Gibt die Systemweite Adresse an IP |
 | 2. Sicherungsschicht (Data Link Layer)      | Gibt die Lokale Adresse an      |
 | 1. Bitübertragungsschicht (Physical Layer)  | Überträgt die Daten             |
 
-| Gerät    | Schicht | Beschreibung               | Kollisionsdomäne                 |
-| -------- | :-----: | -------------------------- | -------------------------------- |
-| Hub      |    1    | Schickt an alle Teilnehmer | Domäne vergrößert sich           |
-| Repeater |    1    |                            |                                  |
-| Bridge   |    2    | Schaltet frei wenn nötig   | Domäne vergrößert nur wenn nötig |
-| Switch   |    2    | Besteht aus Bridges        | mehrere kleine Domänen           |
-| Router   |    3    |                            |                                  |
-| Proxy    |    7    |                            |                                  |
-| Gateway  |    7    |                            |                                  |
 
 MAC-Adresse 6 byte (hersteller + schnittstellenerkennung)
 
