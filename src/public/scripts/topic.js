@@ -2,18 +2,8 @@
  * loads all topics and the home page (on a reload loads last topic)
  */
 async function initTopics(){
-    let url = [...window.location.href.split("/").slice(0, -1), "getTopics"].join("/");
-
-    let response = await fetch(url, {
-        "method": "POST",
-        "headers": {
-            "Content-Type": "application/json"
-        },
-        "body": "{}"
-    });
+    topics = ["Home", "Mathematik Ⅰ", "Mathematik ⅠⅠ", "Programmierung", "Technik"];
     
-    let topics = await response.json();
-
     let navElement = document.getElementById("nav");
     navElement.innerHTML = "";
 
