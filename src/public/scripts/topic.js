@@ -38,7 +38,7 @@ async function loadTopicContent(topicName){
     for(let line of content.split("\n")){
         if(line[0] == "#"){
             let k = line.split("#").length - 2;
-            let text = line.replaceAll("#", "").slice(1, -1);
+            let text = line.replaceAll("#", "").trim();
             let element = document.createElement("div");
             element.classList.add(`outline-heading-${k}`);
             element.innerText = text;

@@ -18,9 +18,9 @@ $$l_i = \frac{h_i \cdot x_i}{\displaystyle\sum_{j=0}^{n}h_j \cdot x_j}$$
 <img src="./images/lorenzkurve.svg"/>
 
 #### Maßzahlen
-| Modus               | Quantil$_k$                                                           | Arithmetisches Mittel                        | Geometrisches Mittel                         | Harmonisches Mittel                                    | Quadratisches Mittel |
-| ------------------- | --------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------- | ------------------------------------------------------ |-|
-| Häufigster Messwert | Wert sodass $\frac{k}{4}$ darüber und $\frac{1-k}{k}$ darunter liegen | $$x_a = \frac{\displaystyle\sum_{i=0}^{n}x_i}{n}$$ | $$x_g = \sqrt[n]{\displaystyle\prod_{i=0}^{n}x_i}$$ | $$x_h = \frac{n}{\displaystyle\sum_{i=0}^{n}\frac{1}{x_i}}$$ |$$ x_q = \sqrt{\frac{\displaystyle\sum_{i=0}^{n}x_i^2}{n}}$$|
+| Modus               | Quantil$_k$                                                           | Arithmetisches Mittel                              | Geometrisches Mittel                                | Harmonisches Mittel                                          | Quadratisches Mittel                                         |
+| ------------------- | --------------------------------------------------------------------- | -------------------------------------------------- | --------------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| Häufigster Messwert | Wert sodass $\frac{k}{4}$ darüber und $\frac{1-k}{k}$ darunter liegen | $$x_a = \frac{\displaystyle\sum_{i=0}^{n}x_i}{n}$$ | $$x_g = \sqrt[n]{\displaystyle\prod_{i=0}^{n}x_i}$$ | $$x_h = \frac{n}{\displaystyle\sum_{i=0}^{n}\frac{1}{x_i}}$$ | $$ x_q = \sqrt{\frac{\displaystyle\sum_{i=0}^{n}x_i^2}{n}}$$ |
 
 #### Streuung
 Die Varianz $s^2$ und die Standartabweichung $s$ geben die Streung von Messwerten an.
@@ -73,7 +73,7 @@ $$(\ln(x))' = \frac{1}{x}$$
 | Kettenregel    | $$f(x) = u(v(x))$$ $$f'(x) = v'(x) \cdot u'(v(x))$$                                                                                       |
 | Logarithmisch  | $$f(x) = u(x)^{v(x)}$$ $$(\ln(f(x)))' = (v(x) \cdot \ln(u(x)))'$$                                                                         |
 | Umkehrfunktion | $$f(x) \text{ umkehrbar}$$ $$f'(x) = \frac{1}{(f^{-1})'(f(x))}$$                                                                          |
-| Impliziert     | $$F(x; y) = u(x) + v(y) = 0$$ $$u'(x) + y' \cdot v(y) = 0$$                                                                               |
+| Impliziert     | $$F(x; y) = 0$$ $$\frac{\partial}{\partial x}F + \frac{\partial}{\partial y}F \cdot y' = 0$$                                              |
 | Parameter      | $$x(t) \text{, } y(t)$$ $$f'(t) = \frac{y'(t)}{x'(t)}$$                                                                                   |
 | Polar          | $$r(\alpha)$$ $$x(\alpha) = r(\alpha) \cdot \cos(\alpha)$$ $$y(\alpha) = r(\alpha) \cdot \sin(\alpha)$$ $$\rightarrow \text{ Parameter}$$ |
 
