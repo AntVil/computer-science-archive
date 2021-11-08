@@ -137,6 +137,15 @@ Speicher welche näher an der CPU sind, sind deutlich schneller, jedoch haben di
 
 Für optimale Performace wird oft ein großer Block an Daten aus einem Sekundär- oder Tertiärspeicher in den Primärspeicher geladen. Auf der CPU gibt es den Cache, welcher für diese Optimierung allein verwendet wird.
 
+#### Adressraum
+
+
+#### Freispeicherverwaltung
+
+
+#### MMU
+Seitentabelle (Page/Frame)
+TLB
 
 ### Motherboard
 Das Motherboard enthält eine CPU, welche mit der Northbridge verbunden ist. Diese greift auf den Arbeitsspeicher und Grafikprozeessor zu. Über die Northbridge gelangt man zur Southbridge, welche Externe Anbindungen verwaltet.
@@ -257,7 +266,7 @@ Netzwerke können unterschiedlich verbunden werden.
 | Proxy    |    7    |                                                 |                                  |
 | Gateway  |    7    |                                                 |                                  |
 
-Store & Foreword: Empfangen dann senden (fehler werden erkannt)
+Store & Forward: Empfangen dann senden (fehler werden erkannt)
 Cut-Through: Lesen und fast sofort senden
 
 IPv6: 128 Bit
