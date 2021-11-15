@@ -167,6 +167,11 @@ Eine Hashfunktion ist meist nur surjektiv, also kann man für zwei verschiedene 
 | ----------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------- |
 | Bei Kollision werden Werte so lange nach links verschoben, bis eine freie Stelle gefunden wird. | Bei Kollision werden Werte in Quadratischen Abständen (links und rechts) vom Index eingefügt. | Das Array verwaltet Listen. |
 
+### Gridfile
+Speicherungen Elemente in Blöcke mit der Kapazität $b$. Wenn die Blockgröße überstritten wird, werden die Blöcke geteilt. Und die Elemente neu verteilt.
+<img src="./images/gridfile.svg">
+
+
 ## Programmierung
 ### Rekursive Programmierung
 Anders als bei der **iterativen Programmierung**, bei der Probleme schrittweise mit Schleifen gelöst werden, wird bei der **rekursiven Programmierung** das Problem unterteil. Diese Unterteilung erfolgt durch wiederholtes Aufrufen einer Funktion durch sich selbst.
@@ -186,3 +191,13 @@ Lineare Programmierung beschäftigt sich mit Optimierung mehrerer Ungleichungen 
 | 5. Zeile mit kleinstem Quotient von Faktor und $b_i$ wählen              |
 | 6. Matrix umformen sodass pivot 1 und Rest der Spalte 0 ergibt           |
 | 7. Wiederholen bis Zielfunktionsvorfaktoren nicht positiv                |
+
+### Geometrische Algorithmen
+#### Scanline
+Das Scanline Verfahren beschäftigt sich mit dem zurückführen eines zweidimensionalen Problems in eine Menge eindimensionaler Probleme. 
+| Schnittpunkte Scanline                                   |
+| -------------------------------------------------------- |
+| Punkte nach x sortieren                                  |
+| nacheinander Punkte durchgehen                           |
+| Schnittpunkte nur Prüfen, wenn Nachbarschaft sich ändert |
+| Schnittpunkte einfügen in Haltepunkte                    |

@@ -251,7 +251,7 @@ Die Zusammschlüsse der Unterschiedlichen Geräte funktioniert über unterschied
 
 Anschlüsse können verschieden verwendet werden.
 <img style="max-width: 700px;" src="./images/kommunikation.svg"/>
-Bei einem Halbduplex Anschluss können Kollisionen entstehen, falls beide Teilnehmer gleichzeitig senden.
+Bei einem Halbduplex Anschluss können Kollisionen entstehen, falls beide Teilnehmer gleichzeitig senden. Diese werden vom anderen erkannt durch CSMA/CD (Carrier-Sense-Multiple-Access Collision Detection). Bei einem shared Medium bei dem Kollisionen nicht erkannt werden können wird CSMA/CA (Carrier-Sense-Multiple-Access Collision Avoidance) verwendet.
 
 #### Netzwerkanbindungen
 Netzwerke können unterschiedlich verbunden werden.
@@ -266,25 +266,26 @@ Netzwerke können unterschiedlich verbunden werden.
 | Proxy    |    7    |                                                 |                                  |
 | Gateway  |    7    |                                                 |                                  |
 
-Store & Forward: Empfangen dann senden (fehler werden erkannt)
-Cut-Through: Lesen und fast sofort senden
+##### Switch
+Ein Switch verwaltet die MAC-Adressen (3byte Hersteller + 3byte Schnittstellenerkennung) aller Angeschlossenen Geräte. Bei dem Eintreffen eines Ethernet-frame wird dieser weitergeleitet. Dies kann über zwei verschiedene Arten erfolgen
+
+| Store & Forward                               | Cut-Through                  |
+| --------------------------------------------- | ---------------------------- |
+| Empfangen dann senden (fehler werden erkannt) | Lesen und fast sofort senden |
+
+Bei vLAN unterteilt ein Switch das Netz virtuell. Ethernet-frames werden vom Switch mit tags versehen, welche die Weiterleitung an ausgewählte Ports ermöglicht. Die Tags werden entfernt, sodass die angeschlossenen Geräte das vLAN nicht bemerken. Nur Geräte, die an speziellen taged Ports angeschlossen sind, erhalten die Tags, um beispielsweise das vLAN auf mehrere Switche zu erweitern.
 
 IPv6: 128 Bit
 IPv4: 32 Bit
 
 ### OSI-Schichtenmodell (Open Systems Interconnection)
 
-| Schicht                                     | Aufgabe                         |
-| ------------------------------------------- | ------------------------------- |
-| 7. Anwendungsschicht (Application Layer)    |                                 |
-| 6. Darstellungsschicht (Presentation Layer) |                                 |
-| 5. Sitzungsschicht (Session Layer)          |                                 |
+| Schicht                                     | Aufgabe                            |
+| ------------------------------------------- | ---------------------------------- |
+| 7. Anwendungsschicht (Application Layer)    |                                    |
+| 6. Darstellungsschicht (Presentation Layer) |                                    |
+| 5. Sitzungsschicht (Session Layer)          |                                    |
 | 4. Transportschicht (Transport Layer)       | Gibt den Port im Ziel an       TCP |
 | 3. Vermittlungsschicht (Network Layer)      | Gibt die Systemweite Adresse an IP |
-| 2. Sicherungsschicht (Data Link Layer)      | Gibt die Lokale Adresse an      |
-| 1. Bitübertragungsschicht (Physical Layer)  | Überträgt die Daten             |
-
-
-MAC-Adresse 6 byte (hersteller + schnittstellenerkennung)
-
-Ethernet-frame
+| 2. Sicherungsschicht (Data Link Layer)      | Gibt die Lokale Adresse an         |
+| 1. Bitübertragungsschicht (Physical Layer)  | Überträgt die Daten                |
