@@ -194,7 +194,8 @@ Lineare Programmierung beschäftigt sich mit Optimierung mehrerer Ungleichungen 
 
 ### Geometrische Algorithmen
 #### Scanline
-Das Scanline Verfahren beschäftigt sich mit dem zurückführen eines zweidimensionalen Problems in eine Menge eindimensionaler Probleme. 
+Das Scanline Verfahren beschäftigt sich mit dem zurückführen eines zweidimensionalen Problems in eine Menge eindimensionaler Probleme.
+
 | Schnittpunkte Scanline                                   |
 | -------------------------------------------------------- |
 | Punkte nach x sortieren                                  |

@@ -129,26 +129,20 @@ Im Gegensatz zum **Polling**, bei dem aktiv gewartet und abgefragt wird, wird be
 ### Speicher
 Speicher welche näher an der CPU sind, sind deutlich schneller, jedoch haben diese schon für geringe Mengen Speicherplatz hohe Kosten. Langsamere Speicher sind oft billiger.
 
-| Kategorie        | Beschreibung              | Beispiele     |
-| ---------------- | ------------------------- | ------------- |
-| Primärspeicher   | interne kurzzeit Speicher | RAM/ROM       |
-| Sekundärspeicher | interne langzeit Speicher | SSD/HDD       |
-| Tertiärspeicher  | externe Speicher          | CD/Magnetband |
+| Kategorie        | Beschreibung              | Beispiele               |
+| ---------------- | ------------------------- | ----------------------- |
+| Primärspeicher   | interne kurzzeit Speicher | RAM/ROM (Hauptspeicher) |
+| Sekundärspeicher | interne langzeit Speicher | SSD/HDD                 |
+| Tertiärspeicher  | externe Speicher          | CD/Magnetband           |
 
 Für optimale Performace wird oft ein großer Block an Daten aus einem Sekundär- oder Tertiärspeicher in den Primärspeicher geladen. Auf der CPU gibt es den Cache, welcher für diese Optimierung allein verwendet wird.
 
 #### Adressraum
+Jeder Prozess besitzt einen virtuellen Hauptspeicher, welcher genau so groß wie der gesamte reale Hauptspeicher ist. Die MMU verwaltet den Zugriff auf den realen Hauptspeicher und ordnet jeden Block des virtuellen Hauptspeicher (Page) einen Block im realen Hauptspeicher (Frame) oder Schattenspeicher (Paging Area) zu. Über den TLB kann die MMU die Zuordnung beschleunigen und muss nicht die Paging-Tabelle durchlaufen. Wenn eine Seite aus dem Schattenspeicher angefordert wird, wird über einen Interrput die Seite in den realen Hauptspeicher geladen.
 
-
-#### Freispeicherverwaltung
-
-
-#### MMU
-Seitentabelle (Page/Frame)
-TLB
 
 ### Motherboard
-Das Motherboard enthält eine CPU, welche mit der Northbridge verbunden ist. Diese greift auf den Arbeitsspeicher und Grafikprozeessor zu. Über die Northbridge gelangt man zur Southbridge, welche Externe Anbindungen verwaltet.
+Das Motherboard enthält eine CPU, welche mit der Northbridge verbunden ist. Diese greift auf den Arbeitsspeicher und Grafikprozessor zu. Über die Northbridge gelangt man zur Southbridge, welche Externe Anbindungen verwaltet.
 
 
 ### Emulation
@@ -196,8 +190,8 @@ Nach der Initialisierung eines Prozess wird dieser in eine Warteschlange eingef�
 
 Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zwischen gespeichert und geladen werden. Der Wechsel zwischen Threads ist einfacher und schneller, da dabei nicht der gesamte Kontext gewechselt werden muss. Der Wechsel zwischen Threads erfordert meist sehr viel Koordination, da sonst Kollisionen zwischen den Threads entstehen. Dabei können entweder unerwartete Ergebnisse auftreten oder die Threads blockieren sich gegenseitig. Um diese Probleme zu lösen gibt es **Semaphore**. Sie verwalten Zeitpunkte in denen ein Thread im kritischen Abschnitt ist. Zu diesen Zeitpunkten kann der Thread nicht unterbrochen werden.
 
-### Scheduling
-
+#### Scheduling
+Scheduling gibt vor in welcher Reihenfolge die verschiedenen Prozesse laufen sollen, um die Fairness und Durchsatz maximal und Wartezeit minimal zu halten.
 
 ### Virtualisierung
 | Virtualisierung           | Beschreibung                                              |
