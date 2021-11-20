@@ -129,6 +129,17 @@ $$f(k) \notin \mathbb{R}$$
 $$\displaystyle\int_{x_0}^{k}f(x)dx = \lim_{n \rightarrow k}\left(\displaystyle\int_{x_0}^{n}f(x)dx\right)$$
 
 
+### Kurvenintegrale 1. Art
+Bestimmt die Länge $L$ einer Kurve gegeben durch x(t) und y(t). Durch $\rho$ kann zusätzlich eine Dichte gegeben sein.
+
+$$L = \displaystyle\int_{t_0}^{t_n}\rho(x(t), y(t))\sqrt{(x'(t)^2 + (y'(t)^2)}dt$$
+
+### Kurvenintegrale 2. Art
+Bestimmt die verrichtete Arbeit $W$ in einem Kraftfeld $\vec{F}$ für einen Weg $C(t)$.
+
+$$W = \displaystyle\int_{t_0}^{t_n}\left(F_x \cdot C_x' + F_y \cdot C_y'\right)dt$$
+
+
 ## Lineare Algebra
 ### Vektoren
 Vektoren sind Teil eines Vektorraums und werden als Tupel dargestellt. Geometrisch können Vektoren auch als Pfeile im Raum verstanden werden.

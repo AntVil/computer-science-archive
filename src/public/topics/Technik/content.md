@@ -281,5 +281,5 @@ IPv4: 32 Bit
 | 5. Sitzungsschicht (Session Layer)          |                                    |
 | 4. Transportschicht (Transport Layer)       | Gibt den Port im Ziel an       TCP |
 | 3. Vermittlungsschicht (Network Layer)      | Gibt die Systemweite Adresse an IP |
-| 2. Sicherungsschicht (Data Link Layer)      | Gibt die Lokale Adresse an         |
+| 2. Sicherungsschicht (Data Link Layer)      | Gibt die MAC Adresse an            |
 | 1. Bitübertragungsschicht (Physical Layer)  | Überträgt die Daten                |
