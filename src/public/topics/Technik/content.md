@@ -149,6 +149,9 @@ Das Motherboard enthält eine CPU, welche mit der Northbridge verbunden ist. Die
 Mit einer Emulation kann auf einem beliebigen Gerät ein komplett anderes Gerät simuliert werden, da die Hardware komplett in der Software Nachgebildet wird.
 
 
+## Embedded System
+Ein Embedded System ist ein Microcontroller mit begrenzter Funktionalität, welcher generell nur eine einzige Aufgabe besitzt. Diese Aufgabe soll zuverlässig und erfüllt werden.
+
 
 ## Betriebssysteme
 Das Betriebssystem verwaltet alle Prozesse (Job-Managment), die Leistung und bietet abstrakte Schnittstellen zu der Hardware (Task-Managment). Prozesse werden von einander getrennt und besitzen unterschiedliche Rechte.
