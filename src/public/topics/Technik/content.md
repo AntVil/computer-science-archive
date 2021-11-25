@@ -114,13 +114,17 @@ FlipFlops werden Unterteil in **nicht-taktgesteuert**, **taktgesteuert**, **einf
 Die CPU ist das central processing unit. Es gibt verschiedene Architekturen, jedoch die Aufgaben der CPU sind eindeutig. Sie kontrolliert, steuert und verwendet alle anderen Hardware Komponenten.
 Dies funktioniert über Busse, kabel die zwei oder mehr Hardware Komponenten Verbinden.
 
-| Architektur             | Beschreibung            |
-| ----------------------- | ----------------------- |
-| Von-Neumann-Architektur | langsam durch einen Bus |
-| Harvard-Architektur     | schnell aber komplex    |
+| Architektur             | Beschreibung                                  |
+| ----------------------- | --------------------------------------------- |
+| Von-Neumann-Architektur | langsam durch einen Bus                       |
+| Harvard-Architektur     | schnell aber komplex, Code und Daten getrennt |
 
 Grundlegend besitzt eine CPU mindestens einen Kern. Jeder Kern hat ein Memory Managment Unit (MMU), ein Steuerwerk, einen Registersatz und ein Rechenwerk (ALU). Mit Hilfe des Caches können Daten schnell zwischen gespeichert werden. Im Fall von mehreren Kernen gibt es oft einen weiteren Cache, auf den alle Kerne zugreifen können. Die Kerne einer CPU arbeiten echt-parallel.
 Die CPU kann in der **Skalare Architektur** nur einen Befehl pro Taktzyklus ausführen. Die **Superskalare Architektur** hingegen führt mehrere Befehle auf einer CPU parallel aus. Es können auch konditionelle Befehle parallel zur Kondition ausgeführt werden, sodass nicht auf das Ergebnis der Kondition gewartet werden muss.
+
+| RISC             | CISC             |
+| ---------------- | ---------------- |
+| simplere Befehle | komplexe Befehle |
 
 #### Interrupt
 Im Gegensatz zum **Polling**, bei dem aktiv gewartet und abgefragt wird, wird bei einem **Interrupt** unterbrochen. Ein Interupt entsteht bei Fehlern, welche vom Betriebssystem abgefangen werden oder durch asynchrone Ereignisse, welche unabhängig vom System sind (Klick). Ein Interrupt wird vom Interrupt Controller ausgelöst, dieser benachrichtigt die CPU, welche daraufhin den Interrupt in der Interrupt service Tabelle nachschaut und die Jeweilige Interrupt service routine aufruft. Falls ein Interrupt länger benötigt wird er als ein deferred interrupt parallel zu den Prozessen ausgeführt. Je nach Priorität werden unterschiedliche Interrupts ausgeführt. Systemcalls sind spezielle Interrupts, welche das Betriebssystem im Kernel-modus auffordern bestimmt Aufgaben auszuführen.
@@ -196,17 +200,15 @@ Um zwischen Prozessen zu wechseln muss der Hardware-Kontext vor jedem Wechsel zw
 #### Scheduling
 Scheduling gibt vor in welcher Reihenfolge die verschiedenen Prozesse laufen sollen, um die Fairness und Durchsatz maximal und Wartezeit minimal zu halten.
 
-### Virtualisierung
-| Virtualisierung           | Beschreibung                                              |
-| ------------------------- | --------------------------------------------------------- |
-| Virtuelle Computer        |                                                           |
-| Speicher Virtualisierung  | Abstraktion von Speicheradressen (sicherer und einfacher) |
-| Anwendungsvirtualisierung |                                                           |
-| Virtuelle Prozessumgebung |                                                           |
-| Virtuelle Prozessoren     | Java Virtual Machine                                      |
-| Netzwerkvirtualisierung   | vLAN                                                      |
-|                           |                                                           |
 
+### Datenübertragung
+
+| Serial Protocols | Kabel/Busse |             | synchron  | Beschreibung                                      |
+| ---------------- | ----------- | ----------- | --------- | ------------------------------------------------- |
+| RS-232/RS-485    | 1/...       | halb-duplex | asynchron | Startbit + (Adresse) + Daten + Parität + Stopbit  |
+| DMX512           | 1           | simplex     | asynchron | Zyklus durch 512 Adressen                         |
+| SPI              | $3 + slave$ | voll-duplex | synchron  | Slave-Select (adressieren) -> Clock & Daten       |
+| I$^2$C           | 2           | halb-duplex | synchron  | Clock & Start + Adressen + Daten + Antwort + Stop |
 
 
 
