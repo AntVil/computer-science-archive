@@ -288,3 +288,28 @@ IPv4: 32 Bit
 | 3. Vermittlungsschicht (Network Layer)      | Gibt die Systemweite Adresse an IP |
 | 2. Sicherungsschicht (Data Link Layer)      | Gibt die MAC Adresse an            |
 | 1. Bitübertragungsschicht (Physical Layer)  | Überträgt die Daten                |
+
+| UDP            | TCP                                   |
+| -------------- | ------------------------------------- |
+| verbindungslos | verbindungsorientiert                 |
+| -              | Aufbau 3 Packete, Abbau 4 Packete     |
+| -              | Packete durch Ackknowledge bestätigen |
+
+NAT (Network Adress Translation)
+einseitge Übersetzung
+DNAT (destination)/SNAT (source)
+versteckt private Adressen
+
+Priviligierte Ports: 1-1024 (ftp: 20,21, ssh: 22, dns: 53, dhcp: 67,68, http: 80, https: 443)
+Nicht-Priviligierte Ports: 1025-65535
+
+
+
+Sitzung
+Authentisierung: Identität vorzeigen (wissen, haben)
+Authentifizierung: Identität prüfen (zeit/ort, hash)
+Autorisierung: Rechte geben/verweigern (netzwerkanmeldung, challenge-response-systeme, 2FA, anmeldeorte)
+
+| PAP                  | CHAP             |
+| -------------------- | ---------------- |
+| passwort übertragung | hash übertragung |
