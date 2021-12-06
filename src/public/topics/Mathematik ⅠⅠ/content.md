@@ -140,6 +140,11 @@ Bestimmt die verrichtete Arbeit $W$ in einem Kraftfeld $\vec{F}$ für einen Weg 
 $$W = \displaystyle\int_{t_0}^{t_n}\left(F_x \cdot C_x' + F_y \cdot C_y'\right)dt$$
 
 
+## Differenzial Gleichungen
+Differenzial Gleichungen sind gleichungen, welche Varaiblen und Ableitungen der Variablen enthalten. Hierbei ist zu beachten, dass $y' = \frac{dy}{dx}$ gilt.
+Um Gleichungen zu lösen kann man die Variablen komplett von einander trennen und integrieren.
+
+
 ## Lineare Algebra
 ### Vektoren
 Vektoren sind Teil eines Vektorraums und werden als Tupel dargestellt. Geometrisch können Vektoren auch als Pfeile im Raum verstanden werden.

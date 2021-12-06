@@ -142,7 +142,7 @@ Speicher welche näher an der CPU sind, sind deutlich schneller, jedoch haben di
 Für optimale Performace wird oft ein großer Block an Daten aus einem Sekundär- oder Tertiärspeicher in den Primärspeicher geladen. Auf der CPU gibt es den Cache, welcher für diese Optimierung allein verwendet wird.
 
 #### Adressraum
-Jeder Prozess besitzt einen virtuellen Hauptspeicher, welcher genau so groß wie der gesamte reale Hauptspeicher ist. Die MMU verwaltet den Zugriff auf den realen Hauptspeicher und ordnet jeden Block des virtuellen Hauptspeicher (Page) einen Block im realen Hauptspeicher (Frame) oder Schattenspeicher (Paging Area) zu. Über den TLB kann die MMU die Zuordnung beschleunigen und muss nicht die Paging-Tabelle durchlaufen. Wenn eine Seite aus dem Schattenspeicher angefordert wird, wird über einen Interrput die Seite in den realen Hauptspeicher geladen.
+Jeder Prozess besitzt einen virtuellen Hauptspeicher, welcher genau so groß wie der gesamte reale Hauptspeicher ist. Die MMU verwaltet den Zugriff auf den realen Hauptspeicher und ordnet jeden Block des virtuellen Hauptspeicher (Page) einen Block im realen Hauptspeicher (Frame) oder Schattenspeicher (Paging Area) zu. Über den TLB (translation look-aside buffer) kann die MMU die Zuordnung beschleunigen und muss nicht die Paging-Tabelle durchlaufen. Wenn eine Seite aus dem Schattenspeicher angefordert wird, wird über einen Interrput die Seite in den realen Hauptspeicher geladen.
 
 
 ### Motherboard
