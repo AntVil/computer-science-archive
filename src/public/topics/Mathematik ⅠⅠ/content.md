@@ -24,7 +24,24 @@ $$l_i = \frac{h_i \cdot x_i}{\displaystyle\sum_{j=0}^{n}h_j \cdot x_j}$$
 
 #### Streuung
 Die Varianz $s^2$ und die Standartabweichung $s$ geben die Streung von Messwerten an.
-$$s^2 = (x^2)_a - (x_a)^2$$
+$$s^2 = \sum_{i=0}^{n}(x_a - x_i)^2 = (x^2)_a - (x_a)^2$$
+
+### Verteilungen
+| Binomialverteilung                          | Normalverteilung |
+| ------------------------------------------- | ---------------- |
+| ${n \choose k} \cdot p^k \cdot (1-p)^{n-k}$ |                  |
+
+Der Erwartungswert einer Verteilung $\mu$ gibt den zu erwartenden Wert an, welcher jedoch nicht möglich sein muss. Beispielsweise gibt es bei einem Würfel den Erwartungswert $3.5$, dieser kann jedoch nie erhalten werden.
+
+| diskret                                                        | stetig                                                                |
+| -------------------------------------------------------------- | --------------------------------------------------------------------- |
+| $$E(X) = \mu = \displaystyle\sum_{i=0}^{n}(X_i \cdot P(X_i))$$ | $$E(X) = \mu = \displaystyle\int_{-\infty}^{\infty}(X \cdot P(X))dX$$ |
+
+Die Varianz $\sigma^2$ ist ein Streumaß und gibt an, wie weit ein Wert vom Erwartungswert abliegt.
+
+| diskret                                                        | stetig                                                                |
+| -------------------------------------------------------------- | --------------------------------------------------------------------- |
+| $$Var(X) = \sigma^2 = \displaystyle\sum_{i=0}^{n}(\mu - X_i)^2 \cdot P(X_i)$$ | $$Var(X) = \sigma^2 = \displaystyle\int_{-\infty}^{\infty}(\mu - X)^2 \cdot P(X)dX$$ |
 
 
 ## Analysis
