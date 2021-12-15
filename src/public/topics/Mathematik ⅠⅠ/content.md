@@ -27,9 +27,9 @@ Die Varianz $s^2$ und die Standartabweichung $s$ geben die Streung von Messwerte
 $$s^2 = \sum_{i=0}^{n}(x_a - x_i)^2 = (x^2)_a - (x_a)^2$$
 
 ### Verteilungen
-| Binomialverteilung                          | Normalverteilung |
-| ------------------------------------------- | ---------------- |
-| ${n \choose k} \cdot p^k \cdot (1-p)^{n-k}$ |                  |
+| Binomialverteilung                          | Normalverteilung                                                                  |
+| ------------------------------------------- | --------------------------------------------------------------------------------- |
+| ${n \choose k} \cdot p^k \cdot (1-p)^{n-k}$ | $\frac{1}{\sigma \sqrt{2\pi}}e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$ |
 
 Der Erwartungswert einer Verteilung $\mu$ gibt den zu erwartenden Wert an, welcher jedoch nicht möglich sein muss. Beispielsweise gibt es bei einem Würfel den Erwartungswert $3.5$, dieser kann jedoch nie erhalten werden.
 
@@ -39,9 +39,16 @@ Der Erwartungswert einer Verteilung $\mu$ gibt den zu erwartenden Wert an, welch
 
 Die Varianz $\sigma^2$ ist ein Streumaß und gibt an, wie weit ein Wert vom Erwartungswert abliegt.
 
-| diskret                                                        | stetig                                                                |
-| -------------------------------------------------------------- | --------------------------------------------------------------------- |
+| diskret                                                                       | stetig                                                                               |
+| ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | $$Var(X) = \sigma^2 = \displaystyle\sum_{i=0}^{n}(\mu - X_i)^2 \cdot P(X_i)$$ | $$Var(X) = \sigma^2 = \displaystyle\int_{-\infty}^{\infty}(\mu - X)^2 \cdot P(X)dX$$ |
+
+### Bivariate Verteilung
+Bivariate Verteilung beschäftigt sich mit der Beziehung zweier Verteilung. Die Verteilung $A$ und $B$ können dabei unabhängig oder abhängig von einander sein.
+Die Wahrscheinlichkeit für $A$ unter der Bedingung $B$ lautet:
+$$P(A | B) = \frac{P(A \land B)}{P(B)}$$
+
+Falls $P(A | B) = P(A | \neg B)$ gilt, sind die Variablen komplett unabhängig.
 
 
 ## Analysis
